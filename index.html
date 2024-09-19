@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jhon Cordova</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Barra de naveación-->
+    <nav class="navbar bg-white fixed-top">
+      <div class="barra container-fluid p-3 d-flex flex-row">
+        <a class="navbar-brand" href="#yo">Jhon Cordova</a>
+        <div class="navbar-nav d-none d-lg-flex flex-row">
+          <a class="nav-link" href="#sobremi">Sobre mí</a>
+          <a class="nav-link" href="#exp">Habilidades</a>
+          <a class="nav-link" href="#proy">Proyectos</a>
+          <a class="nav-link" href="#contact">Contáctame</a>
+        </div>
+        <button
+          class="navbar-toggler d-sm d-lg-none bg-white"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+              Jhon Cordova
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link" href="#sobremi">Sobre mí</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#exp">Habilidades</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#proy">Proyectos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact  ">Contáctame</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!--Hero Seccion-->
+    <section class="hero-section" id="yo">
+      <div class="fila-section row h-100">
+        <div class="col-12 col-lg-6 d-flex flex-column">
+          <h2 class="saludo">Hola, soy</h2>
+          <h1 class="title-yo">Jhon Cordova.</h1>
+          <h3 class="est">Ingeniero de sistemas e informática en formación.</h3>
+          <p class="descripcion-yo">
+            Estudiante de Ingeniería de Sistemas en el décimo superior, con una
+            sólida base en tecnología y habilidades analíticas. Apasionado por
+            resolver problemas complejos y comprometido con la excelencia en
+            cada proyecto.
+          </p>
+          <div class="buttons-container">
+            <a
+              href="mailto:jacordova838@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Email"
+            >
+              <i class="bi bi-envelope"></i>
+            </a>
+            <a
+              href="https://github.com/jhoncordova24"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+            >
+              <i class="bi bi-github"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/yourprofile"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <i class="bi bi-linkedin"></i>
+            </a>
+            <a
+              href="https://wa.me/957995839"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="WhatsApp"
+            >
+              <i class="bi bi-whatsapp"></i>
+            </a>
+            <a
+              href="https://www.instagram.com/jhonc.24/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+            >
+              <i class="bi bi-instagram"></i>
+            </a>
+          </div>
+        </div>
+        <div
+          class="col-perfil col-12 col-lg-6 d-flex justify-content-center flex-column align-items-center"
+        >
+          <img src="./img/perfil.jpeg" class="img-fluid" />
+          <button class="button-cv">
+            Descargar CV
+            <i class="bi bi-arrow-down-circle"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="sobremi">
+      <h1 class="title-section">Sobre mí</h1>
+      <p class="text-center">Conóceme un poco más</p>
+      <div class="row text-center">
+        <div
+          class="about1 col-12 col-sm-6 d-flex justify-content-center align-items-center"
+        >
+          <img src="./img/about3.png" />
+        </div>
+        <div class="about2 col-12 col-sm-6 p-3">
+          <h2 class="title-about">Mi historia</h2>
+          <p class="text-about">
+            Actualmente, estoy cursando el octavo semestre de Ingeniería de
+            Sistemas e Informática, lo que me ha permitido adquirir habilidades
+            en análisis de sistemas, programación web y de escritorio, así como
+            en la optimización de procesos mediante técnicas de investigación
+            operativa.
+          </p>
+          <div
+            class="goals row d-flex flex-row justify-content-center align-items-center"
+          >
+            <div class="col-6">
+              <i class="bi bi-patch-check-fill"></i>
+              <p>Universidad Tecnológica del Perú.</p>
+            </div>
+            <div class="col-6">
+              <i class="bi bi-patch-check-fill"></i>
+              <p>Cuento con más de 2 años de experiencia.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Experiencia section-->
+    <section class="exp-section" id="exp">
+      <h1 class="title-section-exp text-center">Mis habilidades</h1>
+      <p class="text-exp text-center">
+        Estas son las tecnologías que domino...
+      </p>
+      <div class="row">
+        <!-- Desarrollo Frontend -->
+        <div class="dev col-12 col-md-6 text-center mb-4">
+          <h2 class="title-front">Desarrollo Frontend</h2>
+          <div
+            class="tec-container d-flex flex-wrap justify-content-center align-items-center"
+          >
+            <div class="tec-item mx-2">
+              <i class="fa-brands fa-html5 fa-3x"></i>
+              <p class="tec">HTML</p>
+            </div>
+            <div class="tec-item mx-2">
+              <i class="fa-brands fa-css3-alt fa-3x"></i>
+              <p class="tec">CSS</p>
+            </div>
+            <div class="tec-item mx-2">
+              <i class="fa-brands fa-js fa-3x"></i>
+              <p class="tec">JAVASCRIPT</p>
+            </div>
+            <div class="tec-item mx-2">
+              <i class="fa-brands fa-bootstrap fa-3x"></i>
+              <p class="tec">BOOTSTRAP</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Desarrollo Backend -->
+        <div class="dev col-12 col-md-6 text-center mb-4">
+          <h2 class="title-front">Desarrollo Backend</h2>
+          <div
+            class="tec-container d-flex flex-wrap justify-content-center align-items-center"
+          >
+            <div class="tec-item mx-2">
+              <i class="fa-brands fa-java"></i>
+              <p class="tec">JAVA</p>
+            </div>
+            <div class="tec-item mx-2">
+              <i class="fa-brands fa-php"></i>
+              <p class="tec">PHP</p>
+            </div>
+            <div class="tec-item mx-2">
+              <i class="fa-solid fa-database"></i>
+              <p class="tec">MySql</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Poyectos section-->
+    <section class="proyectos" id="proy">
+      <h1 class="title-section">Mis proyectos</h1>
+      <p class="text-center">Estos son algunos proyectos que he realizado..</p>
+      <div class="cards-row row justify-content-center">
+        <div
+          class="col-12 col-sm-6 col-md-4 mb-4 d-flex justify-content-center"
+        >
+          <div class="card" style="width: 24rem">
+            <!-- Aumenté el ancho de 20rem a 24rem -->
+            <img
+              src="./img/proyecto1.png"
+              class="card-img-top"
+              alt="..."
+            />
+            <!-- Añadí img-fluid para que la imagen sea responsive -->
+            <div class="card-body">
+              <h5 class="card-title">Página para Patitas SOS PIURA</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-dark">Ir al repositorio</a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-12 col-sm-6 col-md-4 mb-4 d-flex justify-content-center"
+        >
+          <div class="card" style="width: 24rem">
+            <img
+              src="https://images5.alphacoders.com/133/1338843.png"
+              class="card-img-top img-fluid"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-dark">Ir al repositorio</a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-12 col-sm-6 col-md-4 mb-4 d-flex justify-content-center"
+        >
+          <div class="card" style="width: 24rem">
+            <img
+              src="https://images5.alphacoders.com/133/1338843.png"
+              class="card-img-top img-fluid"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-dark">Ir al repositorio</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Contactame y footer-->
+    <section class="footer" id="contact">
+      <h1 class="title-section">Creemos algo juntos</h1>
+      <p class="text-center">Enviame un mensaje...</p>
+      <!--ñe
+      
+      -->
+      <form onsubmit="enviarWhatsapp(event)" class=" d-flex flex-column justify-content-center">
+        <input type="text" id="name" placeholder="Ingresa tu nombre" required>
+        <input type="email" id="email" placeholder="Ingresa tu correo electrónico" required>
+        <textarea id="mensaje" placeholder="Ingresa tu mensaje"></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+
+      <div class="row"></div>
+        <div class="col-12">
+          <div class="buttons-container-footer d-flex justify-content-center">
+            <a
+              href="mailto:jacordova838@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Email"
+            >
+              <i class="bi bi-envelope"></i>
+            </a>
+            <a
+              href="https://github.com/jhoncordova24"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+            >
+              <i class="bi bi-github"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/yourprofile"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <i class="bi bi-linkedin"></i>
+            </a>
+            <a
+              href="https://wa.me/957995839"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="WhatsApp"
+            >
+              <i class="bi bi-whatsapp"></i>
+            </a>
+            <a
+              href="https://www.instagram.com/jhonc.24/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+            >
+              <i class="bi bi-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="row">
+        <div class="copy col text-center">
+          <p>Creado por Jhon Cordova (2024) &#169;.</p>
+        </div>
+      </div>
+    </section>
+
+    <!--Script de bootstrap-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <!--Script para Fontawesome-->
+    <script
+      src="https://kit.fontawesome.com/24a7aa86be.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!--Script para el canvas-->
+    <script src="./script.js"></script>
+  </body>
+</html>

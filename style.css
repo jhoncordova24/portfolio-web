@@ -1,0 +1,317 @@
+/*Estilo generales*/
+* {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  scroll-behavior: smooth;
+}
+
+/*Animacion on-scroll*/
+@keyframes appear {
+  from {
+    opacity: 0;
+    clip-path: inset (100% 100% 0 0);
+  }
+  to {
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+section {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+/*Barra de navegacion*/
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-left: 50px;
+  color: black;
+}
+.navbar-nav {
+  margin-right: 50px;
+}
+.navbar-nav .nav-link {
+  color: black;
+  margin: 0 30px;
+}
+.navbar-nav .nav-link:hover {
+  color: gray;
+}
+section {
+  scroll-margin-top: 80px;
+}
+
+/*Seccion hero*/
+.hero-section {
+  margin: 100px 0px 70px 70px;
+  padding: 60px;
+}
+.saludo {
+  font-weight: bold;
+}
+.title-yo {
+  font-weight: bold;
+  font-size: 4em;
+}
+.est {
+  color: gray;
+  font-size: 1.5rem;
+}
+.descripcion-yo {
+  font-size: 1.1rem;
+}
+.col-perfil img {
+  width: auto;
+  height: auto;
+  max-width: 260px;
+  max-height: 260px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.2) 5px 5px, rgba(0, 0, 0, 0.15) 10px 10px,
+    rgba(0, 0, 0, 0.1) 15px 15px, rgba(0, 0, 0, 0.05) 20px 20px,
+    rgba(0, 0, 0, 0.03) 25px 25px;
+}
+.buttons-container a {
+  margin-right: 15px;
+  font-size: 30px;
+  color: #000;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.buttons-container a:hover {
+  color: gray;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.button-cv {
+  font-size: 0.8rem;
+  margin: 30px 0;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+}
+
+/*Section About*/
+.about {
+  padding: 90px;
+}
+.about .about1 img {
+  width: 80%;
+  height: auto;
+  object-fit: cover;
+}
+.about2 .title-about {
+  color: gray;
+  padding-top: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.about2 .text-about {
+  text-align: left;
+}
+.about2 .goals i {
+  font-size: 2rem;
+  margin: 10px 15px;
+}
+
+/*Exp Section*/
+.exp-section {
+  padding: 90px;
+}
+.title-section {
+  text-align: center;
+  font-weight: bold;
+}
+.title-section-exp {
+  color: black;
+  text-align: center;
+  font-weight: bold;
+}
+.text-exp {
+  color: black;
+
+  margin-bottom: 70px;
+}
+.title-front {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: black;
+
+  margin-bottom: 40px;
+}
+.tec-container i {
+  color: black;
+
+  margin: 0px 30px;
+  font-size: 5rem;
+  transition: all 0.3s ease;
+}
+.dev i:hover {
+  color: black;
+
+  text-shadow: 3px 3px 10px rgba(149, 145, 145, 0.6);
+}
+.tec-container .tec {
+  margin-top: 10px;
+  color: black;
+
+  font-size: 1rem;
+}
+
+/*Proyectos Section*/
+.proyectos {
+  padding: 80px;
+}
+.proyectos .card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+.proyectos .card img {
+  height: 250px;
+  object-fit: cover;
+}
+.cards-row {
+  margin-top: 50px;
+}
+
+.footer {
+  background-image: linear-gradient(
+      6deg,
+      rgba(0, 0, 0, 0.02) 0%,
+      rgba(0, 0, 0, 0.02) 39%,
+      transparent 39%,
+      transparent 74%,
+      rgba(117, 117, 117, 0.02) 74%,
+      rgba(117, 117, 117, 0.02) 100%
+    ),
+    linear-gradient(
+      129deg,
+      rgba(222, 222, 222, 0.02) 0%,
+      rgba(222, 222, 222, 0.02) 65%,
+      transparent 65%,
+      transparent 73%,
+      rgba(83, 83, 83, 0.02) 73%,
+      rgba(83, 83, 83, 0.02) 100%
+    ),
+    linear-gradient(90deg, rgb(255, 255, 255), rgb(255, 255, 255));
+  padding: 70px;
+}
+
+.text-footer {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.buttons-container-footer a {
+  margin: 0 20px;
+  font-size: 30px;
+  color: #000;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.buttons-container-footer a:hover {
+  color: gray;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+.footer form {
+  color: black;
+  border-radius: 10px;
+  max-width: 550px;
+  border: 5px solid black;
+  margin-bottom: 50px;
+  margin: 30px auto 60px auto;
+  padding: 40px;
+}
+.footer form input {
+  padding: 20px;
+  border-radius: 5px;
+  background-color: whitesmoke;
+  margin-bottom: 20px;
+  border: none;
+}
+.footer form textarea {
+  padding: 20px;
+  border-radius: 5px;
+  background-color: whitesmoke;
+  border: none;
+  height: 100px;
+  resize: none;
+}
+.footer form button {
+  color: white;
+  margin-top: 30px;
+  background-color: black;
+  border-radius: 5px;
+  border: none;
+}
+
+/*Responsividad*/
+@media screen and (max-width: 728px) {
+  .hero-section {
+    margin: 60px 0px auto auto;
+  }
+  .saludo {
+    font-size: 1.5rem;
+  }
+  .title-yo {
+    font-size: 2rem;
+  }
+  .est {
+    font-size: 1rem;
+  }
+  .descripcion-yo {
+    font-size: 1rem;
+  }
+  .buttons-container a {
+    font-size: 1.6rem;
+  }
+  .col-perfil img {
+    margin-top: 50px;
+    max-width: 210px;
+    max-height: 210px;
+  }
+  .text-exp {
+    margin-bottom: 50px;
+  }
+  .exp-section {
+    padding: 40px;
+  }
+  .dev {
+    padding: 20px;
+    border: 5px solid gray;
+    border-radius: 10px;
+  }
+  .dev i {
+    font-size: 40px;
+  }
+  .dev .tec {
+    font-size: 1rem;
+  }
+  .about {
+    padding: 40px;
+  }
+  .about2 .text-about {
+    text-align: center;
+    font-size: 1rem;
+  }
+  .card {
+    margin-bottom: 20px;
+  }
+  .proyectos {
+    padding: 30px;
+  }
+  .footer {
+    padding: 30px;
+  }
+  .footer form {
+    font-size: 0.8rem;
+  }
+  .footer .copy {
+    font-size: 0.7rem;
+  }
+}
