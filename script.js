@@ -12,8 +12,37 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-//funcion para enviar mensaje por whatsapp
+const scrollers = document.querySelectorAll(".scroller");
 
+// If a user hasn't opted in for recuded motion, then we add the animation
+if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  addAnimation();
+}
+
+function addAnimation() {
+  scrollers.forEach((scroller) => {
+    // add data-animated="true" to every `.scroller` on the page
+    scroller.setAttribute("data-animated", true);
+
+    // Make an array from the elements within `.scroller-inner`
+    const scrollerInner = scroller.querySelector(".scroller__inner");
+    const scrollerContent = Array.from(scrollerInner.children);
+
+    // For each item in the array, clone it
+    // add aria-hidden to it
+    // add it into the `.scroller-inner`
+    scrollerContent.forEach((item) => {
+      const duplicatedItem = item.cloneNode(true);
+      duplicatedItem.setAttribute("aria-hidden", true);
+      scrollerInner.appendChild(duplicatedItem);
+    });
+  });
+}
+
+
+
+
+//funcion para enviar mensaje por whatsapp
 function enviarWhatsapp(event) {
   event.preventDefault();
 
@@ -42,13 +71,13 @@ document.addEventListener("DOMContentLoaded", function () {
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add("active"); // Agrega la clase cuando la sección es visible
-          observer.unobserve(entry.target); // Deja de observar después de activar la animación
+          entry.target.classList.add("active"); 
+          observer.unobserve(entry.target); 
         }
       });
     },
     {
-      threshold: 0.1, // Ajusta según cuando quieras que la animación empiece (10% de visibilidad)
+      threshold: 0.1, 
     }
   );
 
@@ -56,3 +85,16 @@ document.addEventListener("DOMContentLoaded", function () {
     observer.observe(section);
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const navbar = document.querySelector(".navbar");
+
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 50) {
+      navbar.classList.add("scrolled"); // Agrega la clase para aplicar la sombra
+    } else {
+      navbar.classList.remove("scrolled"); // Remueve la clase cuando vuelva al tope
+    }
+  });
+});
+
