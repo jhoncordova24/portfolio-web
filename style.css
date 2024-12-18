@@ -156,16 +156,6 @@ section {
   box-shadow: 0 0.5rem 1rem -0.25rem var(--clr-primary-900);
 }
 
-.button-cv {
-  font-size: 0.8rem;
-  margin: 30px 0;
-  border: none;
-  padding: 10px;
-  border-radius: 5px;
-  background-color: black;
-  color: white;
-}
-
 /*Section About*/
 .about {
   padding: 90px;
@@ -253,7 +243,7 @@ section {
 }
 
 .proyectos .card:hover {
-  transform: scale(1.03);
+  transform: scale(1.02);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
@@ -262,7 +252,20 @@ section {
   object-fit: cover;
 }
 
-.card-text{
+.repo-link {
+  margin: 0 20px;
+  font-size: 25px;
+  color: #000;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.repo-link:hover {
+  color: gray;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.card-text {
   font-size: 0.8rem;
 }
 .cards-row {
@@ -292,15 +295,17 @@ section {
     linear-gradient(90deg, rgb(255, 255, 255), rgb(255, 255, 255));
   padding: 70px;
 }
+
 .footer form {
   color: black;
   border-radius: 10px;
   max-width: 550px;
-  border: 5px solid black;
+  border: 3px solid gray;
   margin-bottom: 50px;
   margin: 30px auto 60px auto;
   padding: 40px;
 }
+
 .footer form input {
   padding: 20px;
   border-radius: 5px;
@@ -308,6 +313,7 @@ section {
   margin-bottom: 20px;
   border: none;
 }
+
 .footer form textarea {
   padding: 20px;
   border-radius: 5px;
@@ -316,6 +322,7 @@ section {
   height: 100px;
   resize: none;
 }
+
 .footer form button {
   padding: 5px;
   color: white;
@@ -324,13 +331,16 @@ section {
   border-radius: 5px;
   border: none;
 }
+
 .text-footer {
   font-size: 1.5rem;
   font-weight: bold;
 }
+
 .buttons-container-footer {
   margin-top: 30px;
 }
+
 .buttons-container-footer a {
   margin: 0 20px;
   font-size: 25px;
@@ -343,76 +353,106 @@ section {
   color: gray;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
-.copy{
+
+.copy {
   font-size: 0.8rem;
 }
 
 /*Responsividad*/
 @media screen and (max-width: 728px) {
+  /*Hero Section*/
   .hero-section {
-    padding: 60px;
-    margin: 60px 0px auto auto;
+    padding: 20px;
+    margin: 90px 5px 50px 5px;
   }
+
   .saludo {
     font-size: 2rem;
   }
+
   .title-yo {
     font-size: 3rem;
   }
+
   .est {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
+
   .descripcion-yo {
     margin-top: 10px;
     font-size: 1rem;
   }
+
   .buttons-container a {
     font-size: 1.6rem;
   }
+
   .col-perfil img {
     margin-top: 50px;
     max-width: 210px;
     max-height: 210px;
   }
+
+  /*Titulo de las secciones*/
   .title-section {
     font-size: 2.5rem;
   }
+
+  /*About Section*/
+  .about {
+    padding: 40px;
+  }
+
+  .about2 .text-about {
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .text-goals {
+    font-size: 0.8rem;
+  }
+
+  /*Expericnecia Section*/
   .text-exp {
     margin-bottom: 50px;
   }
+
   .exp-section {
     padding: 40px;
   }
+
   .dev {
     padding: 20px;
     border: 3px solid gray;
     border-radius: 10px;
   }
+
   .dev i {
     font-size: 40px;
   }
+
   .dev .tec {
     font-size: 1rem;
   }
-  .about {
-    padding: 40px;
-  }
-  .about2 .text-about {
-    text-align: center;
-    font-size: 1rem;
-  }
+
+  /*Proyectos Section*/
   .card {
     margin-bottom: 20px;
   }
+
   .proyectos {
     padding: 30px;
   }
+
+  /*Footer Section*/
   .footer {
     padding: 30px;
   }
+
   .footer form {
     font-size: 0.8rem;
   }
+
   .footer .copy {
     font-size: 0.7rem;
   }

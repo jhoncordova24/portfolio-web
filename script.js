@@ -1,3 +1,4 @@
+// Cierra el menú Offcanvas cuando se hace clic en un enlace
 document.addEventListener("DOMContentLoaded", function () {
   var offcanvasElement = document.getElementById("offcanvasNavbar");
   var navLinks = offcanvasElement.querySelectorAll(".nav-link");
@@ -12,25 +13,20 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// Añade animación infinita a elementos scroller
 const scrollers = document.querySelectorAll(".scroller");
 
-// If a user hasn't opted in for recuded motion, then we add the animation
 if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
   addAnimation();
 }
 
 function addAnimation() {
   scrollers.forEach((scroller) => {
-    // add data-animated="true" to every `.scroller` on the page
     scroller.setAttribute("data-animated", true);
 
-    // Make an array from the elements within `.scroller-inner`
     const scrollerInner = scroller.querySelector(".scroller__inner");
     const scrollerContent = Array.from(scrollerInner.children);
 
-    // For each item in the array, clone it
-    // add aria-hidden to it
-    // add it into the `.scroller-inner`
     scrollerContent.forEach((item) => {
       const duplicatedItem = item.cloneNode(true);
       duplicatedItem.setAttribute("aria-hidden", true);
@@ -39,10 +35,7 @@ function addAnimation() {
   });
 }
 
-
-
-
-//funcion para enviar mensaje por whatsapp
+// Envía un mensaje por WhatsApp con los datos del formulario
 function enviarWhatsapp(event) {
   event.preventDefault();
 
@@ -54,16 +47,15 @@ function enviarWhatsapp(event) {
     `https://api.whatsapp.com/send?phone=957995839&text=Hola, me llamo ${name}.\n` +
     ` Mi correo electrónico es ${email} y ${mensaje}`;
 
-  // Verificar si alguno de los campos está vacío
   if (name === "" || email === "" || mensaje === "") {
     alert("Por favor, completa todos los campos.");
-    return; // Detener la ejecución si hay campos vacíos
+    return;
   }
 
   window.open(url, "_blank");
 }
 
-//
+// Añade la clase "active" a secciones visibles usando Intersection Observer
 document.addEventListener("DOMContentLoaded", function () {
   const sections = document.querySelectorAll("section");
 
@@ -71,13 +63,13 @@ document.addEventListener("DOMContentLoaded", function () {
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add("active"); 
-          observer.unobserve(entry.target); 
+          entry.target.classList.add("active");
+          observer.unobserve(entry.target);
         }
       });
     },
     {
-      threshold: 0.1, 
+      threshold: 0.1,
     }
   );
 
@@ -86,15 +78,15 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// Cambia el estilo del navbar al hacer scroll
 document.addEventListener("DOMContentLoaded", function () {
   const navbar = document.querySelector(".navbar");
 
   window.addEventListener("scroll", function () {
     if (window.scrollY > 50) {
-      navbar.classList.add("scrolled"); // Agrega la clase para aplicar la sombra
+      navbar.classList.add("scrolled");
     } else {
-      navbar.classList.remove("scrolled"); // Remueve la clase cuando vuelva al tope
+      navbar.classList.remove("scrolled");
     }
   });
 });
-
