@@ -10,26 +10,11 @@ section {
   scroll-margin-top: 70px;
 }
 
-/*Animacion on-scroll
-@keyframes appear {
-  from {
-    opacity: 0;
-    clip-path: inset (100% 100% 0 0);
-  }
-  to {
-    opacity: 1;
-    clip-path: inset(0 0 0 0);
-  }
-}
-
-section {
-  animation: appear linear;
-  animation-timeline: view();
-  animation-range: entry 0% cover 40%;
-}
-*/
-
 /*Barra de navegacion*/
+.barra {
+  max-width: 1500px;
+}
+
 .navbar-brand {
   font-size: 1.5rem;
   font-weight: bold;
@@ -55,10 +40,15 @@ section {
   transition: box-shadow 0.3s ease;
 }
 
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+
 /*Seccion hero*/
 .hero-section {
-  margin: 100px 0px 70px 70px;
-  padding: 60px;
+  margin: 120px 0px 100px 70px;
+  padding: 10px;
 }
 
 .saludo {
@@ -83,8 +73,8 @@ section {
 .col-perfil img {
   width: auto;
   height: auto;
-  max-width: 260px;
-  max-height: 260px;
+  max-width: 320px;
+  max-height: 320px;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.2) 5px 5px, rgba(0, 0, 0, 0.15) 10px 10px,
     rgba(0, 0, 0, 0.1) 15px 15px, rgba(0, 0, 0, 0.05) 20px 20px,
@@ -158,10 +148,11 @@ section {
 
 /*Section About*/
 .about {
-  padding: 90px;
+  padding: 60px;
 }
 
 .about .about1 img {
+  margin-top: -20px;
   width: 90%;
   height: auto;
   object-fit: cover;
@@ -243,12 +234,12 @@ section {
 }
 
 .proyectos .card:hover {
-  transform: scale(1.02);
+  transform: scale(1.01);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
 .proyectos .card img {
-  height: 250px;
+  height: 240px;
   object-fit: cover;
 }
 
@@ -367,11 +358,11 @@ section {
   }
 
   .saludo {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .title-yo {
-    font-size: 3rem;
+    font-size: 3.5rem;
   }
 
   .est {
@@ -442,6 +433,10 @@ section {
 
   .proyectos {
     padding: 30px;
+  }
+
+  .proyectos .card img {
+    height: auto;
   }
 
   /*Footer Section*/
