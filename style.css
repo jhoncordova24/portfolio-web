@@ -11,6 +11,11 @@ section {
 }
 
 /*Barra de navegacion*/
+.navbar {
+  background-color: white;
+  transition: background-color 1s ease;
+}
+
 .barra {
   max-width: 1500px;
 }
@@ -23,7 +28,7 @@ section {
 }
 
 .navbar-nav {
-  margin-right: 50px;
+  margin-right: 70px;
 }
 
 .navbar-nav .nav-link {
@@ -36,8 +41,7 @@ section {
 }
 
 .navbar.scrolled {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  transition: box-shadow 0.3s ease;
+  background-color: #f2f3f4;
 }
 
 .navbar-toggler:focus {
@@ -47,8 +51,8 @@ section {
 
 /*Seccion hero*/
 .hero-section {
-  margin: 120px 0px 100px 70px;
-  padding: 10px;
+  margin: 0px 70px 100px 70px;
+  padding: 150px 10px 0 10px;
 }
 
 .saludo {
@@ -180,6 +184,7 @@ section {
   margin: auto;
   padding: 90px;
 }
+
 .dev {
   padding: 40px;
   border-radius: 10px;
@@ -190,20 +195,24 @@ section {
   color: black;
   text-shadow: 3px 3px 10px rgba(149, 145, 145, 0.7);
 }
+
 .title-section {
   font-size: 3.5rem;
   text-align: center;
   font-weight: bold;
 }
+
 .title-section-exp {
   color: black;
   text-align: center;
   font-weight: bold;
 }
+
 .text-exp {
   color: black;
   margin-bottom: 50px;
 }
+
 .title-front {
   font-size: 1.2rem;
   font-weight: bold;
@@ -354,7 +363,7 @@ section {
   /*Hero Section*/
   .hero-section {
     padding: 20px;
-    margin: 90px 5px 50px 5px;
+    margin: 100px 5px 40px 5px;
   }
 
   .saludo {
@@ -379,7 +388,7 @@ section {
   }
 
   .col-perfil img {
-    margin-top: 50px;
+    margin-top: 20px;
     max-width: 210px;
     max-height: 210px;
   }
