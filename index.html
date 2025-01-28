@@ -24,8 +24,10 @@
     />
     <!-- Iconos LineIcons-->
     <link href="https://cdn.lineicons.com/5.0/lineicons.css" rel="stylesheet" />
-
+    <!-- Hoja de estilos-->
     <link rel="stylesheet" href="style.css" />
+    <!-- AOS-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
     <!-- Barra de naveación-->
@@ -86,7 +88,12 @@
     </nav>
 
     <!--Hero Seccion-->
-    <section class="hero-section" id="yo">
+    <section
+      class="hero-section"
+      data-aos="fade-up"
+      data-aos-delay="100"
+      id="yo"
+    >
       <div class="fila-section row h-100">
         <div class="col-12 col-lg-6 d-flex flex-column">
           <h2 class="saludo">Hola, soy</h2>
@@ -114,7 +121,12 @@
         <div
           class="col-perfil col-12 col-lg-6 d-flex justify-content-center flex-column align-items-center"
         >
-          <img src="./img/perfil.jpeg" class="img-fluid" />
+          <img
+            src="./img/perfil.jpeg"
+            class="img-fluid"
+            data-aos="zoom-out"
+            data-aos-delay="100"
+          />
           <div class="buttons-container-footer d-flex justify-content-center">
             <a
               href="mailto:jacordova838@gmail.com"
@@ -146,14 +158,14 @@
     </section>
 
     <!--About Section-->
-    <section class="about" id="sobremi">
+    <section class="about" data-aos="fade-up" data-aos-delay="100" id="sobremi">
       <h1 class="title-section">Sobre mí</h1>
       <p class="text-center">Conóceme un poco más.</p>
       <div class="row text-center">
         <div
           class="about1 col-12 col-sm-6 d-flex justify-content-center align-items-center"
         >
-          <img src="./img/about.png" />
+          <img src="./img/about.png" data-aos="zoom-out" data-aos-delay="100" />
         </div>
         <div class="about2 col-12 col-sm-6 p-3">
           <h2 class="title-about">Mi historia</h2>
@@ -181,12 +193,17 @@
     </section>
 
     <!--Experiencia section-->
-    <section class="exp-section" id="exp">
+    <section
+      class="exp-section"
+      data-aos="fade-up"
+      data-aos-delay="100"
+      id="exp"
+    >
       <h1 class="title-section text-center">Mis habilidades</h1>
       <p class="text-exp text-center">Lo que he aprendido hasta ahora.</p>
       <div class="row">
         <!-- Desarrollo Frontend -->
-        <div class="dev col-12 text-center mb-4">
+        <div class="dev col-12 text-center mb-4" data-aos="fade-left">
           <h2 class="title-front">Desarrollo Frontend</h2>
           <div
             class="tec-container d-flex flex-wrap justify-content-center align-items-center"
@@ -223,7 +240,7 @@
         </div>
 
         <!-- Desarrollo Backend -->
-        <div class="dev col-12 text-center mb-4">
+        <div class="dev col-12 text-center mb-4" data-aos="fade-right">
           <h2 class="title-front">Desarrollo Backend</h2>
           <div
             class="tec-container d-flex flex-wrap justify-content-center align-items-center"
@@ -250,7 +267,12 @@
     </section>
 
     <!--Poyectos section-->
-    <section class="proyectos" id="proy">
+    <section
+      class="proyectos"
+      data-aos="fade-up"
+      data-aos-delay="100"
+      id="proy"
+    >
       <h1 class="title-section">Mis proyectos</h1>
       <p class="text-center">Estos son algunos proyectos que he realizado.</p>
       <div class="cards-row row justify-content-center">
@@ -270,7 +292,9 @@
                 facilitar donaciones y ofrecer información sobre el cuidado
                 animal en Piura.
               </p>
-              <a href="https://github.com/jhoncordova24/patitas-sos-piura"><i class="repo-link ms-0 lni lni-github"></i></a>
+              <a href="https://github.com/jhoncordova24/patitas-sos-piura"
+                ><i class="repo-link ms-0 lni lni-github"></i
+              ></a>
             </div>
           </div>
         </div>
@@ -407,7 +431,12 @@
     </section>
 
     <!--Footer-->
-    <section class="footer" id="contact">
+    <section
+      class="footer"
+      data-aos="fade-up"
+      data-aos-delay="100"
+      id="contact"
+    >
       <h1 class="title-section">Creemos algo juntos</h1>
       <p class="text-center">Enviame un mensaje.</p>
       <!--ñe
@@ -416,6 +445,8 @@
       <form
         onsubmit="enviarWhatsapp(event)"
         class="d-flex flex-column justify-content-center"
+        data-aos="fade"
+        data-aos-delay="200"
       >
         <input type="text" id="name" placeholder="Ingresa tu nombre" required />
         <input
@@ -480,14 +511,17 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-
     <!--Script para Fontawesome-->
     <script
       src="https://kit.fontawesome.com/24a7aa86be.js"
       crossorigin="anonymous"
     ></script>
-
-    <!--Script para el canvas-->
+    <!--Script para AOS-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <!--JS-->
     <script src="./script.js"></script>
   </body>
 </html>
