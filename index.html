@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -25,21 +25,123 @@
     <!-- Iconos LineIcons-->
     <link href="https://cdn.lineicons.com/5.0/lineicons.css" rel="stylesheet" />
     <!-- Hoja de estilos-->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="assets/styles/index.css" />
     <!-- AOS-->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+      <symbol id="circle-half" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
+      </symbol>
+
+      <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+        <path
+          d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"
+        />
+        <path
+          d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"
+        />
+      </symbol>
+
+      <symbol id="sun-fill" viewBox="0 0 16 16">
+        <path
+          d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
+        />
+      </symbol>
+    </svg>
+
     <!-- Barra de naveación-->
     <nav class="navbar fixed-top">
-      <div class="barra container-fluid p-2 d-flex flex-row">
-        <a class="navbar-brand ms-1 ms-lg-5" href="#yo">Jhon Cordova.</a>
-        <div class="navbar-nav d-none d-lg-flex flex-row">
-          <a class="nav-link" href="#sobremi">Sobre mí</a>
-          <a class="nav-link" href="#exp">Habilidades</a>
-          <a class="nav-link" href="#proy">Proyectos</a>
+      <div
+        class="barra container-xl p-2 d-flex justify-content-between flex-row"
+      >
+        <a class="navbar-brand ms-1 ms-lg-4" href="#yo">Jhon Cordova.</a>
+        <div class="navbar-nav d-none d-lg-flex flex-row ms-auto">
+          <a class="nav-link me-5" href="#sobremi">Sobre mí</a>
+          <a class="nav-link me-5" href="#proy">Proyectos</a>
+          <a class="nav-link me-5" href="#exp">Habilidades</a>
           <a class="nav-link" href="#contact">Contáctame</a>
         </div>
+        <ul class="mb-1 mb-lg-0 list-unstyled ms-auto">
+          <li class="nav-item dropdown w-25">
+            <button
+              class="btn btn-link nav-link py-1 px-0 px-lg-2 dropdown-toggle d-flex align-items-center"
+              id="bd-theme"
+              type="button"
+              aria-expanded="false"
+              data-bs-toggle="dropdown"
+              data-bs-display="static"
+            >
+              <svg
+                class="bi my-1 theme-icon-active"
+                width="16"
+                height="16"
+                fill="currentColor"
+              >
+                <use href="#circle-half"></use>
+              </svg>
+            </button>
+
+            <ul
+              class="dropdown-menu dropdown-menu-end px-1"
+              aria-labelledby="bd-theme"
+            >
+              <li>
+                <button
+                  type="button"
+                  class="dropdown-item d-flex align-items-center"
+                  data-bs-theme-value="light"
+                >
+                  <svg
+                    class="bi me-2 opacity-50 theme-icon"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                  >
+                    <use href="#sun-fill"></use>
+                  </svg>
+                  Light
+                </button>
+              </li>
+              <li>
+                <button
+                  type="button"
+                  class="dropdown-item d-flex align-items-center"
+                  data-bs-theme-value="dark"
+                >
+                  <svg
+                    class="bi me-2 opacity-50 theme-icon"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                  >
+                    <use href="#moon-stars-fill"></use>
+                  </svg>
+                  Dark
+                </button>
+              </li>
+              <li>
+                <button
+                  type="button"
+                  class="dropdown-item d-flex align-items-center active"
+                  data-bs-theme-value="auto"
+                >
+                  <svg
+                    class="bi me-2 opacity-50 theme-icon"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                  >
+                    <use href="#circle-half"></use>
+                  </svg>
+                  Auto
+                </button>
+              </li>
+            </ul>
+          </li>
+        </ul>
+
         <button
           class="navbar-toggler d-sm d-lg-none border-0"
           type="button"
@@ -73,10 +175,10 @@
                 <a class="nav-link" href="#sobremi">Sobre mí</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#exp">Habilidades</a>
+                <a class="nav-link" href="#proy">Proyectos</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#proy">Proyectos</a>
+                <a class="nav-link" href="#exp">Habilidades</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#contact  ">Contáctame</a>
@@ -88,13 +190,8 @@
     </nav>
 
     <!--Hero Seccion-->
-    <section
-      class="hero-section"
-      data-aos="fade-up"
-      data-aos-delay="100"
-      id="yo"
-    >
-      <div class="fila-section row h-100">
+    <section class="hero-section" data-aos="fade-up" id="yo">
+      <div class="fila-section row h-100 container-xl">
         <div class="col-12 col-lg-6 d-flex flex-column">
           <h2 class="saludo">Hola, soy</h2>
           <h1 class="title-yo">Jhon Cordova.</h1>
@@ -105,67 +202,73 @@
           </p>
           <div class="scroller" data-speed="fast">
             <ul class="tag-list scroller__inner">
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>JavaScript</li>
-              <li>React</li>
-              <li>Tailwind CSS</li>
-              <li>PHP</li>
-              <li>Firebase</li>
-              <li>MySQL</li>
-              <li>UI/UX Design</li>
-              <li>Git</li>
+              <i class="lni lni-javascript"></i>
+              <i class="lni lni-css3"></i>
+              <i class="lni lni-react"></i>
+              <i class="lni lni-tailwindcss"></i>
+              <i class="lni lni-angular"></i>
+              <i class="lni lni-laravel"></i>
+              <i class="lni lni-bootstrap-5"></i>
+              <i class="lni lni-mysql"></i>
+              <i class="lni lni-java"></i>
+              <i class="lni lni-git"></i>
             </ul>
           </div>
         </div>
-        <div
-          class="col-perfil col-12 col-lg-6 d-flex justify-content-center flex-column align-items-center"
-        >
-          <img
-            src="./img/perfil.jpeg"
-            class="img-fluid"
-            data-aos="zoom-out"
-            data-aos-delay="100"
-          />
-          <div class="buttons-container-footer d-flex justify-content-center">
-            <a
-              href="mailto:jacordova838@gmail.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Email"
-            >
-              <i class="bi bi-envelope"></i>
-            </a>
-            <a
-              href="https://github.com/jhoncordova24"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub"
-            >
-              <i class="bi bi-github"></i>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/jhon-alonso-paucar-cordova-ba9354296/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
-            >
-              <i class="bi bi-linkedin"></i>
-            </a>
+        <div class="col-perfil col-12 col-lg-6 d-flex flex-column">
+          <div
+            class="container-img d-flex justify-content-center justify-content-lg-end align-items-center align-items-lg-end"
+          >
+            <img
+              src="assets/img/perfil.jpeg"
+              class="img-fluid"
+              data-aos="fade-in"
+              data-aos-delay="200"
+            />
+          </div>
+          <div
+            class="buttons-container-img d-flex justify-content-center justify-content-lg-end align-items-center align-items-lg-end flex-row"
+          >
+            <button class="download-btn pixel-corners">
+              <div class="button-content">
+                <div class="svg-container">
+                  <svg
+                    class="download-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="white"
+                  >
+                    <path
+                      d="M19.479 10.092c-.212-3.951-3.473-7.092-7.479-7.092-4.005 0-7.267 3.141-7.479 7.092-2.57.463-4.521 2.706-4.521 5.408 0 3.037 2.463 5.5 5.5 5.5h13c3.037 0 5.5-2.463 5.5-5.5 0-2.702-1.951-4.945-4.521-5.408zm-7.479 6.908l-4-4h3v-4h2v4h3l-4 4z"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="text-container">
+                  <div class="text">Descargar CV</div>
+                </div>
+              </div>
+            </button>
           </div>
         </div>
       </div>
     </section>
 
     <!--About Section-->
-    <section class="about" data-aos="fade-up" data-aos-delay="100" id="sobremi">
+    <section
+      class="about container-xl"
+      data-aos="fade-up"
+      data-aos-delay="100"
+      id="sobremi"
+    >
       <h1 class="title-section">Sobre mí</h1>
       <p class="text-center">Conóceme un poco más.</p>
       <div class="row text-center">
         <div
           class="about1 col-12 col-sm-6 d-flex justify-content-center align-items-center"
         >
-          <img src="./img/about.png" data-aos="zoom-out" data-aos-delay="100" />
+          <img src="assets/img/about.png" />
         </div>
         <div class="about2 col-12 col-sm-6 p-3">
           <h2 class="title-about">Mi historia</h2>
@@ -192,9 +295,180 @@
       </div>
     </section>
 
+    <!--Poyectos section-->
+    <section
+      class="proyectos container-xl"
+      data-aos="fade-up"
+      data-aos-delay="100"
+      id="proy"
+    >
+      <h1 class="title-section">Mis proyectos</h1>
+      <p class="text-center">Estos son algunos proyectos que he realizado.</p>
+      <div class="cards-row row justify-content-center">
+        <div
+          class="col-12 col-sm-6 col-md-4 mb-4 d-flex justify-content-center"
+        >
+          <div class="card" style="width: 25rem">
+            <img
+              src="assets/img/proyects/proyecto1.png"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Patitas SOS PIURA</h5>
+              <p class="card-text">
+                Diseñada para promover la adopción responsable de mascotas,
+                facilitar donaciones y ofrecer información sobre el cuidado
+                animal en Piura.
+              </p>
+              <a
+                href="https://github.com/jhoncordova24/patitas-sos-piura"
+                class="text-body"
+                ><i class="repo-link ms-0 lni lni-github"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-12 col-sm-6 col-md-4 mb-4 d-flex justify-content-center"
+        >
+          <div class="card" style="width: 25rem">
+            <img
+              src="assets/img/proyects/proyecto2.png"
+              class="card-img-top img-fluid"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Polaroid Kagia</h5>
+              <p class="card-text">
+                Plataforma para personalizar y preservar tus recuerdos favoritos
+                a través de productos como fotos estilo polaroid, cuadros y
+                llaveros.
+              </p>
+              <a
+                href="https://github.com/jhoncordova24/polaroidkagia-landing-page"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Ver el repositorio de Polaroid Kagia"
+                class="text-body"
+              >
+                <i class="repo-link ms-0 lni lni-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-12 col-sm-6 col-md-4 mb-4 d-flex justify-content-center"
+        >
+          <div class="card" style="width: 25rem">
+            <img
+              src="assets/img/proyects/proyecto3.png"
+              class="card-img-top img-fluid"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Gestor de Libros y Revistas</h5>
+              <p class="card-text">
+                Sistema intuitivo para organizar y gestionar colecciones de
+                libros y revistas, ideal para bibliotecas o usuarios
+                individuales.
+              </p>
+              <a
+                href="https://github.com/jhoncordova24/gestion-libros-revistas-factory-method"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-body"
+              >
+                <i class="repo-link ms-0 lni lni-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-12 col-sm-6 col-md-4 mb-4 d-flex justify-content-center"
+        >
+          <div class="card" style="width: 25rem">
+            <img
+              src="assets/img/proyects/proyecto4.png"
+              class="card-img-top img-fluid"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Colegio Isaac Newton</h5>
+              <p class="card-text">
+                Plataforma desarrollada para informar a los usuarios sobre la
+                institución, con un modo administrador para una gestión
+                eficiente.
+              </p>
+              <a
+                href="https://github.com/jhoncordova24/school-management-system-with-admin-panel"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-body"
+              >
+                <i class="repo-link ms-0 lni lni-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-12 col-sm-6 col-md-4 mb-4 d-flex justify-content-center"
+        >
+          <div class="card" style="width: 25rem">
+            <img
+              src="assets/img/proyects/proyecto5.png"
+              class="card-img-top img-fluid"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">GoFast!</h5>
+              <p class="card-text">
+                Proyecto de maquetación diseñado para mostrar habilidades en
+                diseño de interfaces modernas y funcionales.
+              </p>
+              <a
+                href="https://github.com/jhoncordova24/bootstrap-mockup-project"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-body"
+              >
+                <i class="repo-link ms-0 lni lni-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-12 col-sm-6 col-md-4 mb-4 d-flex justify-content-center"
+        >
+          <div class="card" style="width: 25rem">
+            <img
+              src="assets/img/proyects/proyecto6.png"
+              class="card-img-top img-fluid"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Portal de Ingeniería de Sistemas</h5>
+              <p class="card-text">
+                Portal creado para centralizar y compartir información relevante
+                de la facultad, conectando estudiantes y docentes.
+              </p>
+              <a
+                href="https://github.com/jhoncordova24/faculty-of-systems-portal"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-body"
+              >
+                <i class="repo-link ms-0 lni lni-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!--Experiencia section-->
     <section
-      class="exp-section"
+      class="exp-section container-xl"
       data-aos="fade-up"
       data-aos-delay="100"
       id="exp"
@@ -203,7 +477,11 @@
       <p class="text-exp text-center">Lo que he aprendido hasta ahora.</p>
       <div class="row">
         <!-- Desarrollo Frontend -->
-        <div class="dev col-12 text-center mb-4" data-aos="fade-left">
+        <div
+          class="dev col-12 text-center mb-4"
+          data-aos="fade"
+          data-aos-delay="100"
+        >
           <h2 class="title-front">Desarrollo Frontend</h2>
           <div
             class="tec-container d-flex flex-wrap justify-content-center align-items-center"
@@ -240,7 +518,11 @@
         </div>
 
         <!-- Desarrollo Backend -->
-        <div class="dev col-12 text-center mb-4" data-aos="fade-right">
+        <div
+          class="dev col-12 text-center mb-4"
+          data-aos="fade"
+          data-aos-delay="100"
+        >
           <h2 class="title-front">Desarrollo Backend</h2>
           <div
             class="tec-container d-flex flex-wrap justify-content-center align-items-center"
@@ -266,198 +548,26 @@
       </div>
     </section>
 
-    <!--Poyectos section-->
-    <section
-      class="proyectos"
-      data-aos="fade-up"
-      data-aos-delay="100"
-      id="proy"
-    >
-      <h1 class="title-section">Mis proyectos</h1>
-      <p class="text-center">Estos son algunos proyectos que he realizado.</p>
-      <div class="cards-row row justify-content-center">
-        <div
-          class="col-12 col-sm-6 col-md-4 mb-4 d-flex justify-content-center"
-        >
-          <div class="card" style="width: 28rem">
-            <img
-              src="./img/proyects/proyecto1.png"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title">Patitas SOS PIURA</h5>
-              <p class="card-text">
-                Diseñada para promover la adopción responsable de mascotas,
-                facilitar donaciones y ofrecer información sobre el cuidado
-                animal en Piura.
-              </p>
-              <a href="https://github.com/jhoncordova24/patitas-sos-piura"
-                ><i class="repo-link ms-0 lni lni-github"></i
-              ></a>
-            </div>
-          </div>
-        </div>
-        <div
-          class="col-12 col-sm-6 col-md-4 mb-4 d-flex justify-content-center"
-        >
-          <div class="card" style="width: 27rem">
-            <img
-              src="./img/proyects/proyecto2.png"
-              class="card-img-top img-fluid"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title">Polaroid Kagia</h5>
-              <p class="card-text">
-                Plataforma para personalizar y preservar tus recuerdos favoritos
-                a través de productos como fotos estilo polaroid, cuadros y
-                llaveros.
-              </p>
-              <a
-                href="https://github.com/jhoncordova24/polaroidkagia-landing-page"
-                target="_blank"
-                rel="noopener noreferrer"
-                title="Ver el repositorio de Polaroid Kagia"
-              >
-                <i class="repo-link ms-0 lni lni-github"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div
-          class="col-12 col-sm-6 col-md-4 mb-4 d-flex justify-content-center"
-        >
-          <div class="card" style="width: 27rem">
-            <img
-              src="./img/proyects/proyecto3.png"
-              class="card-img-top img-fluid"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title">Gestor de Libros y Revistas</h5>
-              <p class="card-text">
-                Sistema intuitivo para organizar y gestionar colecciones de
-                libros y revistas, ideal para bibliotecas o usuarios
-                individuales.
-              </p>
-              <a
-                href="https://github.com/jhoncordova24/gestion-libros-revistas-factory-method"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="repo-link ms-0 lni lni-github"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div
-          class="col-12 col-sm-6 col-md-4 mb-4 d-flex justify-content-center"
-        >
-          <div class="card" style="width: 27rem">
-            <img
-              src="./img/proyects/proyecto4.png"
-              class="card-img-top img-fluid"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title">Colegio Isaac Newton</h5>
-              <p class="card-text">
-                Plataforma desarrollada para informar a los usuarios sobre la
-                institución, con un modo administrador para una gestión
-                eficiente.
-              </p>
-              <a
-                href="https://github.com/jhoncordova24/school-management-system-with-admin-panel"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="repo-link ms-0 lni lni-github"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div
-          class="col-12 col-sm-6 col-md-4 mb-4 d-flex justify-content-center"
-        >
-          <div class="card" style="width: 27rem">
-            <img
-              src="./img/proyects/proyecto5.png"
-              class="card-img-top img-fluid"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title">GoFast!</h5>
-              <p class="card-text">
-                Proyecto de maquetación diseñado para mostrar habilidades en
-                diseño de interfaces modernas y funcionales.
-              </p>
-              <a
-                href="https://github.com/jhoncordova24/bootstrap-mockup-project"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="repo-link ms-0 lni lni-github"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div
-          class="col-12 col-sm-6 col-md-4 mb-4 d-flex justify-content-center"
-        >
-          <div class="card" style="width: 27rem">
-            <img
-              src="./img/proyects/proyecto6.png"
-              class="card-img-top img-fluid"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title">Portal de Ingeniería de Sistemas</h5>
-              <p class="card-text">
-                Portal creado para centralizar y compartir información relevante
-                de la facultad, conectando estudiantes y docentes.
-              </p>
-              <a
-                href="https://github.com/jhoncordova24/faculty-of-systems-portal"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="repo-link ms-0 lni lni-github"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!--Footer-->
     <section
-      class="footer"
+      class="footer container-xl"
       data-aos="fade-up"
       data-aos-delay="100"
       id="contact"
     >
       <h1 class="title-section">Creemos algo juntos</h1>
       <p class="text-center">Enviame un mensaje.</p>
-      <!--ñe
-      
-      -->
-      <form
-        onsubmit="enviarWhatsapp(event)"
-        class="d-flex flex-column justify-content-center"
-        data-aos="fade"
-        data-aos-delay="200"
-      >
-        <input type="text" id="name" placeholder="Ingresa tu nombre" required />
-        <input
-          type="email"
-          id="email"
-          placeholder="Ingresa tu correo electrónico"
-          required
-        />
-        <textarea id="mensaje" placeholder="Ingresa tu mensaje"></textarea>
-        <button type="submit">Enviar</button>
-      </form>
+      <div class="container-contact d-flex justify-content-center align-items-center">
+        <a
+          href="mailto:jacordova838@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Email"
+          class="text-body"
+        >
+          <i class="bi bi-envelope-check-fill"></i>
+        </a>
+      </div>
 
       <div class="row">
         <div class="col-12">
@@ -467,6 +577,7 @@
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Email"
+              class="text-body"
             >
               <i class="bi bi-envelope"></i>
             </a>
@@ -475,6 +586,7 @@
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
+              class="text-body"
             >
               <i class="bi bi-github"></i>
             </a>
@@ -483,6 +595,7 @@
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
+              class="text-body"
             >
               <i class="bi bi-linkedin"></i>
             </a>
@@ -491,6 +604,7 @@
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
+              class="text-body"
             >
               <i class="bi bi-instagram"></i>
             </a>
@@ -505,23 +619,26 @@
       </div>
     </section>
 
-    <!--Script de bootstrap-->
+    <!-- Bootstrap -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <!--Script para Fontawesome-->
+
+    <!-- Fontawesome -->
     <script
       src="https://kit.fontawesome.com/24a7aa86be.js"
       crossorigin="anonymous"
     ></script>
-    <!--Script para AOS-->
+
+    <!-- AOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
     </script>
-    <!--JS-->
-    <script src="./script.js"></script>
+    <!-- JS -->
+    <script src="/assets/js/index.js"></script>
+    <script src="/assets/js/dark-mode.js"></script>
   </body>
 </html>

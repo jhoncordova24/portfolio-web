@@ -78,6 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+/*
 // Cambia el estilo del navbar al hacer scroll
 document.addEventListener("DOMContentLoaded", function () {
   const navbar = document.querySelector(".navbar");
@@ -90,4 +91,4 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
-
+*/
