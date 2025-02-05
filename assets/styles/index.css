@@ -2,6 +2,7 @@
 * {
   font-family: "DM Sans", Arial, serif;
   scroll-behavior: smooth;
+  padding: 0;
   border: 0;
 }
 
@@ -26,12 +27,20 @@ section {
 .navbar-nav .nav-link:hover {
   color: #0fc4ab;
 }
+.barra {
+  max-width: 1200px;
+}
 
 /*
 .navbar.scrolled {
   background-color: #f2f3f4;
 }
 */
+.añaña {
+  border: none;
+  font-size: 1.5rem;
+  background: none;
+}
 
 .navbar-toggler:focus {
   outline: none;
@@ -50,7 +59,8 @@ section {
 
 /*Seccion hero*/
 .fila-section {
-  padding: 100px 20px 60px 20px;
+  max-width: 1200px;
+  padding: 100px 40px 60px 10px;
   margin: 70px auto 30px auto;
 }
 
@@ -149,8 +159,8 @@ section {
 .col-perfil img {
   width: auto;
   height: auto;
-  max-width: 300px;
-  max-height: 300px;
+  max-width: 320px;
+  max-height: 320px;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.2) 5px 5px, rgba(0, 0, 0, 0.15) 10px 10px,
     rgba(0, 0, 0, 0.1) 15px 15px, rgba(0, 0, 0, 0.05) 20px 20px,
@@ -300,6 +310,7 @@ section {
 
 /*Section About*/
 .about {
+  max-width: 1200px;
   padding: 40px;
 }
 
@@ -330,27 +341,17 @@ section {
 
 /*Proyectos Section*/
 .proyectos {
-  padding: 20px;
+  max-width: 1150px;
+  padding: 40px;
 }
 
-.proyectos .card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  margin-bottom: 30px;
-}
-
-.proyectos .card:hover {
-  transform: scale(1.01);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 12px rgba(0, 0, 0, 0.1);
-}
-
-.proyectos .card img {
-  height: 220px;
+.card img {
+  height: 180px;
   object-fit: cover;
 }
 
 .repo-link {
-  margin: 0 20px;
-  font-size: 25px;
+  font-size: 1.7rem;
   text-decoration: none;
   transition: all 0.3s ease;
 }
@@ -377,7 +378,7 @@ section {
 
 /*Exp Section*/
 .exp-section {
-  max-width: 1000px;
+  max-width: 1150px;
   margin: auto;
   padding: 80px;
 }
@@ -425,7 +426,7 @@ section {
 
 .tec-container i {
   margin: 0px 30px;
-  font-size: 4rem;
+  font-size: 3rem;
   transition: all 0.3s ease;
 }
 
@@ -436,14 +437,14 @@ section {
 
 /*Footer*/
 .footer {
-  padding: 40px;
+  padding: 30px;
+  max-width: 1200px;
 }
 
 .container-contact {
   margin-bottom: 150px;
 }
 
-/* From Uiverse.io by opMorn */
 .container-contact button {
   position: relative;
   padding: 12px 35px;
@@ -613,7 +614,7 @@ button:hover .star-6 {
 /*Responsividad*/
 @media screen and (max-width: 728px) {
   .navbar-brand {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
   }
   /*Hero Section*/
   .fila-section {
@@ -684,45 +685,55 @@ button:hover .star-6 {
     font-size: 0.7rem;
   }
 
-  /*Expericnecia Section*/
+  /*Experiencia Section*/
   .text-exp {
     margin-bottom: 50px;
   }
 
   .exp-section {
-    padding: 40px;
+    padding: 50px;
   }
 
   .dev-f {
     margin-top: -25px;
   }
-}
-.dev i {
-  font-size: 40px;
-}
 
-.dev .tec {
-  font-size: 1rem;
-}
+  .dev i {
+    font-size: 40px;
+  }
 
-/*Proyectos Section*/
-.proyectos {
-  padding: 30px;
-}
+  .dev .tec {
+    font-size: 1rem;
+  }
 
-.proyectos .card {
-  margin-top: -25px;
-}
+  /*Proyectos Section*/
+  .proyectos {
+    padding: 30px;
+  }
 
-.proyectos .card img {
-  height: auto;
-}
+  .proyectos .card {
+    margin-top: -20px;
+    height: 100%;
+  }
 
-/*Footer Section*/
-.footer {
-  padding: 40px;
-}
+  .proyectos .card img {
+    height: auto;
+  }
 
-.footer .copy {
-  font-size: 0.7rem;
+  .proyectos .card-title {
+    font-size: 1.2rem;
+  }
+
+  .proyectos .card-body li {
+    margin-bottom: 15px;
+  }
+
+  /*Footer Section*/
+  .footer {
+    padding: 30px;
+  }
+
+  .footer .copy {
+    font-size: 0.7rem;
+  }
 }

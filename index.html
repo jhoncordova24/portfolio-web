@@ -5,9 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jhon Cordova</title>
     <!-- Fuente -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poiret+One&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poiret+One&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
     <noscript>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poiret+One&display=swap">
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poiret+One&display=swap"
+      />
     </noscript>
     <!-- Link Bootstrap-->
     <link
@@ -50,19 +58,19 @@
       </symbol>
     </svg>
 
-    <!-- Barra de naveación-->
+    <!-- Barra de navegación-->
     <nav class="navbar fixed-top">
       <div
-        class="barra container-xl p-1 d-flex justify-content-between flex-row"
+        class="barra container-fluid d-flex justify-content-between flex-row"
       >
-        <a class="navbar-brand ms-3 ms-lg-4" href="#yo">Jhon Cordova.</a>
+        <a class="navbar-brand ms-2 ms-lg-2" href="#yo">Jhon.</a>
         <div class="navbar-nav d-none d-lg-flex flex-row ms-auto">
           <a class="nav-link me-5" href="#sobremi">Sobre mí</a>
           <a class="nav-link me-5" href="#proy">Proyectos</a>
           <a class="nav-link me-5" href="#exp">Habilidades</a>
           <a class="nav-link" href="#contact">Contacto</a>
         </div>
-        <ul class="mb-1 mb-lg-0 list-unstyled ms-auto">
+        <ul class="mb-1 mb-lg-0 list-unstyled ms-auto me-2 me-lg-0">
           <li class="nav-item dropdown w-25">
             <button
               class="btn btn-link nav-link py-1 px-0 px-lg-2 dropdown-toggle d-flex align-items-center"
@@ -142,14 +150,14 @@
         </ul>
 
         <button
-          class="navbar-toggler d-sm d-lg-none border-0"
+          class="añaña d-sm d-lg-none"
           type="button"
           data-bs-toggle="offcanvas"
           data-bs-target="#offcanvasNavbar"
           aria-controls="offcanvasNavbar"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <i class="bi bi-list"></i>
         </button>
         <div
           class="offcanvas offcanvas-end"
@@ -188,12 +196,12 @@
       </div>
     </nav>
 
-    <!--Hero Seccion-->
+    <!--Hero section-->
     <section class="hero-section" data-aos="fade-up" id="yo">
-      <div class="fila-section row h-100 container-xl">
+      <div class="fila-section row h-100 container-fluid">
         <div class="col-12 col-lg-6 d-flex flex-column">
           <h2 class="saludo">Hola, soy</h2>
-          <span class="title-yo">Jhon Cordova.</span>
+          <span class="title-yo" data-aos="fade-right">Jhon Cordova.</span>
           <h3 class="est">Ingeniero de sistemas e informática en formación.</h3>
           <p class="descripcion-yo">
             Estudiante de Ingeniería de Sistemas en el décimo superior, con una
@@ -256,7 +264,7 @@
 
     <!--About Section-->
     <section
-      class="about container-xl"
+      class="about container-fluid"
       data-aos="fade-up"
       data-aos-delay="100"
       id="sobremi"
@@ -294,9 +302,9 @@
       </div>
     </section>
 
-    <!--Poyectos section-->
+    <!--Proyectos section-->
     <section
-      class="proyectos container-xl"
+      class="proyectos container-fluid"
       data-aos="fade-up"
       data-aos-delay="100"
       id="proy"
@@ -307,31 +315,36 @@
         <div
           class="col-12 col-sm-6 col-md-4 mb-4 d-flex justify-content-center"
         >
-          <div class="card" style="width: 25rem">
+          <div class="card" style="width: auto">
             <img
               src="assets/img/proyects/proyecto1.png"
               class="card-img-top"
               alt="..."
             />
-            <div class="card-body">
+            <div class="card-body d-flex flex-column">
               <h5 class="card-title">Patitas SOS PIURA</h5>
               <p class="card-text">
                 Diseñada para promover la adopción responsable de mascotas,
                 facilitar donaciones y ofrecer información sobre el cuidado
                 animal en Piura.
               </p>
-              <a
-                href="https://github.com/jhoncordova24/patitas-sos-piura"
-                class="text-body"
-                ><i class="repo-link ms-0 lni lni-github"></i
-              ></a>
+              <!-- Enlace -->
+              <li class="list-unstyled mt-auto">
+                <a
+                  href="https://github.com/jhoncordova24/patitas-sos-piura"
+                  class="text-body"
+                >
+                  <i class="repo-link lni lni-github"></i>
+                </a>
+              </li>
             </div>
           </div>
         </div>
+
         <div
           class="col-12 col-sm-6 col-md-4 mb-4 d-flex justify-content-center"
         >
-          <div class="card" style="width: 25rem">
+          <div class="card" style="width: auto">
             <img
               src="assets/img/proyects/proyecto2.png"
               class="card-img-top img-fluid"
@@ -339,27 +352,31 @@
             />
             <div class="card-body">
               <h5 class="card-title">Polaroid Kagia</h5>
-              <p class="card-text">
+              <p class="card-text d-flex flex-column">
                 Plataforma para personalizar y preservar tus recuerdos favoritos
                 a través de productos como fotos estilo polaroid, cuadros y
                 llaveros.
               </p>
-              <a
-                href="https://github.com/jhoncordova24/polaroidkagia-landing-page"
-                target="_blank"
-                rel="noopener noreferrer"
-                title="Ver el repositorio de Polaroid Kagia"
-                class="text-body"
-              >
-                <i class="repo-link ms-0 lni lni-github"></i>
-              </a>
+              <!-- Enlace -->
+              <li class="list-unstyled mt-auto">
+                <a
+                  href="https://github.com/jhoncordova24/polaroidkagia-landing-page"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Ver el repositorio de Polaroid Kagia"
+                  class="text-body mt-auto"
+                >
+                  <i class="repo-link ms-0 lni lni-github"></i>
+                </a>
+              </li>
             </div>
           </div>
         </div>
+
         <div
           class="col-12 col-sm-6 col-md-4 mb-4 d-flex justify-content-center"
         >
-          <div class="card" style="width: 25rem">
+          <div class="card" style="width: auto">
             <img
               src="assets/img/proyects/proyecto3.png"
               class="card-img-top img-fluid"
@@ -367,98 +384,113 @@
             />
             <div class="card-body">
               <h5 class="card-title">Gestor de Libros y Revistas</h5>
-              <p class="card-text">
-                Sistema intuitivo para organizar y gestionar colecciones de
-                libros y revistas, ideal para bibliotecas o usuarios
-                individuales.
+              <p class="card-text d-flex flex-column">
+                Sistema para organizar y gestionar colecciones de libros y
+                revistas, ideal para bibliotecas o usuarios individuales.
               </p>
-              <a
-                href="https://github.com/jhoncordova24/gestion-libros-revistas-factory-method"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="text-body"
-              >
-                <i class="repo-link ms-0 lni lni-github"></i>
-              </a>
+              <!-- Enlace -->
+              <li class="list-unstyled mt-auto">
+                <a
+                  href="https://github.com/jhoncordova24/gestion-libros-revistas-factory-method"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Ver el repositorio de Polaroid Kagia"
+                  class="text-body mt-auto"
+                >
+                  <i class="repo-link ms-0 lni lni-github"></i>
+                </a>
+              </li>
             </div>
           </div>
         </div>
+
         <div
           class="col-12 col-sm-6 col-md-4 mb-4 d-flex justify-content-center"
         >
-          <div class="card" style="width: 25rem">
+          <div class="card" style="width: auto">
             <img
               src="assets/img/proyects/proyecto4.png"
               class="card-img-top img-fluid"
               alt="..."
             />
-            <div class="card-body">
+            <div class="card-body d-flex flex-column">
               <h5 class="card-title">Colegio Isaac Newton</h5>
               <p class="card-text">
                 Plataforma desarrollada para informar a los usuarios sobre la
                 institución, con un modo administrador para una gestión
                 eficiente.
               </p>
-              <a
-                href="https://github.com/jhoncordova24/school-management-system-with-admin-panel"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="text-body"
-              >
-                <i class="repo-link ms-0 lni lni-github"></i>
-              </a>
+              <!-- Enlace -->
+              <li class="list-unstyled mt-auto">
+                <a
+                  href="https://github.com/jhoncordova24/school-management-system-with-admin-panel"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-body mt-auto"
+                >
+                  <i class="repo-link ms-0 lni lni-github"></i>
+                </a>
+              </li>
             </div>
           </div>
         </div>
+
         <div
           class="col-12 col-sm-6 col-md-4 mb-4 d-flex justify-content-center"
         >
-          <div class="card" style="width: 25rem">
+          <div class="card" style="width: auto">
             <img
               src="assets/img/proyects/proyecto5.png"
               class="card-img-top img-fluid"
               alt="..."
             />
-            <div class="card-body">
+            <div class="card-body d-flex flex-column">
               <h5 class="card-title">GoFast!</h5>
               <p class="card-text">
                 Proyecto de maquetación diseñado para mostrar habilidades en
                 diseño de interfaces modernas y funcionales.
               </p>
-              <a
-                href="https://github.com/jhoncordova24/bootstrap-mockup-project"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="text-body"
-              >
-                <i class="repo-link ms-0 lni lni-github"></i>
-              </a>
+              <!-- Enlace -->
+              <li class="list-unstyled mt-auto">
+                <a
+                  href="https://github.com/jhoncordova24/bootstrap-mockup-project"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-body mt-auto"
+                >
+                  <i class="repo-link ms-0 lni lni-github"></i>
+                </a>
+              </li>
             </div>
           </div>
         </div>
+
         <div
           class="col-12 col-sm-6 col-md-4 mb-4 d-flex justify-content-center"
         >
-          <div class="card" style="width: 25rem">
+          <div class="card h-100" style="width: auto">
             <img
               src="assets/img/proyects/proyecto6.png"
               class="card-img-top img-fluid"
               alt="..."
             />
-            <div class="card-body">
+            <div class="card-body d-flex flex-column">
               <h5 class="card-title">Portal de Ingeniería de Sistemas</h5>
               <p class="card-text">
                 Portal creado para centralizar y compartir información relevante
                 de la facultad, conectando estudiantes y docentes.
               </p>
-              <a
-                href="https://github.com/jhoncordova24/faculty-of-systems-portal"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="text-body"
-              >
-                <i class="repo-link ms-0 lni lni-github"></i>
-              </a>
+              <!-- Enlace -->
+              <li class="list-unstyled mt-auto">
+                <a
+                  href="https://github.com/jhoncordova24/faculty-of-systems-portal"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-body mt-auto"
+                >
+                  <i class="repo-link ms-0 lni lni-github"></i>
+                </a>
+              </li>
             </div>
           </div>
         </div>
@@ -495,7 +527,7 @@
             </div>
             <div class="tec-item mx-2">
               <i class="lni lni-javascript"></i>
-              <p class="tec">Javascript</p>
+              <p class="tec">JavaScript</p>
             </div>
             <div class="tec-item mx-2">
               <i class="lni lni-bootstrap-5"></i>
@@ -542,6 +574,10 @@
               <i class="lni lni-mysql"></i>
               <p class="tec">MySql</p>
             </div>
+            <div class="tec-item mx-2">
+              <i class="lni lni-mongodb"></i>
+              <p class="tec">MongoDB</p>
+            </div>
           </div>
         </div>
       </div>
@@ -549,7 +585,7 @@
 
     <!--Footer-->
     <section
-      class="footer container-xl"
+      class="footer container-fluid"
       data-aos="fade-up"
       data-aos-delay="100"
       id="contact"
@@ -771,20 +807,16 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-
     <!-- Fontawesome -->
     <script
       src="https://kit.fontawesome.com/24a7aa86be.js"
       crossorigin="anonymous"
     ></script>
-
-    <!-- AOS -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
     <!-- JS -->
     <script src="/assets/js/index.js"></script>
     <script src="/assets/js/dark-mode.js"></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./assets/js/aos.js"></script>
   </body>
 </html>
