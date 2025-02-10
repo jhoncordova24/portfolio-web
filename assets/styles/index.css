@@ -10,6 +10,10 @@
   --bs-body-bg: #09090b;
 }
 
+[data-bs-theme="light"] {
+  --bs-body-bg: #fdfefe;
+}
+
 section {
   scroll-margin-top: 150px;
 }
@@ -20,13 +24,20 @@ section {
 }
 
 .navbar-brand {
-  font-size: 1.7rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.navbar .point {
+  font-size: 1.6rem;
+  color: #0fc4ab;
   font-weight: bold;
 }
 
 .navbar-nav .nav-link:hover {
   color: #0fc4ab;
 }
+
 .barra {
   max-width: 1200px;
 }
@@ -36,6 +47,7 @@ section {
   background-color: #f2f3f4;
 }
 */
+
 .añaña {
   border: none;
   font-size: 1.5rem;
@@ -74,7 +86,7 @@ section {
   width: 430px;
   font-weight: bold;
   font-size: 4rem;
-  background-color: rgba(15, 196, 171, 0.3);
+  background: linear-gradient(to right, rgba(15, 196, 171, 0.05), rgba(15, 196, 171, 0.3));
   padding: 5px 5px;
   border-right: 3px solid #0fc4ab;
   margin-bottom: 15px;
@@ -150,7 +162,7 @@ section {
 
 .tag-list i {
   margin: 0 12px;
-  font-size: 2.8rem;
+  font-size: 2.4rem;
   border-radius: 0.5rem;
   box-shadow: 0 0.5rem 1rem -0.25rem var(--clr-primary-900);
   color: #0fc4ab;
@@ -159,13 +171,11 @@ section {
 .col-perfil img {
   width: auto;
   height: auto;
-  max-width: 320px;
-  max-height: 320px;
-  border-radius: 10px;
-  box-shadow: rgba(0, 0, 0, 0.2) 5px 5px, rgba(0, 0, 0, 0.15) 10px 10px,
-    rgba(0, 0, 0, 0.1) 15px 15px, rgba(0, 0, 0, 0.05) 20px 20px,
-    rgba(0, 0, 0, 0.03) 25px 25px;
+  max-width: 310px;
+  max-height: 310px;
   animation: float 4s ease-in-out infinite;
+  background-color: rgba(15, 196, 171, 0.3);
+  border-radius: 50%;
 }
 
 @keyframes float {
@@ -180,132 +190,31 @@ section {
   }
 }
 
-.download-btn {
-  height: 40px;
-  width: 120px;
-  cursor: pointer;
+.button {
+  padding: 12px 19px;
   border: none;
-  border-radius: 10px;
-  overflow: hidden;
-  margin: 30px 85px 30px 0;
-  background-color: #0fc4ab;
-  color: white;
-}
-
-.button-content {
-  transform: translateY(-45px);
-  transition: all 250ms ease-in-out;
-}
-
-.svg-container,
-.text-container {
-  height: 42px;
-  width: 100%;
+  color: #0fc4ab;
+  cursor: pointer;
+  background-color: rgba(15, 196, 171, 0.3);
+  border-radius: 7px;
+  font-weight: bold;
+  transition: 0.5s;
   display: flex;
-  justify-content: center;
+  gap: 4px;
   align-items: center;
+  font-size: 13px;
+  box-shadow: rgba(150, 143, 143, 0.2) 0px 2px 8px 0px;
+  margin: 20px 80px 30px 0;
 }
 
-.text-container .text {
-  font-size: 0.8rem;
-  font-weight: 600;
-  opacity: 1;
-  transition: opacity ease-in-out 250ms;
+.button:hover {
+  background-color: rgba(85, 225, 200, 0.3);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
 
-.download-icon {
-  height: 25px;
-  width: 25px;
-  opacity: 0;
-  transition: opacity ease-in-out 250ms;
-  color: white;
-}
-
-/* hover state for the button */
-.download-btn:hover .button-content {
-  transform: translateY(0px);
-}
-
-.download-btn:hover .text {
-  opacity: 0;
-}
-
-.download-btn:hover .download-icon {
-  opacity: 1;
-}
-
-.download-btn:focus .download-icon {
-  -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
-  animation: heartbeat 1.5s ease-in-out infinite both;
-}
-
-@-webkit-keyframes heartbeat {
-  from {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    -webkit-transform-origin: center center;
-    transform-origin: center center;
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-  }
-  10% {
-    -webkit-transform: scale(0.91);
-    transform: scale(0.91);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-  }
-  17% {
-    -webkit-transform: scale(0.98);
-    transform: scale(0.98);
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-  }
-  33% {
-    -webkit-transform: scale(0.87);
-    transform: scale(0.87);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-  }
-  45% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-  }
-}
-@keyframes heartbeat {
-  from {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    -webkit-transform-origin: center center;
-    transform-origin: center center;
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-  }
-  10% {
-    -webkit-transform: scale(0.91);
-    transform: scale(0.91);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-  }
-  17% {
-    -webkit-transform: scale(0.98);
-    transform: scale(0.98);
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-  }
-  33% {
-    -webkit-transform: scale(0.87);
-    transform: scale(0.87);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-  }
-  45% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-  }
+.saveicon {
+  width: 17px;
 }
 
 /*Section About*/
@@ -341,12 +250,16 @@ section {
 
 /*Proyectos Section*/
 .proyectos {
-  max-width: 1150px;
-  padding: 40px;
+  max-width: 1200px;
+  padding: 20px;
+}
+
+.text-proyectos {
+  margin-bottom: -20px;
 }
 
 .card img {
-  height: 180px;
+  height: auto;
   object-fit: cover;
 }
 
@@ -370,6 +283,7 @@ section {
 
 .card-text {
   font-size: 0.8rem;
+  margin-top: 5px;
 }
 
 .cards-row {
@@ -378,14 +292,14 @@ section {
 
 /*Exp Section*/
 .exp-section {
-  max-width: 1150px;
+  max-width: 1000px;
   margin: auto;
   padding: 80px;
 }
 
 .dev {
   padding: 40px;
-  border: 0.1px solid #0fc4ab;
+  border: 2px solid #0fc4ab;
   padding: 20px;
 }
 
@@ -435,8 +349,8 @@ section {
   font-size: 1rem;
 }
 
-/*Footer*/
-.footer {
+/*Contacto*/
+.container-contact {
   padding: 30px;
   max-width: 1200px;
 }
@@ -595,6 +509,11 @@ button:hover .star-6 {
   fill: #0fc4ab;
 }
 
+/*Footer*/
+.buttons-container-footer {
+  padding: 10px;
+}
+
 .buttons-container-footer i {
   margin: 0 20px;
   font-size: 25px;
@@ -608,6 +527,8 @@ button:hover .star-6 {
 }
 
 .copy {
+  border-top: 1px solid #0fc4ab;
+  padding: 10px;
   font-size: 0.8rem;
 }
 
@@ -645,12 +566,12 @@ button:hover .star-6 {
 
   .col-perfil img {
     margin-top: 35px;
-    max-width: 210px;
-    max-height: 210px;
+    max-width: 190px;
+    max-height: 190px;
   }
 
-  .download-btn {
-    margin: 30px 0px 30px 0;
+  .buttons-container-img button {
+    margin: 20px 0 0 0;
   }
 
   .tag-list i {
@@ -691,7 +612,7 @@ button:hover .star-6 {
   }
 
   .exp-section {
-    padding: 50px;
+    padding: 40px;
   }
 
   .dev-f {
@@ -699,11 +620,11 @@ button:hover .star-6 {
   }
 
   .dev i {
-    font-size: 40px;
+    font-size: 1.3rem;
   }
 
   .dev .tec {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 
   /*Proyectos Section*/
@@ -711,9 +632,8 @@ button:hover .star-6 {
     padding: 30px;
   }
 
-  .proyectos .card {
-    margin-top: -20px;
-    height: 100%;
+  .proyectos .text-proyectos {
+    margin-top: -10px;
   }
 
   .proyectos .card img {
@@ -728,9 +648,17 @@ button:hover .star-6 {
     margin-bottom: 15px;
   }
 
+  .proyectos .repo-link{
+    font-size: 1.5rem;
+  }
+  
   /*Footer Section*/
   .footer {
     padding: 30px;
+  }
+
+  .buttons-container-footer i {
+    font-size: 1.2rem;
   }
 
   .footer .copy {

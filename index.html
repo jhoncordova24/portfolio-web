@@ -4,17 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jhon Cordova</title>
-    <!-- Fuente -->
+    <!--Fuente-->
     <link
       rel="preload"
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poiret+One&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
       as="style"
       onload="this.onload=null;this.rel='stylesheet'"
     />
     <noscript>
       <link
         rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poiret+One&display=swap"
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
       />
     </noscript>
     <!-- Link Bootstrap-->
@@ -63,11 +63,13 @@
       <div
         class="barra container-fluid d-flex justify-content-between flex-row"
       >
-        <a class="navbar-brand ms-2 ms-lg-2" href="#yo">Jhon.</a>
+        <a class="navbar-brand ms-2 ms-lg-2" href="#me"
+          >Jhon<span class="point">.</span></a
+        >
         <div class="navbar-nav d-none d-lg-flex flex-row ms-auto">
-          <a class="nav-link me-5" href="#sobremi">Sobre mí</a>
-          <a class="nav-link me-5" href="#proy">Proyectos</a>
-          <a class="nav-link me-5" href="#exp">Habilidades</a>
+          <a class="nav-link me-5" href="#about-me">Sobre mí</a>
+          <a class="nav-link me-5" href="#proyects">Proyectos</a>
+          <a class="nav-link me-5" href="#skills">Habilidades</a>
           <a class="nav-link" href="#contact">Contacto</a>
         </div>
         <ul class="mb-1 mb-lg-0 list-unstyled ms-auto me-2 me-lg-0">
@@ -179,16 +181,16 @@
           <div class="offcanvas-body">
             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
               <li class="nav-item">
-                <a class="nav-link" href="#sobremi">Sobre mí</a>
+                <a class="nav-link" href="#about-me">Sobre mí</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#proy">Proyectos</a>
+                <a class="nav-link" href="#proyects">Proyectos</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#exp">Habilidades</a>
+                <a class="nav-link" href="#skills">Habilidades</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#contact  ">Contacto</a>
+                <a class="nav-link" href="#contact">Contacto</a>
               </li>
             </ul>
           </div>
@@ -197,7 +199,7 @@
     </nav>
 
     <!--Hero section-->
-    <section class="hero-section" data-aos="fade-up" id="yo">
+    <section class="hero-section" data-aos="fade-up" id="me">
       <div class="fila-section row h-100 container-fluid">
         <div class="col-12 col-lg-6 d-flex flex-column">
           <h2 class="saludo">Hola, soy</h2>
@@ -213,12 +215,12 @@
               <i class="lni lni-css3"></i>
               <i class="lni lni-react"></i>
               <i class="lni lni-tailwindcss"></i>
-              <i class="lni lni-angular"></i>
+              <i class="lni lni-mongodb"></i>
               <i class="lni lni-laravel"></i>
               <i class="lni lni-bootstrap-5"></i>
               <i class="lni lni-mysql"></i>
               <i class="lni lni-java"></i>
-              <i class="lni lni-git"></i>
+              <i class="lni lni-php"></i>
             </ul>
           </div>
         </div>
@@ -227,7 +229,7 @@
             class="container-img d-flex justify-content-center justify-content-lg-end align-items-center align-items-lg-end"
           >
             <img
-              src="assets/img/perfil.jpeg"
+              src="assets/img/perfil.webp"
               class="img-fluid"
               data-aos="fade-in"
               data-aos-delay="200"
@@ -236,26 +238,22 @@
           <div
             class="buttons-container-img d-flex justify-content-center justify-content-lg-end align-items-center align-items-lg-end flex-row"
           >
-            <button class="download-btn pixel-corners">
-              <div class="button-content">
-                <div class="svg-container">
-                  <svg
-                    class="download-icon"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="white"
-                  >
-                    <path
-                      d="M19.479 10.092c-.212-3.951-3.473-7.092-7.479-7.092-4.005 0-7.267 3.141-7.479 7.092-2.57.463-4.521 2.706-4.521 5.408 0 3.037 2.463 5.5 5.5 5.5h13c3.037 0 5.5-2.463 5.5-5.5 0-2.702-1.951-4.945-4.521-5.408zm-7.479 6.908l-4-4h3v-4h2v4h3l-4 4z"
-                    ></path>
-                  </svg>
-                </div>
-                <div class="text-container">
-                  <div class="text">Descargar CV</div>
-                </div>
-              </div>
+            <button class="button">
+              <svg
+                class="saveicon"
+                stroke="currentColor"
+                stroke-width="1.7"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5m8.25 3v6.75m0 0l-3-3m3 3l3-3M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z"
+                  stroke-linejoin="round"
+                  stroke-linecap="round"
+                ></path>
+              </svg>
+              Descargar CV
             </button>
           </div>
         </div>
@@ -267,7 +265,7 @@
       class="about container-fluid"
       data-aos="fade-up"
       data-aos-delay="100"
-      id="sobremi"
+      id="about-me"
     >
       <h1 class="title-section">Sobre mí</h1>
       <p class="text-center">Conóceme un poco más.</p>
@@ -302,15 +300,17 @@
       </div>
     </section>
 
-    <!--Proyectos section-->
+    <!--Proyectos Section-->
     <section
       class="proyectos container-fluid"
       data-aos="fade-up"
       data-aos-delay="100"
-      id="proy"
+      id="proyects"
     >
       <h1 class="title-section">Mis proyectos</h1>
-      <p class="text-center">Estos son algunos proyectos que he realizado.</p>
+      <p class="text-proyectos text-center">
+        Estos son algunos proyectos que he realizado.
+      </p>
       <div class="cards-row row justify-content-center">
         <div
           class="col-12 col-sm-6 col-md-4 mb-4 d-flex justify-content-center"
@@ -382,9 +382,9 @@
               class="card-img-top img-fluid"
               alt="..."
             />
-            <div class="card-body">
+            <div class="card-body d-flex flex-column">
               <h5 class="card-title">Gestor de Libros y Revistas</h5>
-              <p class="card-text d-flex flex-column">
+              <p class="card-text">
                 Sistema para organizar y gestionar colecciones de libros y
                 revistas, ideal para bibliotecas o usuarios individuales.
               </p>
@@ -394,7 +394,6 @@
                   href="https://github.com/jhoncordova24/gestion-libros-revistas-factory-method"
                   target="_blank"
                   rel="noopener noreferrer"
-                  title="Ver el repositorio de Polaroid Kagia"
                   class="text-body mt-auto"
                 >
                   <i class="repo-link ms-0 lni lni-github"></i>
@@ -497,12 +496,12 @@
       </div>
     </section>
 
-    <!--Experiencia section-->
+    <!--Experiencia Section-->
     <section
       class="exp-section"
       data-aos="fade-up"
       data-aos-delay="100"
-      id="exp"
+      id="skills"
     >
       <h1 class="title-section text-center">Mis habilidades</h1>
       <p class="text-exp text-center">Lo que he aprendido hasta ahora.</p>
@@ -540,10 +539,6 @@
             <div class="tec-item mx-2">
               <i class="lni lni-tailwindcss"></i>
               <p class="tec">Tailwind CSS</p>
-            </div>
-            <div class="tec-item mx-2">
-              <i class="lni lni-angular"></i>
-              <p class="tec">Angular</p>
             </div>
           </div>
         </div>
@@ -583,19 +578,16 @@
       </div>
     </section>
 
-    <!--Footer-->
+    <!--Contacto Section -->
     <section
-      class="footer container-fluid"
+      class="container-contact container-fluid"
       data-aos="fade-up"
       data-aos-delay="100"
       id="contact"
     >
       <h1 class="title-section">Creemos algo juntos</h1>
       <p class="text-center">Enviame un mensaje.</p>
-      <div
-        class="container-contact d-flex justify-content-center align-items-center"
-      >
-        <!-- From Uiverse.io by opMorn -->
+      <div class="message d-flex justify-content-center align-items-center">
         <button onclick="window.location.href='mailto:jacordova838@gmail.com'">
           Contáctame
           <div class="star-1">
@@ -750,7 +742,10 @@
           </div>
         </button>
       </div>
+    </section>
 
+    <!--Footer-->
+    <footer class="container-fluid">
       <div class="row">
         <div class="col-12">
           <div class="buttons-container-footer d-flex justify-content-center">
@@ -793,13 +788,12 @@
           </div>
         </div>
       </div>
-      <hr />
       <div class="row">
         <div class="copy col text-center">
           <p>Creado por Jhon Cordova (2025) &#169;.</p>
         </div>
       </div>
-    </section>
+    </footer>
 
     <!-- Bootstrap -->
     <script
