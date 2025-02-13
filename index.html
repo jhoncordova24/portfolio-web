@@ -7,14 +7,18 @@
     <!--Fuente-->
     <link
       rel="preload"
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       as="style"
       onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     />
     <noscript>
       <link
         rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       />
     </noscript>
     <!-- Link Bootstrap-->
@@ -203,8 +207,10 @@
       <div class="fila-section row h-100 container-fluid">
         <div class="col-12 col-lg-6 d-flex flex-column">
           <h2 class="saludo">Hola, soy</h2>
-          <span class="title-yo" data-aos="fade-right">Jhon Cordova.</span>
-          <h3 class="est">Ingeniero de sistemas e informática en formación.</h3>
+          <div class="title-me" data-aos="fade-right">Jhon Cordova.</div>
+          <h3 class="carrer">
+            Ingeniero de sistemas e informática en formación.
+          </h3>
           <p class="descripcion-yo">
             Estudiante de Ingeniería de Sistemas en el décimo superior, con una
             sólida base en tecnología y habilidades analíticas.
@@ -285,13 +291,13 @@
             operativa.
           </p>
           <div
-            class="goals row d-flex flex-row justify-content-center align-items-center"
+            class="goals-container d-flex flex-nowrap justify-content-center align-items-center"
           >
-            <div class="col-6">
+            <div class="goal-item mx-4">
               <i class="bi bi-patch-check-fill"></i>
               <p class="text-goals">Universidad Tecnológica del Perú.</p>
             </div>
-            <div class="col-6">
+            <div class="goal-item mx-4">
               <i class="bi bi-patch-check-fill"></i>
               <p class="text-goals">Más de 2 años de experiencia.</p>
             </div>
@@ -312,14 +318,14 @@
         Estos son algunos proyectos que he realizado.
       </p>
       <div class="cards-row row justify-content-center">
+        <!-- Proyecto 1 -->
         <div
           class="col-12 col-sm-6 col-md-4 mb-4 d-flex justify-content-center"
         >
-          <div class="card" style="width: auto">
+          <div class="card h-100" style="width: auto">
             <img
               src="assets/img/proyects/proyecto1.png"
-              class="card-img-top"
-              alt="..."
+              alt="Patitas SOS PIURA"
             />
             <div class="card-body d-flex flex-column">
               <h5 class="card-title">Patitas SOS PIURA</h5>
@@ -332,27 +338,26 @@
               <li class="list-unstyled mt-auto">
                 <a
                   href="https://github.com/jhoncordova24/patitas-sos-piura"
-                  class="text-body"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-body mt-auto"
                 >
-                  <i class="repo-link lni lni-github"></i>
+                  <i class="repo-link ms-0 lni lni-github"></i>
                 </a>
               </li>
             </div>
           </div>
         </div>
 
+        <!-- Proyecto 2 -->
         <div
           class="col-12 col-sm-6 col-md-4 mb-4 d-flex justify-content-center"
         >
-          <div class="card" style="width: auto">
-            <img
-              src="assets/img/proyects/proyecto2.png"
-              class="card-img-top img-fluid"
-              alt="..."
-            />
-            <div class="card-body">
+          <div class="card h-100" style="width: auto">
+            <img src="assets/img/proyects/proyecto2.png" alt="Polaroid Kagia" />
+            <div class="card-body d-flex flex-column">
               <h5 class="card-title">Polaroid Kagia</h5>
-              <p class="card-text d-flex flex-column">
+              <p class="card-text">
                 Plataforma para personalizar y preservar tus recuerdos favoritos
                 a través de productos como fotos estilo polaroid, cuadros y
                 llaveros.
@@ -363,7 +368,6 @@
                   href="https://github.com/jhoncordova24/polaroidkagia-landing-page"
                   target="_blank"
                   rel="noopener noreferrer"
-                  title="Ver el repositorio de Polaroid Kagia"
                   class="text-body mt-auto"
                 >
                   <i class="repo-link ms-0 lni lni-github"></i>
@@ -373,14 +377,14 @@
           </div>
         </div>
 
+        <!-- Proyecto 3 -->
         <div
           class="col-12 col-sm-6 col-md-4 mb-4 d-flex justify-content-center"
         >
-          <div class="card" style="width: auto">
+          <div class="card h-100" style="width: auto">
             <img
               src="assets/img/proyects/proyecto3.png"
-              class="card-img-top img-fluid"
-              alt="..."
+              alt="Gestor de Libros y Revistas"
             />
             <div class="card-body d-flex flex-column">
               <h5 class="card-title">Gestor de Libros y Revistas</h5>
@@ -403,14 +407,14 @@
           </div>
         </div>
 
+        <!-- Proyecto 4 -->
         <div
           class="col-12 col-sm-6 col-md-4 mb-4 d-flex justify-content-center"
         >
-          <div class="card" style="width: auto">
+          <div class="card h-100" style="width: auto">
             <img
               src="assets/img/proyects/proyecto4.png"
-              class="card-img-top img-fluid"
-              alt="..."
+              alt="Colegio Isaac Newton"
             />
             <div class="card-body d-flex flex-column">
               <h5 class="card-title">Colegio Isaac Newton</h5>
@@ -434,15 +438,12 @@
           </div>
         </div>
 
+        <!-- Proyecto 5 -->
         <div
           class="col-12 col-sm-6 col-md-4 mb-4 d-flex justify-content-center"
         >
-          <div class="card" style="width: auto">
-            <img
-              src="assets/img/proyects/proyecto5.png"
-              class="card-img-top img-fluid"
-              alt="..."
-            />
+          <div class="card h-100" style="width: auto">
+            <img src="assets/img/proyects/proyecto5.png" alt="GoFast!" />
             <div class="card-body d-flex flex-column">
               <h5 class="card-title">GoFast!</h5>
               <p class="card-text">
@@ -464,14 +465,14 @@
           </div>
         </div>
 
+        <!-- Proyecto 6 -->
         <div
           class="col-12 col-sm-6 col-md-4 mb-4 d-flex justify-content-center"
         >
           <div class="card h-100" style="width: auto">
             <img
               src="assets/img/proyects/proyecto6.png"
-              class="card-img-top img-fluid"
-              alt="..."
+              alt="Portal de Ingeniería de Sistemas"
             />
             <div class="card-body d-flex flex-column">
               <h5 class="card-title">Portal de Ingeniería de Sistemas</h5>
@@ -587,160 +588,21 @@
     >
       <h1 class="title-section">Creemos algo juntos</h1>
       <p class="text-center">Enviame un mensaje.</p>
-      <div class="message d-flex justify-content-center align-items-center">
-        <button onclick="window.location.href='mailto:jacordova838@gmail.com'">
+      <!-- From Uiverse.io by AmIt-DasIT -->
+      <div class="svg-wrapper">
+        <svg height="60" width="190" xmlns="http://www.w3.org/2000/svg">
+          <rect class="shape" height="60" width="190"></rect>
+        </svg>
+        <a
+          href="mailto:jacordova838@gmail.com"
+          class="text"
+          aria-label="Contáctame"
+          title="Contáctame"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Contáctame
-          <div class="star-1">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              xml:space="preserve"
-              version="1.1"
-              style="
-                shape-rendering: geometricPrecision;
-                text-rendering: geometricPrecision;
-                image-rendering: optimizeQuality;
-                fill-rule: evenodd;
-                clip-rule: evenodd;
-              "
-              viewBox="0 0 784.11 815.53"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-            >
-              <defs></defs>
-              <g id="Layer_x0020_1">
-                <metadata id="CorelCorpID_0Corel-Layer"></metadata>
-                <path
-                  class="fil0"
-                  d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
-                ></path>
-              </g>
-            </svg>
-          </div>
-          <div class="star-2">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              xml:space="preserve"
-              version="1.1"
-              style="
-                shape-rendering: geometricPrecision;
-                text-rendering: geometricPrecision;
-                image-rendering: optimizeQuality;
-                fill-rule: evenodd;
-                clip-rule: evenodd;
-              "
-              viewBox="0 0 784.11 815.53"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-            >
-              <defs></defs>
-              <g id="Layer_x0020_1">
-                <metadata id="CorelCorpID_0Corel-Layer"></metadata>
-                <path
-                  class="fil0"
-                  d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
-                ></path>
-              </g>
-            </svg>
-          </div>
-          <div class="star-3">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              xml:space="preserve"
-              version="1.1"
-              style="
-                shape-rendering: geometricPrecision;
-                text-rendering: geometricPrecision;
-                image-rendering: optimizeQuality;
-                fill-rule: evenodd;
-                clip-rule: evenodd;
-              "
-              viewBox="0 0 784.11 815.53"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-            >
-              <defs></defs>
-              <g id="Layer_x0020_1">
-                <metadata id="CorelCorpID_0Corel-Layer"></metadata>
-                <path
-                  class="fil0"
-                  d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
-                ></path>
-              </g>
-            </svg>
-          </div>
-          <div class="star-4">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              xml:space="preserve"
-              version="1.1"
-              style="
-                shape-rendering: geometricPrecision;
-                text-rendering: geometricPrecision;
-                image-rendering: optimizeQuality;
-                fill-rule: evenodd;
-                clip-rule: evenodd;
-              "
-              viewBox="0 0 784.11 815.53"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-            >
-              <defs></defs>
-              <g id="Layer_x0020_1">
-                <metadata id="CorelCorpID_0Corel-Layer"></metadata>
-                <path
-                  class="fil0"
-                  d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
-                ></path>
-              </g>
-            </svg>
-          </div>
-          <div class="star-5">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              xml:space="preserve"
-              version="1.1"
-              style="
-                shape-rendering: geometricPrecision;
-                text-rendering: geometricPrecision;
-                image-rendering: optimizeQuality;
-                fill-rule: evenodd;
-                clip-rule: evenodd;
-              "
-              viewBox="0 0 784.11 815.53"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-            >
-              <defs></defs>
-              <g id="Layer_x0020_1">
-                <metadata id="CorelCorpID_0Corel-Layer"></metadata>
-                <path
-                  class="fil0"
-                  d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
-                ></path>
-              </g>
-            </svg>
-          </div>
-          <div class="star-6">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              xml:space="preserve"
-              version="1.1"
-              style="
-                shape-rendering: geometricPrecision;
-                text-rendering: geometricPrecision;
-                image-rendering: optimizeQuality;
-                fill-rule: evenodd;
-                clip-rule: evenodd;
-              "
-              viewBox="0 0 784.11 815.53"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-            >
-              <defs></defs>
-              <g id="Layer_x0020_1">
-                <metadata id="CorelCorpID_0Corel-Layer"></metadata>
-                <path
-                  class="fil0"
-                  d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
-                ></path>
-              </g>
-            </svg>
-          </div>
-        </button>
+        </a>
       </div>
     </section>
 

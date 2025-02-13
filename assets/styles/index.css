@@ -1,6 +1,6 @@
 /*Estilos generales*/
 * {
-  font-family: "DM Sans", Arial, serif;
+  font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
   padding: 0;
   border: 0;
@@ -11,16 +11,17 @@
 }
 
 [data-bs-theme="light"] {
-  --bs-body-bg: #fdfefe;
+  --bs-body-bg: #f6fbff;
 }
 
 section {
-  scroll-margin-top: 150px;
+  scroll-margin-top: 140px;
 }
 
 /*Barra de navegacion*/
 .navbar {
   background-color: var(--bs-body-bg);
+  border-bottom: 2px solid rgba(15, 196, 171, 0.2);
 }
 
 .navbar-brand {
@@ -48,6 +49,26 @@ section {
 }
 */
 
+/*Modo oscuro*/
+.dropdown-menu .dropdown-item {
+  font-size: 14px;
+  background: none;
+}
+.theme-icon-active,
+#bd-theme::after {
+  color: var(--icon-color, #09090b) !important;
+}
+
+[data-bs-theme="dark"] {
+  --icon-color: white;
+}
+
+.dropdown-menu .dropdown-item.active,
+.dropdown-menu .dropdown-item:active {
+  background-color: #0fc4ab !important;
+  color: white !important;
+}
+
 .añaña {
   border: none;
   font-size: 1.5rem;
@@ -57,16 +78,6 @@ section {
 .navbar-toggler:focus {
   outline: none;
   box-shadow: none;
-}
-
-.dropdown-menu .dropdown-item {
-  font-size: 14px;
-}
-
-.dropdown-menu .dropdown-item.active,
-.dropdown-menu .dropdown-item:active {
-  background-color: #0fc4ab !important;
-  color: white !important;
 }
 
 /*Seccion hero*/
@@ -79,23 +90,28 @@ section {
 .saludo {
   font-weight: bold;
   font-size: 4rem;
+  letter-spacing: 1px;
 }
 
-.title-yo {
+.title-me {
   color: #0fc4ab;
-  width: 430px;
+  max-width: 500px;
   font-weight: bold;
+  letter-spacing: 1px;
   font-size: 4rem;
-  background: linear-gradient(to right, rgba(15, 196, 171, 0.05), rgba(15, 196, 171, 0.3));
-  padding: 5px 5px;
+  background: linear-gradient(
+    to right,
+    rgba(15, 196, 171, 0),
+    rgba(15, 196, 171, 0.1)
+  );
   border-right: 3px solid #0fc4ab;
   margin-bottom: 15px;
 }
 
-.est {
-  color: gray;
-  font-size: 1.3rem;
+.carrer {
+  font-size: 1rem;
   letter-spacing: 1px;
+  color: #0fc4ab
 }
 
 .descripcion-yo {
@@ -174,7 +190,11 @@ section {
   max-width: 310px;
   max-height: 310px;
   animation: float 4s ease-in-out infinite;
-  background-color: rgba(15, 196, 171, 0.3);
+  background: linear-gradient(
+    to top,
+    rgba(15, 196, 171, 0),
+    rgba(15, 196, 171, 0.4)
+  );
   border-radius: 50%;
 }
 
@@ -242,24 +262,32 @@ section {
   text-align: left;
 }
 
-.about2 .goals i {
+.about2 .goals-container {
+  margin-top: 20px;
+}
+
+.about2 .goal-item i {
   font-size: 2rem;
-  margin: 10px 15px;
   color: #0fc4ab;
+}
+
+.about2 .text-goals {
+  text-align: center;
+  font-size: 0.8rem;
 }
 
 /*Proyectos Section*/
 .proyectos {
   max-width: 1200px;
-  padding: 20px;
+  padding: 30px;
 }
 
 .text-proyectos {
-  margin-bottom: -20px;
+  margin-bottom: -10px;
 }
 
 .card img {
-  height: auto;
+  height: 200px;
   object-fit: cover;
 }
 
@@ -290,7 +318,7 @@ section {
   margin-top: 50px;
 }
 
-/*Exp Section*/
+/*Skills section*/
 .exp-section {
   max-width: 1000px;
   margin: auto;
@@ -298,15 +326,16 @@ section {
 }
 
 .dev {
-  padding: 40px;
   border: 2px solid #0fc4ab;
   padding: 20px;
+  background-color: rgba(15, 196, 171, 0.1);
+  border-radius: 0.75em;
 }
 
 /* modo oscuro */
 [data-bs-theme="dark"] .dev i:hover {
   color: #0fc4ab;
-  text-shadow: 0 0 5px rgba(15, 196, 171, 0.8), 0 0 15px rgba(15, 196, 171, 0.5);
+  text-shadow: 0 0 5px rgba(15, 196, 171, 0.2), 0 0 15px rgba(15, 196, 171, 0.5);
 }
 
 /*  modo claro */
@@ -340,7 +369,7 @@ section {
 
 .tec-container i {
   margin: 0px 30px;
-  font-size: 3rem;
+  font-size: 2.6rem;
   transition: all 0.3s ease;
 }
 
@@ -358,155 +387,43 @@ section {
 .container-contact {
   margin-bottom: 150px;
 }
-
-.container-contact button {
+/* From Uiverse.io by AmIt-DasIT */
+.svg-wrapper {
   position: relative;
-  padding: 12px 35px;
-  background: #0fc4ab;
-  font-size: 17px;
-  font-weight: 1000;
-  color: #ffffff;
-  border: 3px solid #0fc4ab;
-  border-radius: 8px;
-  box-shadow: 0 0 0 #ffffff;
-  transition: all 0.3s ease-in-out;
+  width: 190px;
+  height: 60px;
+  text-align: center;
   cursor: pointer;
+  margin: 20px auto;
 }
 
-.star-1 {
-  position: absolute;
-  top: 20%;
-  left: 20%;
-  width: 25px;
-  height: auto;
-  filter: drop-shadow(0 0 0 #0fc4ab);
-  z-index: -5;
-  transition: all 1s cubic-bezier(0.05, 0.83, 0.43, 0.96);
+.shape {
+  stroke-dasharray: 100 300;
+  stroke-dashoffset: -297;
+  fill: transparent;
+  stroke: #0fc4ab;
+  stroke-width: 5px;
+  transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
 }
 
-.star-2 {
-  position: absolute;
-  top: 45%;
-  left: 45%;
-  width: 15px;
-  height: auto;
-  filter: drop-shadow(0 0 0 #0fc4ab);
-  z-index: -5;
-  transition: all 1scubic-bezier(0, 0.4, 0, 1.01);
-}
-
-.star-3 {
-  position: absolute;
-  top: 40%;
-  left: 40%;
-  width: 5px;
-  height: auto;
-  filter: drop-shadow(0 0 0 #0fc4ab);
-  z-index: -5;
-  transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
-}
-
-.star-4 {
-  position: absolute;
-  top: 20%;
-  left: 40%;
-  width: 8px;
-  height: auto;
-  filter: drop-shadow(0 0 0 #0fc4ab);
-  z-index: -5;
-  transition: all 0.8s cubic-bezier(0, 0.4, 0, 1.01);
-}
-
-.star-5 {
-  position: absolute;
-  top: 25%;
-  left: 45%;
-  width: 15px;
-  height: auto;
-  filter: drop-shadow(0 0 0 #0fc4ab);
-  z-index: -5;
-  transition: all 0.6s cubic-bezier(0, 0.4, 0, 1.01);
-}
-
-.star-6 {
-  position: absolute;
-  top: 5%;
-  left: 50%;
-  width: 5px;
-  height: auto;
-  filter: drop-shadow(0 0 0 #0fc4ab);
-  z-index: -5;
-  transition: all 0.8s ease;
-}
-
-.container-contact button:hover {
-  background: transparent;
+.text {
+  font-size: 22px;
+  top: -48px;
+  position: relative;
+  font-weight: 600;
+  text-decoration: none;
   color: #0fc4ab;
-  box-shadow: 0 0 0px #0fc4ab;
 }
 
-button:hover .star-1 {
-  position: absolute;
-  top: -80%;
-  left: -30%;
-  width: 25px;
-  height: auto;
-  filter: drop-shadow(0 0 0px #0fc4ab);
-  z-index: 2;
+.svg-wrapper:hover .shape {
+  stroke-width: 2px;
+  stroke-dashoffset: 0;
+  stroke-dasharray: 760;
 }
 
-button:hover .star-2 {
-  position: absolute;
-  top: -0%;
-  left: 10%;
-  width: 15px;
-  height: auto;
-  filter: drop-shadow(0 0 0px #0fc4ab);
-  z-index: 2;
-}
-
-button:hover .star-3 {
-  position: absolute;
-  top: 55%;
-  left: 25%;
-  width: 5px;
-  height: auto;
-  filter: drop-shadow(0 0 0px #0fc4ab);
-  z-index: 2;
-}
-
-button:hover .star-4 {
-  position: absolute;
-  top: 30%;
-  left: 80%;
-  width: 8px;
-  height: auto;
-  filter: drop-shadow(0 0 0px #0fc4ab);
-  z-index: 2;
-}
-
-button:hover .star-5 {
-  position: absolute;
-  top: 25%;
-  left: 115%;
-  width: 15px;
-  height: auto;
-  filter: drop-shadow(0 0 0px #0fc4ab);
-  z-index: 2;
-}
-
-button:hover .star-6 {
-  position: absolute;
-  top: 5%;
-  left: 60%;
-  width: 5px;
-  height: auto;
-  filter: drop-shadow(0 0 0px #0fc4ab);
-  z-index: 2;
-}
-
-.fil0 {
-  fill: #0fc4ab;
+.svg-wrapper:hover {
+  background-color: rgba(15, 196, 171, 0.1);
+  transition: 1s;
 }
 
 /*Footer*/
@@ -527,7 +444,7 @@ button:hover .star-6 {
 }
 
 .copy {
-  border-top: 1px solid #0fc4ab;
+  border-top: 2px solid rgba(15, 196, 171, 0.2);
   padding: 10px;
   font-size: 0.8rem;
 }
@@ -544,24 +461,21 @@ button:hover .star-6 {
   }
 
   .saludo {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
-  .title-yo {
-    color: #0fc4accf;
-    width: 340px;
-    font-weight: bold;
-    font-size: 3.1rem;
-    padding: 5px;
+  .title-me {
+    max-width: 335px;
+    font-size: 2.6rem;
   }
 
-  .est {
-    font-size: 1.1rem;
+  .carrer {
+    font-size: 0.8rem;
   }
 
   .descripcion-yo {
     margin-top: 10px;
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
   .col-perfil img {
@@ -586,11 +500,11 @@ button:hover .star-6 {
 
   /*About Section*/
   .about {
-    padding: 40px;
+    padding: 30px;
   }
 
   .about .about1 img {
-    margin-top: -80px;
+    margin-top: -70px;
   }
 
   .about2 {
@@ -602,7 +516,11 @@ button:hover .star-6 {
     font-size: 1rem;
   }
 
-  .text-goals {
+  .about2 .goal-item i {
+    font-size: 1.2rem;
+  }
+
+  .about2 .text-goals {
     font-size: 0.7rem;
   }
 
@@ -633,7 +551,7 @@ button:hover .star-6 {
   }
 
   .proyectos .text-proyectos {
-    margin-top: -10px;
+    margin-bottom: -20px;
   }
 
   .proyectos .card img {
@@ -644,21 +562,17 @@ button:hover .star-6 {
     font-size: 1.2rem;
   }
 
-  .proyectos .card-body li {
-    margin-bottom: 15px;
+  .proyectos .repo-link i {
+    font-size: 25px;
   }
 
-  .proyectos .repo-link{
-    font-size: 1.5rem;
-  }
-  
   /*Footer Section*/
   .footer {
     padding: 30px;
   }
 
   .buttons-container-footer i {
-    font-size: 1.2rem;
+    font-size: 25px;
   }
 
   .footer .copy {
