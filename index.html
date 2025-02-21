@@ -62,99 +62,135 @@
       </symbol>
     </svg>
 
-    <!-- Barra de navegación-->
+    <!-- Barra de navegación -->
     <nav class="navbar fixed-top">
-      <div
-        class="barra container-fluid d-flex justify-content-between flex-row"
-      >
+      <div class="barra container-fluid d-flex flex-row mx-auto">
         <a class="navbar-brand ms-2 ms-lg-2" href="#me"
           >Jhon<span class="point">.</span></a
         >
-        <div class="navbar-nav d-none d-lg-flex flex-row ms-auto">
-          <a class="nav-link me-5" href="#about-me">Sobre mí</a>
-          <a class="nav-link me-5" href="#proyects">Proyectos</a>
-          <a class="nav-link me-5" href="#skills">Habilidades</a>
-          <a class="nav-link" href="#contact">Contacto</a>
+        <div class="navbar-nav d-none d-lg-flex flex-row">
+          <a
+            class="nav-link"
+            href="#about-me"
+            data-section="header"
+            data-value="about-me"
+            >Sobre mí</a
+          >
+          <a
+            class="nav-link"
+            href="#proyects"
+            data-section="header"
+            data-value="proyects"
+            >Proyectos</a
+          >
+          <a
+            class="nav-link"
+            href="#skills"
+            data-section="header"
+            data-value="skills"
+            >Habilidades</a
+          >
+          <a
+            class="nav-link"
+            href="#contact"
+            data-section="header"
+            data-value="contact"
+            >Contacto</a
+          >
         </div>
-        <ul class="mb-1 mb-lg-0 list-unstyled ms-auto me-2 me-lg-0">
-          <li class="nav-item dropdown w-25">
-            <button
-              class="btn btn-link nav-link py-1 px-0 px-lg-2 dropdown-toggle d-flex align-items-center"
-              id="bd-theme"
-              type="button"
-              aria-expanded="false"
-              data-bs-toggle="dropdown"
-              data-bs-display="static"
-            >
-              <svg
-                class="bi my-1 theme-icon-active"
-                width="16"
-                height="16"
-                fill="currentColor"
-              >
-                <use href="#circle-half"></use>
-              </svg>
+
+        <div class="d-flex flex-row ms-auto ms-lg-0">
+          <!-- Idiomas -->
+          <div class="languages me-3">
+            <button class="lang-button" data-language="es">
+              <img src="https://flagcdn.com/w40/es.png" alt="Español" />
             </button>
+            <button class="lang-button" data-language="en">
+              <img src="https://flagcdn.com/w40/gb.png" alt="English" />
+            </button>
+          </div>
+          <!-- Modo Oscuro -->
+          <ul class="mb-1 mb-lg-0 list-unstyled me-2 me-lg-0">
+            <li class="nav-item dropdown">
+              <button
+                class="btn btn-link nav-link py-1 px-0 px-lg-2 dropdown-toggle d-flex align-items-center"
+                id="bd-theme"
+                type="button"
+                aria-expanded="false"
+                data-bs-toggle="dropdown"
+                data-bs-display="static"
+              >
+                <svg
+                  class="bi my-1 theme-icon-active"
+                  width="14"
+                  height="14"
+                  fill="currentColor"
+                >
+                  <use href="#circle-half"></use>
+                </svg>
+              </button>
 
-            <ul
-              class="dropdown-menu dropdown-menu-end px-1"
-              aria-labelledby="bd-theme"
-            >
-              <li>
-                <button
-                  type="button"
-                  class="dropdown-item d-flex align-items-center"
-                  data-bs-theme-value="light"
-                >
-                  <svg
-                    class="bi me-2 opacity-50 theme-icon"
-                    width="16"
-                    height="16"
-                    fill="currentColor"
+              <ul
+                class="dropdown-menu dropdown-menu-end px-1"
+                aria-labelledby="bd-theme"
+              >
+                <li>
+                  <button
+                    type="button"
+                    class="dropdown-item d-flex align-items-center"
+                    data-bs-theme-value="light"
                   >
-                    <use href="#sun-fill"></use>
-                  </svg>
-                  Claro
-                </button>
-              </li>
-              <li>
-                <button
-                  type="button"
-                  class="dropdown-item d-flex align-items-center"
-                  data-bs-theme-value="dark"
-                >
-                  <svg
-                    class="bi me-2 opacity-50 theme-icon"
-                    width="16"
-                    height="16"
-                    fill="currentColor"
+                    <svg
+                      class="bi me-2 opacity-50 theme-icon"
+                      width="14"
+                      height="14"
+                      fill="currentColor"
+                    >
+                      <use href="#sun-fill"></use>
+                    </svg>
+                    <span data-section="mode" data-value="light">Claro</span>
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    class="dropdown-item d-flex align-items-center"
+                    data-bs-theme-value="dark"
                   >
-                    <use href="#moon-stars-fill"></use>
-                  </svg>
-                  Oscuro
-                </button>
-              </li>
-              <li>
-                <button
-                  type="button"
-                  class="dropdown-item d-flex align-items-center active"
-                  data-bs-theme-value="auto"
-                >
-                  <svg
-                    class="bi me-2 opacity-50 theme-icon"
-                    width="16"
-                    height="16"
-                    fill="currentColor"
+                    <svg
+                      class="bi me-2 opacity-50 theme-icon"
+                      width="14"
+                      height="14"
+                      fill="currentColor"
+                    >
+                      <use href="#moon-stars-fill"></use>
+                    </svg>
+                    <span data-section="mode" data-value="dark">Oscuro</span>
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    class="dropdown-item d-flex align-items-center active"
+                    data-bs-theme-value="auto"
                   >
-                    <use href="#circle-half"></use>
-                  </svg>
-                  Auto
-                </button>
-              </li>
-            </ul>
-          </li>
-        </ul>
+                    <svg
+                      class="bi me-2 opacity-50 theme-icon"
+                      width="14"
+                      height="14"
+                      fill="currentColor"
+                    >
+                      <use href="#circle-half"></use>
+                    </svg>
+                    Auto
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
 
+        <!-- Canvas -->
         <button
           class="añaña d-sm d-lg-none"
           type="button"
@@ -185,16 +221,40 @@
           <div class="offcanvas-body">
             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
               <li class="nav-item">
-                <a class="nav-link" href="#about-me">Sobre mí</a>
+                <a
+                  class="nav-link"
+                  href="#about-me"
+                  data-section="header"
+                  data-value="about-me"
+                  >Sobre mí</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#proyects">Proyectos</a>
+                <a
+                  class="nav-link"
+                  href="#proyects"
+                  data-section="header"
+                  data-value="proyects"
+                  >Proyectos</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#skills">Habilidades</a>
+                <a
+                  class="nav-link"
+                  href="#skills"
+                  data-section="header"
+                  data-value="skills"
+                  >Habilidades</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#contact">Contacto</a>
+                <a
+                  class="nav-link"
+                  href="#contact"
+                  data-section="header"
+                  data-value="contact"
+                  >Contacto</a
+                >
               </li>
             </ul>
           </div>
@@ -206,12 +266,14 @@
     <section class="hero-section" data-aos="fade-up" id="me">
       <div class="fila-section row h-100 container-fluid">
         <div class="col-12 col-lg-6 d-flex flex-column">
-          <h2 class="saludo">Hola, soy</h2>
+          <h2 class="saludo" data-section="hero" data-value="hero-first">
+            Hola, soy
+          </h2>
           <div class="title-me" data-aos="fade-right">Jhon Cordova.</div>
-          <h3 class="carrer">
+          <h3 class="carrer" data-section="hero" data-value="hero-second">
             Ingeniero de sistemas e informática en formación.
           </h3>
-          <p class="descripcion-yo">
+          <p class="descripcion-yo" data-section="hero" data-value="hero-third">
             Estudiante de Ingeniería de Sistemas en el décimo superior, con una
             sólida base en tecnología y habilidades analíticas.
           </p>
@@ -230,9 +292,11 @@
             </ul>
           </div>
         </div>
-        <div class="col-perfil col-12 col-lg-6 d-flex flex-column">
+        <div
+          class="col-perfil col-12 col-lg-6 d-flex flex-column align-items-center align-items-sm-center align-items-md-center align-items-lg-end"
+        >
           <div
-            class="container-img d-flex justify-content-center justify-content-lg-end align-items-center align-items-lg-end"
+            class="container-img d-flex justify-content-center justify-content-sm-center justify-content-md-center justify-content-lg-end"
           >
             <img
               src="assets/img/perfil.webp"
@@ -242,25 +306,17 @@
             />
           </div>
           <div
-            class="buttons-container-img d-flex justify-content-center justify-content-lg-end align-items-center align-items-lg-end flex-row"
+            class="buttons-container-img d-flex justify-content-center justify-content-sm-center justify-content-md-center justify-content-lg-end"
           >
-            <button class="button">
-              <svg
-                class="saveicon"
-                stroke="currentColor"
-                stroke-width="1.7"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5m8.25 3v6.75m0 0l-3-3m3 3l3-3M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z"
-                  stroke-linejoin="round"
-                  stroke-linecap="round"
-                ></path>
-              </svg>
-              Descargar CV
-            </button>
+            <a
+              href="https://www.linkedin.com/in/jhon-paucar-cordova-ba9354296/"
+              class="button"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="lni lni-linkedin icon-linkedin"></i>
+              LinkedIn
+            </a>
           </div>
         </div>
       </div>
@@ -273,8 +329,16 @@
       data-aos-delay="100"
       id="about-me"
     >
-      <h1 class="title-section">Sobre mí</h1>
-      <p class="text-center">Conóceme un poco más.</p>
+      <h1 class="title-section" data-section="header" data-value="about-me">
+        Sobre mí
+      </h1>
+      <p
+        class="text-section text-center"
+        data-section="about"
+        data-value="about-sub"
+      >
+        Conóceme un poco más.
+      </p>
       <div class="row text-center">
         <div
           class="about1 col-12 col-sm-6 d-flex justify-content-center align-items-center"
@@ -282,8 +346,14 @@
           <img src="assets/img/about.png" />
         </div>
         <div class="about2 col-12 col-sm-6 p-3">
-          <h2 class="title-about">Mi historia</h2>
-          <p class="text-about">
+          <h2
+            class="title-about"
+            data-section="about"
+            data-value="about2-title"
+          >
+            Mi historia
+          </h2>
+          <p class="text-about" data-section="about" data-value="about2-text">
             Actualmente, estoy cursando el octavo semestre de Ingeniería de
             Sistemas e Informática, lo que me ha permitido adquirir habilidades
             en análisis de sistemas, programación web y de escritorio, así como
@@ -295,11 +365,15 @@
           >
             <div class="goal-item mx-4">
               <i class="bi bi-patch-check-fill"></i>
-              <p class="text-goals">Universidad Tecnológica del Perú.</p>
+              <p class="text-goals" data-section="about" data-value="about2-u">
+                Universidad Tecnológica del Perú.
+              </p>
             </div>
             <div class="goal-item mx-4">
               <i class="bi bi-patch-check-fill"></i>
-              <p class="text-goals">Más de 2 años de experiencia.</p>
+              <p class="text-goals" data-section="about" data-value="about2-e">
+                Más de 2 años de experiencia.
+              </p>
             </div>
           </div>
         </div>
@@ -313,11 +387,21 @@
       data-aos-delay="100"
       id="proyects"
     >
-      <h1 class="title-section">Mis proyectos</h1>
-      <p class="text-proyectos text-center">
+      <h1
+        class="title-section"
+        data-section="projects"
+        data-value="projects-title"
+      >
+        Mis proyectos
+      </h1>
+      <p
+        class="text-section text-center"
+        data-section="projects"
+        data-value="projects-subtitle"
+      >
         Estos son algunos proyectos que he realizado.
       </p>
-      <div class="cards-row row justify-content-center">
+      <div class="cards-row row justify-content-center mt-4">
         <!-- Proyecto 1 -->
         <div
           class="col-12 col-sm-6 col-md-4 mb-4 d-flex justify-content-center"
@@ -328,13 +412,22 @@
               alt="Patitas SOS PIURA"
             />
             <div class="card-body d-flex flex-column">
-              <h5 class="card-title">Patitas SOS PIURA</h5>
-              <p class="card-text">
+              <h5
+                class="card-title"
+                data-section="projects"
+                data-value="project1-title"
+              >
+                Patitas SOS PIURA
+              </h5>
+              <p
+                class="card-text"
+                data-section="projects"
+                data-value="project1-desc"
+              >
                 Diseñada para promover la adopción responsable de mascotas,
                 facilitar donaciones y ofrecer información sobre el cuidado
                 animal en Piura.
               </p>
-              <!-- Enlace -->
               <li class="list-unstyled mt-auto">
                 <a
                   href="https://github.com/jhoncordova24/patitas-sos-piura"
@@ -356,13 +449,22 @@
           <div class="card h-100" style="width: auto">
             <img src="assets/img/proyects/proyecto2.png" alt="Polaroid Kagia" />
             <div class="card-body d-flex flex-column">
-              <h5 class="card-title">Polaroid Kagia</h5>
-              <p class="card-text">
+              <h5
+                class="card-title"
+                data-section="projects"
+                data-value="project2-title"
+              >
+                Polaroid Kagia
+              </h5>
+              <p
+                class="card-text"
+                data-section="projects"
+                data-value="project2-desc"
+              >
                 Plataforma para personalizar y preservar tus recuerdos favoritos
                 a través de productos como fotos estilo polaroid, cuadros y
                 llaveros.
               </p>
-              <!-- Enlace -->
               <li class="list-unstyled mt-auto">
                 <a
                   href="https://github.com/jhoncordova24/polaroidkagia-landing-page"
@@ -387,12 +489,21 @@
               alt="Gestor de Libros y Revistas"
             />
             <div class="card-body d-flex flex-column">
-              <h5 class="card-title">Gestor de Libros y Revistas</h5>
-              <p class="card-text">
+              <h5
+                class="card-title"
+                data-section="projects"
+                data-value="project3-title"
+              >
+                Gestor de Libros y Revistas
+              </h5>
+              <p
+                class="card-text"
+                data-section="projects"
+                data-value="project3-desc"
+              >
                 Sistema para organizar y gestionar colecciones de libros y
                 revistas, ideal para bibliotecas o usuarios individuales.
               </p>
-              <!-- Enlace -->
               <li class="list-unstyled mt-auto">
                 <a
                   href="https://github.com/jhoncordova24/gestion-libros-revistas-factory-method"
@@ -417,13 +528,22 @@
               alt="Colegio Isaac Newton"
             />
             <div class="card-body d-flex flex-column">
-              <h5 class="card-title">Colegio Isaac Newton</h5>
-              <p class="card-text">
+              <h5
+                class="card-title"
+                data-section="projects"
+                data-value="project4-title"
+              >
+                Colegio Isaac Newton
+              </h5>
+              <p
+                class="card-text"
+                data-section="projects"
+                data-value="project4-desc"
+              >
                 Plataforma desarrollada para informar a los usuarios sobre la
                 institución, con un modo administrador para una gestión
                 eficiente.
               </p>
-              <!-- Enlace -->
               <li class="list-unstyled mt-auto">
                 <a
                   href="https://github.com/jhoncordova24/school-management-system-with-admin-panel"
@@ -445,12 +565,21 @@
           <div class="card h-100" style="width: auto">
             <img src="assets/img/proyects/proyecto5.png" alt="GoFast!" />
             <div class="card-body d-flex flex-column">
-              <h5 class="card-title">GoFast!</h5>
-              <p class="card-text">
+              <h5
+                class="card-title"
+                data-section="projects"
+                data-value="project5-title"
+              >
+                GoFast!
+              </h5>
+              <p
+                class="card-text"
+                data-section="projects"
+                data-value="project5-desc"
+              >
                 Proyecto de maquetación diseñado para mostrar habilidades en
                 diseño de interfaces modernas y funcionales.
               </p>
-              <!-- Enlace -->
               <li class="list-unstyled mt-auto">
                 <a
                   href="https://github.com/jhoncordova24/bootstrap-mockup-project"
@@ -475,12 +604,21 @@
               alt="Portal de Ingeniería de Sistemas"
             />
             <div class="card-body d-flex flex-column">
-              <h5 class="card-title">Portal de Ingeniería de Sistemas</h5>
-              <p class="card-text">
+              <h5
+                class="card-title"
+                data-section="projects"
+                data-value="project6-title"
+              >
+                Portal de Ingeniería de Sistemas
+              </h5>
+              <p
+                class="card-text"
+                data-section="projects"
+                data-value="project6-desc"
+              >
                 Portal creado para centralizar y compartir información relevante
                 de la facultad, conectando estudiantes y docentes.
               </p>
-              <!-- Enlace -->
               <li class="list-unstyled mt-auto">
                 <a
                   href="https://github.com/jhoncordova24/faculty-of-systems-portal"
@@ -499,21 +637,39 @@
 
     <!--Experiencia Section-->
     <section
-      class="exp-section"
+      class="exp-section container-fluid"
       data-aos="fade-up"
       data-aos-delay="100"
       id="skills"
     >
-      <h1 class="title-section text-center">Mis habilidades</h1>
-      <p class="text-exp text-center">Lo que he aprendido hasta ahora.</p>
-      <div class="row">
+      <h1
+        class="title-section text-center"
+        data-section="skills"
+        data-value="skills-title"
+      >
+        Mis habilidades
+      </h1>
+      <p
+        class="text-section text-center"
+        data-section="skills"
+        data-value="skills-subtitle"
+      >
+        Lo que he aprendido hasta ahora.
+      </p>
+      <div class="exp-row row mt-4">
         <!-- Desarrollo Frontend -->
         <div
           class="dev dev-f col-12 text-center mb-4"
           data-aos="fade"
           data-aos-delay="100"
         >
-          <h2 class="title-front">Desarrollo Frontend</h2>
+          <h2
+            class="title-front"
+            data-section="skills"
+            data-value="frontend-title"
+          >
+            Desarrollo Frontend
+          </h2>
           <div
             class="tec-container d-flex flex-wrap justify-content-center align-items-center"
           >
@@ -550,7 +706,13 @@
           data-aos="fade"
           data-aos-delay="100"
         >
-          <h2 class="title-front">Desarrollo Backend</h2>
+          <h2
+            class="title-front"
+            data-section="skills"
+            data-value="backend-title"
+          >
+            Desarrollo Backend
+          </h2>
           <div
             class="tec-container d-flex flex-wrap justify-content-center align-items-center"
           >
@@ -586,9 +748,21 @@
       data-aos-delay="100"
       id="contact"
     >
-      <h1 class="title-section">Creemos algo juntos</h1>
-      <p class="text-center">Enviame un mensaje.</p>
-      <!-- From Uiverse.io by AmIt-DasIT -->
+      <h1
+        class="title-section"
+        data-section="contact"
+        data-value="contact-title"
+      >
+        Creemos algo juntos
+      </h1>
+      <p
+        class="text-section text-center"
+        data-section="contact"
+        data-value="contact-subtitle"
+      >
+        Envíame un mensaje.
+      </p>
+
       <div class="svg-wrapper">
         <svg height="60" width="190" xmlns="http://www.w3.org/2000/svg">
           <rect class="shape" height="60" width="190"></rect>
@@ -600,6 +774,8 @@
           title="Contáctame"
           target="_blank"
           rel="noopener noreferrer"
+          data-section="contact"
+          data-value="contact-button"
         >
           Contáctame
         </a>
@@ -630,7 +806,7 @@
               <i class="bi bi-github"></i>
             </a>
             <a
-              href="https://www.linkedin.com/in/jhon-alonso-paucar-cordova-ba9354296/"
+              href="https://www.linkedin.com/in/jhon-paucar-cordova-ba9354296/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
@@ -652,7 +828,9 @@
       </div>
       <div class="row">
         <div class="copy col text-center">
-          <p>Creado por Jhon Cordova (2025) &#169;.</p>
+          <p data-section="footer" data-value="footer-copy">
+            Creado por Jhon Cordova (2025) &#169;.
+          </p>
         </div>
       </div>
     </footer>

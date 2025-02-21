@@ -1,0 +1,54 @@
+{
+    "header": {
+        "about-me": "Sobre mí",
+        "proyects": "Proyectos",
+        "skills": "Habilidades",
+        "contact": "Contacto"
+    },
+    "mode": {
+        "light": "Claro",
+        "dark": "Oscuro"
+    },
+    "hero": {
+        "hero-first": "Hola, soy",
+        "hero-second": "Ingeniero de sistemas e informática en formación.",
+        "hero-third": "Estudiante de Ingeniería de Sistemas en el décimo superior, con una sólida base en tecnología y habilidades analíticas."
+    },
+    "about": {
+        "about-sub": "Conóceme un poco más.",
+        "about2-title": "Mi historia",
+        "about2-text": "Actualmente, estoy cursando el octavo semestre de Ingeniería de Sistemas e Informática, lo que me ha permitido adquirir habilidades en análisis de sistemas, programación web y de escritorio, así como en la optimización de procesos mediante técnicas de investigación operativa.",
+        "about2-u": "Universidad Tecnológica del Perú.",
+        "about2-e": "Más de 2 años de experiencia."
+    },
+    "projects": {
+        "projects-title": "Mis Proyectos",
+        "projects-subtitle": "Estos son algunos proyectos que he realizado.",
+        "project1-title": "Patitas SOS PIURA",
+        "project1-desc": "Diseñada para promover la adopción responsable de mascotas, facilitar donaciones y ofrecer información sobre el cuidado animal en Piura.",
+        "project2-title": "Polaroid Kagia",
+        "project2-desc": "Plataforma para personalizar y preservar tus recuerdos favoritos a través de productos como fotos estilo polaroid, cuadros y llaveros.",
+        "project3-title": "Gestor de Libros y Revistas",
+        "project3-desc": "Sistema para organizar y gestionar colecciones de libros y revistas, ideal para bibliotecas o usuarios individuales.",
+        "project4-title": "Colegio Isaac Newton",
+        "project4-desc": "Plataforma desarrollada para informar a los usuarios sobre la institución, con un modo administrador para una gestión eficiente.",
+        "project5-title": "GoFast!",
+        "project5-desc": "Proyecto de maquetación diseñado para mostrar habilidades en diseño de interfaces modernas y funcionales.",
+        "project6-title": "Portal de Ingeniería de Sistemas",
+        "project6-desc": "Portal creado para centralizar y compartir información relevante de la facultad, conectando estudiantes y docentes."
+    },
+    "skills": {
+        "skills-title": "Mis habilidades",
+        "skills-subtitle": "Lo que he aprendido hasta ahora.",
+        "frontend-title": "Desarrollo Frontend",
+        "backend-title": "Desarrollo Backend"
+    },
+    "contact": {
+        "contact-title": "Creemos algo juntos",
+        "contact-subtitle": "Envíame un mensaje.",
+        "contact-button": "Contáctame"
+    },
+    "footer": {
+        "footer-copy": "Creado por Jhon Cordova (2025) ©."
+    }
+}

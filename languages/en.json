@@ -1,0 +1,54 @@
+{
+    "header": {
+        "about-me": "About me",
+        "proyects": "Projects",
+        "skills": "Skills",
+        "contact": "Contact"
+    },
+    "mode": {
+        "light": "Light",
+        "dark": "Dark"
+    },
+    "hero": {
+        "hero-first": "Hi, I am",
+        "hero-second": "Systems and Computer Engineering student in training.",
+        "hero-third": "Systems Engineering student in the top tenth, with a solid foundation in technology and analytical skills."
+    },
+    "about": {
+        "about-sub": "Get to know me a little more.",
+        "about2-title": "My Story",
+        "about2-text": "I am currently in my eighth semester of Systems and Computer Engineering, which has allowed me to acquire skills in systems analysis, web and desktop programming, as well as process optimization using operations research techniques.",
+        "about2-u": "Technological University of Peru.",
+        "about2-e": "Over 2 years of experience."
+    },
+    "projects": {
+        "projects-title": "My Projects",
+        "projects-subtitle": "Here are some projects I have worked on.",
+        "project1-title": "Patitas SOS PIURA",
+        "project1-desc": "Designed to promote responsible pet adoption, facilitate donations, and provide information about animal care in Piura.",
+        "project2-title": "Polaroid Kagia",
+        "project2-desc": "Platform to customize and preserve your favorite memories through products like polaroid-style photos, frames, and keychains.",
+        "project3-title": "Book and Magazine Manager",
+        "project3-desc": "System to organize and manage collections of books and magazines, ideal for libraries or individual users.",
+        "project4-title": "Isaac Newton School",
+        "project4-desc": "Platform developed to inform users about the institution, featuring an admin mode for efficient management.",
+        "project5-title": "GoFast!",
+        "project5-desc": "Mockup project designed to showcase skills in modern and functional interface design.",
+        "project6-title": "Systems Engineering Portal",
+        "project6-desc": "Portal created to centralize and share relevant information from the faculty, connecting students and teachers."
+    },
+    "skills": {
+        "skills-title": "My Skills",
+        "skills-subtitle": "What I have learned so far.",
+        "frontend-title": "Frontend Development",
+        "backend-title": "Backend Development"
+    },
+    "contact": {
+        "contact-title": "Let's create something together",
+        "contact-subtitle": "Send me a message.",
+        "contact-button": "Contact me"
+    },
+    "footer": {
+        "footer-copy": "Created by Jhon Cordova (2025) ©."
+    }
+}
