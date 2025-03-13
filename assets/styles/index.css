@@ -42,8 +42,8 @@ section {
 }
 
 .navbar-nav .nav-link {
-  font-size: 1rem;
-  margin: 0 10px 0 40px;
+  font-size: 0.9rem;
+  margin: 0 15px 0 40px;
 }
 
 .navbar-nav .nav-link:hover {
@@ -59,12 +59,12 @@ section {
   background: none;
 }
 
-.lang-button img {
+.lang-button span {
   width: 22px;
   height: 15px;
   object-fit: cover;
   border-radius: 3px;
-  margin: 7px 2px 2px 2px;
+  margin: 8px 1px 1px 1px;
 }
 
 /*Modo oscuro*/
@@ -115,14 +115,15 @@ section {
 
 .fila-section {
   max-width: 1200px;
-  padding: 130px 75px 60px 10px;
+  padding: 130px 0 60px 10px;
   margin: 60px auto 30px auto;
 }
 
 .saludo {
   font-weight: bold;
-  font-size: 3.3rem;
+  font-size: 3.1rem;
   letter-spacing: 1px;
+  margin-bottom: 10px;
 }
 
 .title-me {
@@ -152,7 +153,7 @@ section {
 }
 
 .scroller {
-  max-width: 600px;
+  max-width: 100%;
 }
 
 .scroller__inner {
@@ -214,13 +215,19 @@ section {
   border-radius: 0.5rem;
   box-shadow: 0 0.5rem 1rem -0.25rem var(--clr-primary-900);
   color: #0fc4ab;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.tag-list i:hover {
+  color: #0fc4ab;
+  text-shadow: 0 0 5px rgba(15, 196, 171, 0.6), 0 0 15px rgba(15, 196, 171, 0.5);
 }
 
 .col-perfil img {
   width: auto;
   height: auto;
-  max-width: 295px;
-  max-height: 295px;
+  max-width: 300px;
+  max-height: 300px;
   animation: float 4s ease-in-out infinite;
   background: linear-gradient(
     to top,
@@ -316,31 +323,38 @@ section {
 }
 
 .card img {
-  height: 200px;
+  max-height: 200px;
   object-fit: cover;
-}
-
-.repo-link {
-  font-size: 1.7rem;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-/* modo oscuro */
-[data-bs-theme="dark"] .repo-link:hover {
-  color: #0fc4ab;
-  text-shadow: 0 0 5px rgba(15, 196, 171, 0.8), 0 0 15px rgba(15, 196, 171, 0.5);
-}
-
-/*  modo claro */
-[data-bs-theme="light"] .repo-link:hover {
-  color: #0fc4ab;
-  text-shadow: 0 0 3px rgba(15, 196, 171, 0.4), 0 0 8px rgba(15, 196, 171, 0.3);
 }
 
 .card-text {
   font-size: 0.8rem;
   margin-top: 5px;
+}
+
+.project-links {
+  font-size: 1.6rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+/* modo oscuro */
+[data-bs-theme="dark"] .project-links:hover {
+  color: #0fc4ab;
+  text-shadow: 0 0 5px rgba(15, 196, 171, 0.8), 0 0 15px rgba(15, 196, 171, 0.5);
+}
+
+/*  modo claro */
+[data-bs-theme="light"] .project-links:hover {
+  color: #0fc4ab;
+  text-shadow: 0 0 3px rgba(15, 196, 171, 0.4), 0 0 8px rgba(15, 196, 171, 0.3);
+}
+
+.project-button {
+  padding: 5px;
+  font-size: 0.5rem;
+  background: none;
+  border-radius: 2px;
+  border: 1px solid #0fc4ab;
 }
 
 /*Skills section*/
@@ -444,19 +458,22 @@ footer {
 }
 
 .buttons-container-footer {
-  padding: 10px;
+  padding: 30px;
+}
+
+.buttons-container-footer a{
+  margin: 0 25px;
+  font-size: 25px;
+  text-decoration: none;
 }
 
 .buttons-container-footer i {
-  margin: 0 20px;
-  font-size: 25px;
-  text-decoration: none;
   transition: all 0.3s ease;
 }
 
 .buttons-container-footer i:hover {
   color: #0fc4ab;
-  text-shadow: 0 0 5px rgba(15, 196, 171, 0.8), 0 0 15px rgba(15, 196, 171, 0.5);
+  text-shadow: 0 0 5px rgba(15, 196, 171, 0.6), 0 0 15px rgba(15, 196, 171, 0.5);
 }
 
 .copy {
@@ -465,11 +482,7 @@ footer {
   font-size: 0.8rem;
 }
 
-/*=============================================
-=            RESPONSIVIDAD                   =
-=============================================*/
-
-/* Para pantallas pequeñas (hasta 728px) */
+/* Media Queries */ 
 @media screen and (max-width: 728px) {
   /* Estilos generales */
   .title-section {
@@ -495,7 +508,7 @@ footer {
   }
 
   .title-me {
-    max-width: 365px;
+    max-width: 360px;
     font-size: 2.8rem;
   }
 
@@ -599,21 +612,18 @@ footer {
   }
 }
 
-/* Pantallas medianas (576px - 728px) */
 @media (min-width: 576px) and (max-width: 728px) {
   .about2 {
     margin-top: 0;
   }
 }
 
-/* Pantallas medianas-altas (729px - 990px) */
-@media (min-width: 729px) and (max-width: 990px) {
+@media (min-width: 729px) and (max-width: 991.98px) {
   .container-img {
     margin-top: 50px;
   }
 }
 
-/* Pantallas grandes (992px en adelante) */
 @media (min-width: 992px) {
   .container-img {
     margin-top: -10px;

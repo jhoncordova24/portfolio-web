@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jhon Cordova</title>
+
     <!--Fuente-->
     <link
       rel="preload"
@@ -35,6 +36,11 @@
     />
     <!-- Iconos LineIcons-->
     <link href="https://cdn.lineicons.com/5.0/lineicons.css" rel="stylesheet" />
+    <!--Flags-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css"
+    />
     <!-- Hoja de estilos-->
     <link rel="stylesheet" href="assets/styles/index.css" />
     <!-- AOS-->
@@ -78,7 +84,7 @@
           >
           <a
             class="nav-link"
-            href="#proyects"
+            href="#projects"
             data-section="header"
             data-value="proyects"
             >Proyectos</a
@@ -103,10 +109,10 @@
           <!-- Idiomas -->
           <div class="languages me-3">
             <button class="lang-button" data-language="es">
-              <img src="https://flagcdn.com/w40/es.png" alt="Español" />
+              <span class="fi fi-es"></span>
             </button>
             <button class="lang-button" data-language="en">
-              <img src="https://flagcdn.com/w40/gb.png" alt="English" />
+              <span class="fi fi-gb"></span>
             </button>
           </div>
           <!-- Modo Oscuro -->
@@ -232,7 +238,7 @@
               <li class="nav-item">
                 <a
                   class="nav-link"
-                  href="#proyects"
+                  href="#projects"
                   data-section="header"
                   data-value="proyects"
                   >Proyectos</a
@@ -261,11 +267,11 @@
         </div>
       </div>
     </nav>
-
+    
     <!--Hero section-->
     <section class="hero-section" data-aos="fade-up" id="me">
       <div class="fila-section row h-100 container-fluid">
-        <div class="col-12 col-lg-6 d-flex flex-column">
+        <div class="col-12 col-lg-7 d-flex flex-column">
           <h2 class="saludo" data-section="hero" data-value="hero-first">
             Hola, soy
           </h2>
@@ -274,8 +280,8 @@
             Ingeniero de sistemas e informática en formación.
           </h3>
           <p class="descripcion-yo" data-section="hero" data-value="hero-third">
-            Estudiante de Ingeniería de Sistemas en el décimo superior, con una
-            sólida base en tecnología y habilidades analíticas.
+            Apasionado por la tecnología y el desarrollo de soluciones, con
+            habilidades en análisis de sistemas y programación.
           </p>
           <div class="scroller" data-speed="fast">
             <ul class="tag-list scroller__inner">
@@ -293,7 +299,7 @@
           </div>
         </div>
         <div
-          class="col-perfil col-12 col-lg-6 d-flex flex-column align-items-center align-items-sm-center align-items-md-center align-items-lg-end"
+          class="col-perfil col-12 col-lg-5 d-flex flex-column align-items-center align-items-sm-center align-items-md-center align-items-lg-end"
         >
           <div
             class="container-img d-flex justify-content-center justify-content-sm-center justify-content-md-center justify-content-lg-end"
@@ -301,8 +307,6 @@
             <img
               src="assets/img/perfil.webp"
               class="img-fluid"
-              data-aos="fade-in"
-              data-aos-delay="200"
             />
           </div>
           <div
@@ -355,10 +359,10 @@
           </h2>
           <p class="text-about" data-section="about" data-value="about2-text">
             Actualmente, estoy cursando el octavo semestre de Ingeniería de
-            Sistemas e Informática, lo que me ha permitido adquirir habilidades
-            en análisis de sistemas, programación web y de escritorio, así como
-            en la optimización de procesos mediante técnicas de investigación
-            operativa.
+            Sistemas e Informática, donde he fortalecido mis habilidades en
+            análisis de sistemas, programación web y de escritorio, así como en
+            la optimización de procesos. Mi desempeño ha sido reconocido con la
+            beca de excelencia en dos oportunidades.
           </p>
           <div
             class="goals-container d-flex flex-nowrap justify-content-center align-items-center"
@@ -385,7 +389,7 @@
       class="proyectos container-fluid"
       data-aos="fade-up"
       data-aos-delay="100"
-      id="proyects"
+      id="projects"
     >
       <h1
         class="title-section"
@@ -428,16 +432,16 @@
                 facilitar donaciones y ofrecer información sobre el cuidado
                 animal en Piura.
               </p>
-              <li class="list-unstyled mt-auto">
+              <div class="d-flex justify-content-end mt-auto">
                 <a
                   href="https://github.com/jhoncordova24/patitas-sos-piura"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="text-body mt-auto"
+                  class="text-body"
                 >
-                  <i class="repo-link ms-0 lni lni-github"></i>
+                  <i class="project-links ms-0 lni lni-github"></i>
                 </a>
-              </li>
+              </div>
             </div>
           </div>
         </div>
@@ -465,16 +469,16 @@
                 a través de productos como fotos estilo polaroid, cuadros y
                 llaveros.
               </p>
-              <li class="list-unstyled mt-auto">
+              <div class="d-flex justify-content-end mt-auto">
                 <a
                   href="https://github.com/jhoncordova24/polaroidkagia-landing-page"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="text-body mt-auto"
+                  class="text-body"
                 >
-                  <i class="repo-link ms-0 lni lni-github"></i>
+                  <i class="project-links ms-0 lni lni-github"></i>
                 </a>
-              </li>
+              </div>
             </div>
           </div>
         </div>
@@ -504,16 +508,16 @@
                 Sistema para organizar y gestionar colecciones de libros y
                 revistas, ideal para bibliotecas o usuarios individuales.
               </p>
-              <li class="list-unstyled mt-auto">
+              <div class="d-flex justify-content-end mt-auto">
                 <a
                   href="https://github.com/jhoncordova24/gestion-libros-revistas-factory-method"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="text-body mt-auto"
+                  class="text-body"
                 >
-                  <i class="repo-link ms-0 lni lni-github"></i>
+                  <i class="project-links ms-0 lni lni-github"></i>
                 </a>
-              </li>
+              </div>
             </div>
           </div>
         </div>
@@ -544,16 +548,16 @@
                 institución, con un modo administrador para una gestión
                 eficiente.
               </p>
-              <li class="list-unstyled mt-auto">
+              <div class="d-flex justify-content-end mt-auto">
                 <a
                   href="https://github.com/jhoncordova24/school-management-system-with-admin-panel"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="text-body mt-auto"
+                  class="text-body"
                 >
-                  <i class="repo-link ms-0 lni lni-github"></i>
+                  <i class="project-links ms-0 lni lni-github"></i>
                 </a>
-              </li>
+              </div>
             </div>
           </div>
         </div>
@@ -570,26 +574,35 @@
                 data-section="projects"
                 data-value="project5-title"
               >
-                GoFast!
+                Convertidor de monedas
               </h5>
               <p
                 class="card-text"
                 data-section="projects"
                 data-value="project5-desc"
               >
-                Proyecto de maquetación diseñado para mostrar habilidades en
-                diseño de interfaces modernas y funcionales.
+                Convierte monedas en tiempo real con tasas actualizadas y una
+                interfaz simple.
               </p>
-              <li class="list-unstyled mt-auto">
+              <div class="d-flex justify-content-end mt-auto">
                 <a
-                  href="https://github.com/jhoncordova24/bootstrap-mockup-project"
+                  href="https://github.com/jhoncordova24/currency-converter"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="text-body mt-auto"
+                  class="text-body"
                 >
-                  <i class="repo-link ms-0 lni lni-github"></i>
+                  <i class="project-links lni lni-github"></i>
                 </a>
-              </li>
+
+                <a
+                  href="https://convertidor-de-monedas.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-body ms-2"
+                >
+                  <i class="project-links lni lni-www-cursor"></i>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -617,18 +630,18 @@
                 data-value="project6-desc"
               >
                 Portal creado para centralizar y compartir información relevante
-                de la facultad, conectando estudiantes y docentes.
+                de la facultad.
               </p>
-              <li class="list-unstyled mt-auto">
+              <div class="d-flex justify-content-end mt-auto">
                 <a
                   href="https://github.com/jhoncordova24/faculty-of-systems-portal"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="text-body mt-auto"
+                  class="text-body"
                 >
-                  <i class="repo-link ms-0 lni lni-github"></i>
+                  <i class="project-links lni lni-github"></i>
                 </a>
-              </li>
+              </div>
             </div>
           </div>
         </div>
