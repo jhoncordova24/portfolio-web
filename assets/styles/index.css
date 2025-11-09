@@ -27,7 +27,7 @@ section {
 /*Barra de navegacion*/
 .navbar {
   background-color: var(--bs-body-bg);
-  border-bottom: 2px solid rgba(15, 196, 171, 0.2);
+  border-bottom: 1px solid rgba(15, 196, 171, 0.1);
 }
 
 .navbar-brand {
@@ -108,7 +108,7 @@ section {
   background: linear-gradient(
     to bottom,
     rgba(15, 196, 171, 0) 0%,
-    rgba(15, 196, 171, 0.03) 50%,
+    rgba(15, 196, 171, 0.06) 50%,
     rgba(0, 0, 0, 0) 100%
   );
 }
@@ -120,8 +120,8 @@ section {
 }
 
 .saludo {
-  font-weight: bold;
-  font-size: 3.1rem;
+  font-weight: 500;
+  font-size: 2.9rem;
   letter-spacing: 1px;
   margin-bottom: 10px;
 }
@@ -152,82 +152,68 @@ section {
   font-size: 1rem;
 }
 
-.scroller {
-  max-width: 100%;
-}
-
-.scroller__inner {
-  padding-block: 1rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-.scroller[data-animated="true"] {
+.marquee {
   overflow: hidden;
-  -webkit-mask: linear-gradient(
-    90deg,
-    transparent,
-    white 20%,
-    white 80%,
-    transparent
+  width: 100%;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 15%,
+    black 85%,
+    transparent 100%
   );
-  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 15%,
+    black 85%,
+    transparent 100%
+  );
 }
 
-.scroller[data-animated="true"] .scroller__inner {
+.marquee__inner {
+  display: flex;
   width: max-content;
-  flex-wrap: nowrap;
-  animation: scroll var(--_animation-duration, 40s)
-    var(--_animation-direction, forwards) linear infinite;
+  animation: marquee-smooth 25s linear infinite;
 }
 
-.scroller[data-direction="right"] {
-  --_animation-direction: reverse;
+.marquee__group {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
 }
 
-.scroller[data-direction="left"] {
-  --_animation-direction: forwards;
+.marquee__group i {
+  margin: 1rem 1.3rem 0.1rem 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.scroller[data-speed="fast"] {
-  --_animation-duration: 20s;
+.marquee__group i img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
 }
 
-.scroller[data-speed="slow"] {
-  --_animation-duration: 60s;
-}
-
-@keyframes scroll {
-  to {
-    transform: translate(calc(-50% - 0.5rem));
+@keyframes marquee-smooth {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.333%);
   }
 }
-.tag-list {
-  margin: 0;
-  padding-inline: 0;
-  list-style: none;
-}
 
-.tag-list i {
-  margin: 0 12px;
-  font-size: 2.5rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 0.5rem 1rem -0.25rem var(--clr-primary-900);
-  color: #0fc4ab;
-  transition: color 0.3s ease, text-shadow 0.3s ease;
-}
-
-.tag-list i:hover {
-  color: #0fc4ab;
-  text-shadow: 0 0 5px rgba(15, 196, 171, 0.6), 0 0 15px rgba(15, 196, 171, 0.5);
+.marquee:hover .marquee__inner {
+  animation-play-state: paused;
 }
 
 .col-perfil img {
   width: auto;
   height: auto;
-  max-width: 300px;
-  max-height: 300px;
+  max-width: 282px;
+  max-height: 282px;
   animation: float 4s ease-in-out infinite;
   background: linear-gradient(
     to top,
@@ -235,18 +221,7 @@ section {
     rgba(15, 196, 171, 0.4)
   );
   border-radius: 50%;
-}
-
-@keyframes float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(0);
-  }
+  transition: all 0.4s ease;
 }
 
 .button {
@@ -337,24 +312,14 @@ section {
   text-decoration: none;
   transition: all 0.3s ease;
 }
-/* modo oscuro */
-[data-bs-theme="dark"] .project-links:hover {
-  color: #0fc4ab;
-  text-shadow: 0 0 5px rgba(15, 196, 171, 0.8), 0 0 15px rgba(15, 196, 171, 0.5);
-}
 
-/*  modo claro */
-[data-bs-theme="light"] .project-links:hover {
-  color: #0fc4ab;
-  text-shadow: 0 0 3px rgba(15, 196, 171, 0.4), 0 0 8px rgba(15, 196, 171, 0.3);
-}
-
-.project-button {
-  padding: 5px;
-  font-size: 0.5rem;
-  background: none;
-  border-radius: 2px;
-  border: 1px solid #0fc4ab;
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #0fc4ab !important;
+  border-radius: 50%;
+  background-size: 50% 50%;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 /*Skills section*/
@@ -365,7 +330,7 @@ section {
 }
 
 .dev {
-  border: 2px solid #0fc4ab;
+  border: 1px solid #0fc4ab;
   padding: 20px;
   background-color: rgba(15, 196, 171, 0.1);
   border-radius: 0.75em;
@@ -453,16 +418,16 @@ footer {
   background: linear-gradient(
     to bottom,
     rgba(15, 196, 171, 0),
-    rgba(15, 196, 171, 0.03)
+    rgba(15, 196, 171, 0.06)
   );
 }
 
 .buttons-container-footer {
-  padding: 30px;
+  padding: 10px;
 }
 
-.buttons-container-footer a{
-  margin: 0 25px;
+.buttons-container-footer a {
+  margin: 0 20px;
   font-size: 25px;
   text-decoration: none;
 }
@@ -477,16 +442,16 @@ footer {
 }
 
 .copy {
-  border-top: 2px solid rgba(15, 196, 171, 0.2);
+  border-top: 1px solid rgba(15, 196, 171, 0.2);
   padding: 10px;
   font-size: 0.8rem;
 }
 
-/* Media Queries */ 
+/* Media Queries */
 @media screen and (max-width: 728px) {
   /* Estilos generales */
   .title-section {
-    font-size: 2rem;
+    font-size: 1.9rem;
   }
 
   .text-section {
@@ -499,17 +464,17 @@ footer {
 
   /* Hero Section */
   .fila-section {
-    padding: 60px 10px 5px 10px;
+    padding: 70px 10px 5px 10px;
     margin-bottom: 50px;
   }
 
   .saludo {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
   }
 
   .title-me {
-    max-width: 360px;
-    font-size: 2.8rem;
+    max-width: 330px;
+    font-size: 2.5rem;
   }
 
   .carrer {
@@ -523,8 +488,8 @@ footer {
 
   .col-perfil img {
     margin-top: 35px;
-    max-width: 195px;
-    max-height: 195px;
+    max-width: 175px;
+    max-height: 175px;
   }
 
   .button {
@@ -537,9 +502,13 @@ footer {
     font-size: 1rem;
   }
 
-  .tag-list i {
-    margin: 0 10px;
-    font-size: 2rem;
+  .marquee__group i {
+    margin: 1rem 0.9rem 0.1rem 0.9rem;
+  }
+
+  .tag-list i img {
+    height: 1.5rem;
+    width: 1.5rem;
   }
 
   /* About Section */
@@ -583,6 +552,12 @@ footer {
 
   .proyectos .repo-link i {
     font-size: 1.3rem;
+  }
+
+  .modal-title {
+    font-size: 1rem;
+    text-align: center;
+    line-height: 1.2;
   }
 
   /* Experiencia Section */
@@ -630,6 +605,6 @@ footer {
   }
 
   .button {
-    margin: 15px 85px 30px 0;
+    margin: 15px 78px 30px 0;
   }
 }

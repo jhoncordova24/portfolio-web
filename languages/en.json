@@ -17,7 +17,7 @@
     "about": {
         "about-sub": "Get to know me a little more.",
         "about2-title": "My Story",
-        "about2-text": "Currently, I am studying the eighth semester of Systems and Computer Engineering where I have strengthened my skills in systems analysis, web and desktop programming, as well as process optimization. My performance has been recognized with the excellence scholarship on two occasions.",
+        "about2-text": "Currently, I am studying the ninth semester of Systems and Computer Engineering where I have strengthened my skills in systems analysis, web and desktop programming, as well as process optimization. My performance has been recognized with the excellence scholarship on three occasions.",
         "about2-u": "Technological University of Peru.",
         "about2-e": "Over 2 years of experience."
     },
@@ -26,8 +26,8 @@
         "projects-subtitle": "Here are some projects I have worked on.",
         "project1-title": "Patitas SOS PIURA",
         "project1-desc": "Designed to promote responsible pet adoption, facilitate donations, and provide information about animal care in Piura.",
-        "project2-title": "Polaroid Kagia",
-        "project2-desc": "Platform to customize and preserve your favorite memories through products like polaroid-style photos, frames, and keychains.",
+        "project2-title": "Document Management System",
+        "project2-desc": "Web system for an administrative area that manages received documents, allowing their registration, advanced search, export to Excel/PDF, and printing.",
         "project3-title": "Book and Magazine Manager",
         "project3-desc": "System to organize and manage collections of books and magazines, ideal for libraries or individual users.",
         "project4-title": "Isaac Newton School",
@@ -50,5 +50,9 @@
     },
     "footer": {
         "footer-copy": "Created by Jhon Cordova (2025) ©."
+    },
+    "modals": {
+        "modal-proyecto2": "Document Management System",
+        "modal-proyecto4": "Book and Magazine Manager"
     }
 }

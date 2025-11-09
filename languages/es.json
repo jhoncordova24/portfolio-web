@@ -17,7 +17,7 @@
     "about": {
         "about-sub": "Conóceme un poco más.",
         "about2-title": "Mi historia",
-        "about2-text": "Actualmente, estoy cursando el octavo semestre de Ingeniería de Sistemas e Informática donde he fortalecido mis habilidades en análisis de sistemas, programación web y de escritorio, así como en la optimización de procesos. Mi desempeño ha sido reconocido con la beca de excelencia en dos oportunidades.",
+        "about2-text": "Actualmente, estoy cursando el noveno semestre de Ingeniería de Sistemas e Informática donde he fortalecido mis habilidades en análisis de sistemas, programación web y de escritorio, así como en la optimización de procesos. Mi desempeño ha sido reconocido con la beca de excelencia en tres oportunidades.",
         "about2-u": "Universidad Tecnológica del Perú.",
         "about2-e": "Más de 2 años de experiencia."
     },
@@ -26,8 +26,8 @@
         "projects-subtitle": "Estos son algunos proyectos que he realizado.",
         "project1-title": "Patitas SOS PIURA",
         "project1-desc": "Diseñada para promover la adopción responsable de mascotas, facilitar donaciones y ofrecer información sobre el cuidado animal en Piura.",
-        "project2-title": "Polaroid Kagia",
-        "project2-desc": "Plataforma para personalizar y preservar tus recuerdos favoritos a través de productos como fotos estilo polaroid, cuadros y llaveros.",
+        "project2-title": "Sistema de Gestión Documentaria",
+        "project2-desc": "Sistema web para un área administrativa, que gestiona documentos recibidos, permitiendo su registro, búsqueda avanzada, exportación en Excel/PDF e impresión.",
         "project3-title": "Gestor de Libros y Revistas",
         "project3-desc": "Sistema para organizar y gestionar colecciones de libros y revistas, ideal para bibliotecas o usuarios individuales.",
         "project4-title": "Colegio Isaac Newton",
@@ -50,5 +50,9 @@
     },
     "footer": {
         "footer-copy": "Creado por Jhon Cordova (2025) ©."
+    },
+    "modals": {
+        "modal-proyecto2": "Sistema de Gestión Documentaria",
+        "modal-proyecto4": "Gestor de Libros y Revistas"
     }
 }
