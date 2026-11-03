@@ -11,13 +11,13 @@
     },
     "hero": {
         "hero-first": "Hi, I am",
-        "hero-second": "Systems and Computer Engineering student in training.",
+        "hero-second": "Systems and Computer Engineering.",
         "hero-third": "Passionate about technology and the development of solutions, with skills in systems analysis and programming."
     },
     "about": {
         "about-sub": "Get to know me a little more.",
         "about2-title": "My Story",
-        "about2-text": "I am a Systems and Informatics Engineering graduate, specializing in software development and process optimization. My academic background, recognized with an Excellence Scholarship on three occasions, has served as the foundation for developing functional and efficient solutions, with a focus on both web and desktop environments.",
+        "about2-text": "I am a graduate in Systems and Informatics Engineering, where I have strengthened my skills in systems analysis, web and desktop programming, and process optimization. My academic performance was recognized with an Excellence Scholarship on three occasions.",
         "about2-u": "Technological University of Peru.",
         "about2-e": "Over 2 years of experience."
     },

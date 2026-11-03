@@ -11,13 +11,13 @@
     },
     "hero": {
         "hero-first": "Hola, soy",
-        "hero-second": "Ingeniero de sistemas e informática en formación.",
+        "hero-second": "Ingeniero de sistemas e informática.",
         "hero-third": "Apasionado por la tecnología y el desarrollo de soluciones, con habilidades en análisis de sistemas y programación."
     },
     "about": {
         "about-sub": "Conóceme un poco más.",
         "about2-title": "Mi historia",
-        "about2-text": "Actualmente, estoy cursando el noveno semestre de Ingeniería de Sistemas e Informática donde he fortalecido mis habilidades en análisis de sistemas, programación web y de escritorio, así como en la optimización de procesos. Mi desempeño ha sido reconocido con la beca de excelencia en tres oportunidades.",
+        "about2-text": "Soy egresado de Ingeniería de Sistemas e Informática, donde he fortalecido mis habilidades en análisis de sistemas, programación web y de escritorio, así como en la optimización de procesos. Mi rendimiento académico fue reconocido con la beca de excelencia en tres oportunidades.",
         "about2-u": "Universidad Tecnológica del Perú.",
         "about2-e": "Más de 2 años de experiencia."
     },
@@ -49,7 +49,7 @@
         "contact-button": "Contáctame"
     },
     "footer": {
-        "footer-copy": "Creado por Jhon Cordova (2025) ©."
+        "footer-copy": "Creado por Jhon Cordova (2026) ©."
     },
     "modals": {
         "modal-proyecto2": "Sistema de Gestión Documentaria",
