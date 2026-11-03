@@ -1,18 +1,19 @@
-<!DOCTYPE html>
-<html lang="en" data-bs-theme="dark">
+<!doctype html>
+<html lang="es" data-bs-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="../assets/img/logo.png" />
+    <link rel="icon" type="image/png" href="assets/img/logo.png" />
     <title>Jhon Cordova</title>
 
-    <!--Fuente-->
     <link
       rel="preload"
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
     />
     <link
       rel="stylesheet"
@@ -24,7 +25,6 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       />
     </noscript>
-    <!-- Link Bootstrap-->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -33,23 +33,14 @@
     />
     <link
       rel="stylesheet"
-      href="./node_modules/lineicons/web-font/lineicons.css"
-    />
-    <!-- Iconos Bootstrap-->
-    <link
-      rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
-    <!-- Iconos LineIcons-->
     <link href="https://cdn.lineicons.com/5.0/lineicons.css" rel="stylesheet" />
-    <!--Flags-->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css"
     />
-    <!-- Hoja de estilos-->
     <link rel="stylesheet" href="assets/styles/index.css" />
-    <!-- AOS-->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
@@ -74,7 +65,6 @@
       </symbol>
     </svg>
 
-    <!-- Barra de navegación -->
     <nav class="navbar fixed-top">
       <div class="barra container-fluid d-flex flex-row mx-auto">
         <a class="navbar-brand ms-2 ms-lg-2" href="#me"
@@ -111,18 +101,16 @@
           >
         </div>
 
-        <div class="d-flex flex-row ms-auto ms-lg-0">
-          <!-- Idiomas -->
+        <div class="d-flex flex-row align-items-center ms-auto ms-lg-0">
           <div class="languages me-3">
-            <button class="lang-button" data-language="es">
+            <button class="lang-button" data-language="es" aria-label="Español">
               <span class="fi fi-es"></span>
             </button>
-            <button class="lang-button" data-language="en">
+            <button class="lang-button" data-language="en" aria-label="Inglés">
               <span class="fi fi-gb"></span>
             </button>
           </div>
-          <!-- Modo Oscuro -->
-          <ul class="mb-1 mb-lg-0 list-unstyled me-2 me-lg-0">
+          <ul class="mb-0 list-unstyled me-2 me-lg-0">
             <li class="nav-item dropdown">
               <button
                 class="btn btn-link nav-link py-1 px-0 px-lg-2 dropdown-toggle d-flex align-items-center"
@@ -131,6 +119,7 @@
                 aria-expanded="false"
                 data-bs-toggle="dropdown"
                 data-bs-display="static"
+                aria-label="Cambiar tema"
               >
                 <svg
                   class="bi my-1 theme-icon-active"
@@ -202,9 +191,8 @@
           </ul>
         </div>
 
-        <!-- Canvas -->
         <button
-          class="añaña d-sm d-lg-none"
+          class="añaña d-lg-none"
           type="button"
           data-bs-toggle="offcanvas"
           data-bs-target="#offcanvasNavbar"
@@ -274,73 +262,118 @@
       </div>
     </nav>
 
-    <!--Hero section-->
-    <section class="hero-section" data-aos="fade-up" id="me">
-      <div class="fila-section row h-100 container-fluid">
-        <div class="col-12 col-lg-7 d-flex flex-column">
+    <section class="hero-section" data-aos="fade" data-aos-delay="200" id="me">
+      <div class="fila-section row align-items-center container-fluid">
+        <div
+          class="col-12 col-lg-7 d-flex flex-column text-center text-lg-start"
+        >
           <h2 class="saludo" data-section="hero" data-value="hero-first">
             Hola, soy
           </h2>
-          <div class="title-me" data-aos="fade-right">Jhon Cordova.</div>
+          <div class="title-me mx-auto mx-lg-0" data-aos="fade-right">
+            Jhon Cordova.
+          </div>
           <h3 class="carrer" data-section="hero" data-value="hero-second">
             Ingeniero de sistemas e informática en formación.
           </h3>
-          <p class="descripcion-yo" data-section="hero" data-value="hero-third">
+          <p
+            class="descripcion-yo mx-auto mx-lg-0"
+            data-section="hero"
+            data-value="hero-third"
+          >
             Apasionado por la tecnología y el desarrollo de soluciones, con
             habilidades en análisis de sistemas y programación.
           </p>
-          <div class="marquee">
+
+          <div class="marquee mx-auto mx-lg-0">
             <div class="marquee__inner">
-              <div class="marquee__group">
-                <i><img src="./assets/img/icons/css3.svg" /></i>
-                <i><img src="./assets/img/icons/javascript.svg" /></i>
-                <i><img src="./assets/img/icons/bootstrap-5.svg" /></i>
-                <i><img src="./assets/img/icons/tailwindcss.svg" /></i>
-                <i><img src="./assets/img/icons/react.svg" /></i>
-                <i><img src="./assets/img/icons/php.svg" /></i>
-                <i><img src="./assets/img/icons/java.svg" /></i>
-                <i><img src="./assets/img/icons/laravel.svg" /></i>
-                <i><img src="./assets/img/icons/mysql.svg" /></i>
-                <i><img src="./assets/img/icons/mongodb.svg" /></i>
-              </div>
-              <div class="marquee__group">
-                <i><img src="./assets/img/icons/css3.svg" /></i>
-                <i><img src="./assets/img/icons/javascript.svg" /></i>
-                <i><img src="./assets/img/icons/bootstrap-5.svg" /></i>
-                <i><img src="./assets/img/icons/tailwindcss.svg" /></i>
-                <i><img src="./assets/img/icons/react.svg" /></i>
-                <i><img src="./assets/img/icons/php.svg" /></i>
-                <i><img src="./assets/img/icons/java.svg" /></i>
-                <i><img src="./assets/img/icons/laravel.svg" /></i>
-                <i><img src="./assets/img/icons/mysql.svg" /></i>
-                <i><img src="./assets/img/icons/mongodb.svg" /></i>
-              </div>
-              <div class="marquee__group">
-                <i><img src="./assets/img/icons/css3.svg" /></i>
-                <i><img src="./assets/img/icons/javascript.svg" /></i>
-                <i><img src="./assets/img/icons/bootstrap-5.svg" /></i>
-                <i><img src="./assets/img/icons/tailwindcss.svg" /></i>
-                <i><img src="./assets/img/icons/react.svg" /></i>
-                <i><img src="./assets/img/icons/php.svg" /></i>
-                <i><img src="./assets/img/icons/java.svg" /></i>
-                <i><img src="./assets/img/icons/laravel.svg" /></i>
-                <i><img src="./assets/img/icons/mysql.svg" /></i>
-                <i><img src="./assets/img/icons/mongodb.svg" /></i>
-              </div>
+              <ul class="marquee__group">
+                <li><img src="./assets/img/icons/css3.svg" alt="CSS3" /></li>
+                <li>
+                  <img
+                    src="./assets/img/icons/javascript.svg"
+                    alt="JavaScript"
+                  />
+                </li>
+                <li>
+                  <img
+                    src="./assets/img/icons/bootstrap-5.svg"
+                    alt="Bootstrap"
+                  />
+                </li>
+                <li>
+                  <img
+                    src="./assets/img/icons/tailwindcss.svg"
+                    alt="Tailwind CSS"
+                  />
+                </li>
+                <li><img src="./assets/img/icons/react.svg" alt="React" /></li>
+                <li><img src="./assets/img/icons/php.svg" alt="PHP" /></li>
+                <li><img src="./assets/img/icons/java.svg" alt="Java" /></li>
+                <li>
+                  <img src="./assets/img/icons/laravel.svg" alt="Laravel" />
+                </li>
+                <li><img src="./assets/img/icons/mysql.svg" alt="MySQL" /></li>
+                <li>
+                  <img src="./assets/img/icons/mongodb.svg" alt="MongoDB" />
+                </li>
+                <li>
+                  <img
+                    src="./assets/img/icons/postgresql.svg"
+                    alt="PostgreSQL"
+                  />
+                </li>
+              </ul>
+              <ul class="marquee__group" aria-hidden="true">
+                <li><img src="./assets/img/icons/css3.svg" alt="CSS3" /></li>
+                <li>
+                  <img
+                    src="./assets/img/icons/javascript.svg"
+                    alt="JavaScript"
+                  />
+                </li>
+                <li>
+                  <img
+                    src="./assets/img/icons/bootstrap-5.svg"
+                    alt="Bootstrap"
+                  />
+                </li>
+                <li>
+                  <img
+                    src="./assets/img/icons/tailwindcss.svg"
+                    alt="Tailwind CSS"
+                  />
+                </li>
+                <li><img src="./assets/img/icons/react.svg" alt="React" /></li>
+                <li><img src="./assets/img/icons/php.svg" alt="PHP" /></li>
+                <li><img src="./assets/img/icons/java.svg" alt="Java" /></li>
+                <li>
+                  <img src="./assets/img/icons/laravel.svg" alt="Laravel" />
+                </li>
+                <li><img src="./assets/img/icons/mysql.svg" alt="MySQL" /></li>
+                <li>
+                  <img src="./assets/img/icons/mongodb.svg" alt="MongoDB" />
+                </li>
+                <li>
+                  <img
+                    src="./assets/img/icons/postgresql.svg"
+                    alt="PostgreSQL"
+                  />
+                </li>
+              </ul>
             </div>
           </div>
         </div>
+
         <div
-          class="col-perfil col-12 col-lg-5 d-flex flex-column align-items-center align-items-sm-center align-items-md-center align-items-lg-end"
+          class="container-img col-12 col-lg-5 mt-4 mt-lg-0 d-flex justify-content-center"
         >
-          <div
-            class="container-img d-flex justify-content-center justify-content-sm-center justify-content-md-center justify-content-lg-end"
-          >
-            <img src="assets/img/perfil.webp" class="img-fluid" />
-          </div>
-          <div
-            class="buttons-container-img d-flex justify-content-center justify-content-sm-center justify-content-md-center justify-content-lg-end"
-          >
+          <div class="profile-card">
+            <img
+              src="assets/img/perfil.webp"
+              alt="Jhon Cordova"
+              class="foto-perfil"
+            />
             <a
               href="https://www.linkedin.com/in/jhon-paucar-cordova-ba9354296/"
               class="button"
@@ -355,7 +388,6 @@
       </div>
     </section>
 
-    <!--About Section-->
     <section
       class="about container-fluid"
       data-aos="fade-up"
@@ -376,7 +408,7 @@
         <div
           class="about1 col-12 col-sm-6 d-flex justify-content-center align-items-center"
         >
-          <img src="assets/img/about.png" />
+          <img src="assets/img/about.avif" alt="Sobre Jhon Cordova" />
         </div>
         <div class="about2 col-12 col-sm-6 p-3">
           <h2
@@ -387,11 +419,12 @@
             Mi historia
           </h2>
           <p class="text-about" data-section="about" data-value="about2-text">
-            Actualmente, estoy cursando el noveno semestre de Ingeniería de
-            Sistemas e Informática, donde he fortalecido mis habilidades en
-            análisis de sistemas, programación web y de escritorio, así como en
-            la optimización de procesos. Mi desempeño ha sido reconocido con la
-            beca de excelencia en tres oportunidades.
+            Egresado de Ingeniería de Sistemas e Informática. Especializado en
+            el desarrollo de software y la optimización de procesos. Mi
+            formación académica, reconocida con la beca de excelencia en tres
+            oportunidades, ha sido la base para desarrollar soluciones
+            funcionales y eficientes, enfocadas tanto en el ámbito web como en
+            el de escritorio.
           </p>
           <div
             class="goals-container d-flex flex-nowrap justify-content-center align-items-center"
@@ -413,7 +446,6 @@
       </div>
     </section>
 
-    <!--Proyectos Section-->
     <section
       class="proyectos container-fluid"
       data-aos="fade-up"
@@ -425,7 +457,7 @@
         data-section="projects"
         data-value="projects-title"
       >
-        Mis proyectos
+        Mis Proyectos
       </h1>
       <p
         class="text-section text-center"
@@ -435,13 +467,94 @@
         Estos son algunos proyectos que he realizado.
       </p>
       <div class="cards-row row justify-content-center mt-4">
-        <!-- Proyecto 1 -->
         <div
           class="col-12 col-sm-6 col-md-4 mb-4 d-flex justify-content-center"
         >
-          <div class="card h-100" style="width: auto">
+          <div class="card h-100 w-100">
             <img
-              src="assets/img/proyects/proyecto1.png"
+              src="assets/img/projects/project-1/p1-1.avif"
+              alt="Portal VRI - UNP"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5
+                class="card-title"
+                data-section="projects"
+                data-value="vri-title"
+              >
+                Vicerrectorado de Investigación
+              </h5>
+              <p
+                class="card-text"
+                data-section="projects"
+                data-value="vri-desc"
+              >
+                Portal oficial del Vicerrectorado de Investigación de la
+                Universidad Nacional de Piura, diseñado para visibilizar la
+                producción científica y el avance institucional.
+              </p>
+              <div class="d-flex justify-content-end mt-auto">
+                <a
+                  href="https://vri.unp.edu.pe/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-body"
+                  aria-label="Visitar Portal VRI"
+                >
+                  <i class="project-links lni lni-www-cursor"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="col-12 col-sm-6 col-md-4 mb-4 d-flex justify-content-center"
+        >
+          <div class="card h-100 w-100">
+            <img
+              src="assets/img/projects/proyecto2.avif"
+              alt="Sistema de Gestión Documentaria"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5
+                class="card-title"
+                data-section="projects"
+                data-value="project2-title"
+              >
+                Sistema de Gestión Documentaria
+              </h5>
+              <p
+                class="card-text"
+                data-section="projects"
+                data-value="project2-desc"
+              >
+                Sistema web de gestión administrativa y académica: registro y
+                seguimiento de documentos recibidos y emitidos, agenda
+                institucional y control exhaustivo del flujo de tesis
+                (metadatos, asignación de asesores, observaciones, subsanaciones
+                y exportación a reportes).
+              </p>
+              <div class="d-flex justify-content-end mt-auto">
+                <a
+                  href="#"
+                  data-bs-toggle="modal"
+                  data-bs-target="#proyecto2Modal"
+                  class="text-body"
+                  aria-label="Ver capturas del Sistema de Gestión Documentaria"
+                >
+                  <i class="project-links lni lni-eye"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="col-12 col-sm-6 col-md-4 mb-4 d-flex justify-content-center"
+        >
+          <div class="card h-100 w-100">
+            <img
+              src="assets/img/projects/proyecto1.png"
               alt="Patitas SOS PIURA"
             />
             <div class="card-body d-flex flex-column">
@@ -466,7 +579,8 @@
                   href="https://github.com/jhoncordova24/patitas-sos-piura"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="text-body"
+                  class="text-body repo-link"
+                  aria-label="Repositorio de Patitas SOS Piura"
                 >
                   <i class="project-links ms-0 lni lni-github"></i>
                 </a>
@@ -475,53 +589,12 @@
           </div>
         </div>
 
-        <!-- Proyecto 2 -->
         <div
           class="col-12 col-sm-6 col-md-4 mb-4 d-flex justify-content-center"
         >
-          <div class="card h-100" style="width: auto">
+          <div class="card h-100 w-100">
             <img
-              src="assets/img/proyects/proyecto2/proyecto2.png"
-              alt="Polaroid Kagia"
-            />
-            <div class="card-body d-flex flex-column">
-              <h5
-                class="card-title"
-                data-section="projects"
-                data-value="project2-title"
-              >
-                Sistema de Gestión Documentaria
-              </h5>
-              <p
-                class="card-text"
-                data-section="projects"
-                data-value="project2-desc"
-              >
-                Sistema web para un área administrativa, que gestiona documentos
-                recibidos, permitiendo su registro, búsqueda avanzada,
-                exportación en Excel/PDF e impresión.
-              </p>
-              <div class="d-flex justify-content-end mt-auto">
-                <a
-                  href="#"
-                  data-bs-toggle="modal"
-                  data-bs-target="#proyecto2Modal"
-                  class="text-body"
-                >
-                  <i class="project-links lni lni-eye"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Proyecto 3 -->
-        <div
-          class="col-12 col-sm-6 col-md-4 mb-4 d-flex justify-content-center"
-        >
-          <div class="card h-100" style="width: auto">
-            <img
-              src="assets/img/proyects/proyecto3.png"
+              src="assets/img/projects/proyecto3.png"
               alt="Colegio Isaac Newton"
             />
             <div class="card-body d-flex flex-column">
@@ -546,7 +619,8 @@
                   href="https://github.com/jhoncordova24/school-management-system-with-admin-panel"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="text-body"
+                  class="text-body repo-link"
+                  aria-label="Repositorio de Colegio Isaac Newton"
                 >
                   <i class="project-links ms-0 lni lni-github"></i>
                 </a>
@@ -555,67 +629,21 @@
           </div>
         </div>
 
-        <!-- Proyecto 4  -->
         <div
           class="col-12 col-sm-6 col-md-4 mb-4 d-flex justify-content-center"
         >
-          <div class="card h-100" style="width: auto">
+          <div class="card h-100 w-100">
             <img
-              src="assets/img/proyects/proyecto4/proyecto4.png"
-              alt="Gestor de Libros y Revistas"
+              src="assets/img/projects/proyecto5.png"
+              alt="Convertidor de monedas"
             />
-            <div class="card-body d-flex flex-column">
-              <h5
-                class="card-title"
-                data-section="projects"
-                data-value="project3-title"
-              >
-                Gestor de Libros y Revistas
-              </h5>
-              <p
-                class="card-text"
-                data-section="projects"
-                data-value="project3-desc"
-              >
-                Sistema para organizar y gestionar colecciones de libros y
-                revistas, ideal para bibliotecas o usuarios individuales.
-              </p>
-              <div class="d-flex justify-content-end mt-auto">
-                <a
-                  href="https://github.com/jhoncordova24/gestion-libros-revistas-factory-method"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="text-body"
-                >
-                  <i class="project-links lni lni-github"></i>
-                </a>
-
-                <a
-                  href="#"
-                  data-bs-toggle="modal"
-                  data-bs-target="#proyecto4Modal"
-                  class="text-body ms-2"
-                >
-                  <i class="project-links lni lni-eye"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Proyecto 5 -->
-        <div
-          class="col-12 col-sm-6 col-md-4 mb-4 d-flex justify-content-center"
-        >
-          <div class="card h-100" style="width: auto">
-            <img src="assets/img/proyects/proyecto5.png" alt="GoFast!" />
             <div class="card-body d-flex flex-column">
               <h5
                 class="card-title"
                 data-section="projects"
                 data-value="project5-title"
               >
-                Convertidor de monedas
+                Convertidor de Monedas
               </h5>
               <p
                 class="card-text"
@@ -630,7 +658,8 @@
                   href="https://github.com/jhoncordova24/currency-converter"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="text-body"
+                  class="text-body repo-link"
+                  aria-label="Repositorio de Convertidor de Monedas"
                 >
                   <i class="project-links lni lni-github"></i>
                 </a>
@@ -640,6 +669,7 @@
                   target="_blank"
                   rel="noopener noreferrer"
                   class="text-body ms-2"
+                  aria-label="Demo de Convertidor de Monedas"
                 >
                   <i class="project-links lni lni-www-cursor"></i>
                 </a>
@@ -648,13 +678,12 @@
           </div>
         </div>
 
-        <!-- Proyecto 6 -->
         <div
           class="col-12 col-sm-6 col-md-4 mb-4 d-flex justify-content-center"
         >
-          <div class="card h-100" style="width: auto">
+          <div class="card h-100 w-100">
             <img
-              src="assets/img/proyects/proyecto6.png"
+              src="assets/img/projects/proyecto6.png"
               alt="Portal de Ingeniería de Sistemas"
             />
             <div class="card-body d-flex flex-column">
@@ -671,14 +700,15 @@
                 data-value="project6-desc"
               >
                 Portal creado para centralizar y compartir información relevante
-                de la facultad.
+                de la facultad, conectando estudiantes y docentes.
               </p>
               <div class="d-flex justify-content-end mt-auto">
                 <a
                   href="https://github.com/jhoncordova24/faculty-of-systems-portal"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="text-body"
+                  class="text-body repo-link"
+                  aria-label="Repositorio de Portal de Ingeniería de Sistemas"
                 >
                   <i class="project-links lni lni-github"></i>
                 </a>
@@ -689,7 +719,6 @@
       </div>
     </section>
 
-    <!--Experiencia Section-->
     <section
       class="exp-section container-fluid"
       data-aos="fade-up"
@@ -711,7 +740,6 @@
         Lo que he aprendido hasta ahora.
       </p>
       <div class="exp-row row mt-4">
-        <!-- Desarrollo Frontend -->
         <div
           class="dev dev-f col-12 text-center mb-4"
           data-aos="fade"
@@ -728,7 +756,7 @@
             class="tec-container d-flex flex-wrap justify-content-center align-items-center"
           >
             <div class="tec-item mx-2">
-              <i class="fa-brands fa-html5 fa-3x"></i>
+              <i class="fa-brands fa-html5"></i>
               <p class="tec">HTML</p>
             </div>
             <div class="tec-item mx-2">
@@ -754,7 +782,6 @@
           </div>
         </div>
 
-        <!-- Desarrollo Backend -->
         <div
           class="dev col-12 text-center mb-4"
           data-aos="fade"
@@ -771,10 +798,6 @@
             class="tec-container d-flex flex-wrap justify-content-center align-items-center"
           >
             <div class="tec-item mx-2">
-              <i class="fa-brands fa-java"></i>
-              <p class="tec">JAVA</p>
-            </div>
-            <div class="tec-item mx-2">
               <i class="fa-brands fa-php"></i>
               <p class="tec">PHP</p>
             </div>
@@ -783,19 +806,34 @@
               <p class="tec">Laravel</p>
             </div>
             <div class="tec-item mx-2">
+              <i class="lni lni-nodejs"></i>
+              <p class="tec">Node.js</p>
+            </div>
+            <div class="tec-item mx-2">
+              <i class="fa-brands fa-java"></i>
+              <p class="tec">JAVA</p>
+            </div>
+            <div class="tec-item mx-2">
               <i class="lni lni-mysql"></i>
-              <p class="tec">MySql</p>
+              <p class="tec">MySQL</p>
+            </div>
+            <div class="tec-item mx-2">
+              <i class="lni lni-postgresql"></i>
+              <p class="tec">PostgreSQL</p>
             </div>
             <div class="tec-item mx-2">
               <i class="lni lni-mongodb"></i>
               <p class="tec">MongoDB</p>
+            </div>
+            <div class="tec-item mx-2">
+              <i class="lni lni-supabase"></i>
+              <p class="tec">Supabase</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!--Contacto Section -->
     <section
       class="container-contact container-fluid"
       data-aos="fade-up"
@@ -836,7 +874,6 @@
       </div>
     </section>
 
-    <!--Footer-->
     <footer class="container-fluid">
       <div class="row">
         <div class="col-12">
@@ -883,14 +920,12 @@
       <div class="row">
         <div class="copy col text-center">
           <p data-section="footer" data-value="footer-copy">
-            Creado por Jhon Cordova (2025) &#169;.
+            Creado por Jhon Cordova (2026) &#169;.
           </p>
         </div>
       </div>
     </footer>
 
-    <!-- Modal's -->
-    <!-- Modal proyecto 2 -->
     <div
       class="modal fade"
       id="proyecto2Modal"
@@ -917,7 +952,6 @@
             ></button>
           </div>
           <div class="modal-body">
-            <!-- Carrusel -->
             <div
               id="proyecto2Carousel"
               class="carousel slide"
@@ -926,118 +960,51 @@
               <div class="carousel-inner">
                 <div class="carousel-item active">
                   <img
-                    src="assets/img/proyects/proyecto2/p2-1.png"
+                    src="assets/img/projects/project-2/p2-1.avif"
                     class="d-block w-100"
                     alt="Pantallazo 1"
                   />
                 </div>
                 <div class="carousel-item">
                   <img
-                    src="assets/img/proyects/proyecto2/p2-2.png"
+                    src="assets/img/projects/project-2/p2-2.avif"
                     class="d-block w-100"
                     alt="Pantallazo 2"
                   />
                 </div>
                 <div class="carousel-item">
                   <img
-                    src="assets/img/proyects/proyecto2/p2-3.png"
+                    src="assets/img/projects/project-2/p2-3.avif"
                     class="d-block w-100"
                     alt="Pantallazo 3"
                   />
                 </div>
                 <div class="carousel-item">
                   <img
-                    src="assets/img/proyects/proyecto2/p2-4.png"
-                    class="d-block w-100"
-                    alt="Pantallazo 3"
-                  />
-                </div>
-                <div class="carousel-item">
-                  <img
-                    src="assets/img/proyects/proyecto2/p2-5.png"
+                    src="assets/img/projects/project-2/p2-4.avif"
                     class="d-block w-100"
                     alt="Pantallazo 4"
                   />
                 </div>
-              </div>
-              <!-- Controles -->
-              <button
-                class="carousel-control-prev"
-                type="button"
-                data-bs-target="#proyecto2Carousel"
-                data-bs-slide="prev"
-              >
-                <span class="carousel-control-prev-icon"></span>
-                <span class="visually-hidden">Anterior</span>
-              </button>
-              <button
-                class="carousel-control-next"
-                type="button"
-                data-bs-target="#proyecto2Carousel"
-                data-bs-slide="next"
-              >
-                <span class="carousel-control-next-icon"></span>
-                <span class="visually-hidden">Siguiente</span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Modal proyecto 4 -->
-    <div
-      class="modal fade"
-      id="proyecto4Modal"
-      tabindex="-1"
-      aria-labelledby="proyecto4ModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5
-              class="modal-title"
-              id="proyecto4ModalLabel"
-              data-section="modals"
-              data-value="modal-proyecto4"
-            >
-              Gestor de Libros y Revistas
-            </h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Cerrar"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <!-- Carrusel -->
-            <div
-              id="proyecto4Carousel"
-              class="carousel slide"
-              data-bs-ride="false"
-            >
-              <div class="carousel-inner">
-                <div class="carousel-item active">
+                <div class="carousel-item">
                   <img
-                    src="assets/img/proyects/proyecto4/p4-1.png"
+                    src="assets/img/projects/project-2/p2-5.avif"
                     class="d-block w-100"
-                    alt="Pantallazo 1"
+                    alt="Pantallazo 5"
                   />
                 </div>
                 <div class="carousel-item">
                   <img
-                    src="assets/img/proyects/proyecto4/p4-2.png"
+                    src="assets/img/projects/project-2/p2-6.avif"
                     class="d-block w-100"
-                    alt="Pantallazo 2"
+                    alt="Pantallazo 6"
                   />
                 </div>
               </div>
-              <!-- Controles -->
               <button
                 class="carousel-control-prev"
                 type="button"
-                data-bs-target="#proyecto4Carousel"
+                data-bs-target="#proyecto2Carousel"
                 data-bs-slide="prev"
               >
                 <span class="carousel-control-prev-icon"></span>
@@ -1046,7 +1013,7 @@
               <button
                 class="carousel-control-next"
                 type="button"
-                data-bs-target="#proyecto4Carousel"
+                data-bs-target="#proyecto2Carousel"
                 data-bs-slide="next"
               >
                 <span class="carousel-control-next-icon"></span>
@@ -1058,21 +1025,17 @@
       </div>
     </div>
 
-    <!-- Bootstrap -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <!-- Fontawesome -->
     <script
       src="https://kit.fontawesome.com/24a7aa86be.js"
       crossorigin="anonymous"
     ></script>
-    <!-- JS -->
-    <script src="/assets/js/index.js"></script>
-    <script src="/assets/js/dark-mode.js"></script>
-    <!-- AOS -->
+    <script src="assets/js/index.js"></script>
+    <script src="assets/js/dark-mode.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./assets/js/aos.js"></script>
   </body>

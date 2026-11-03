@@ -17,25 +17,25 @@
     "about": {
         "about-sub": "Get to know me a little more.",
         "about2-title": "My Story",
-        "about2-text": "Currently, I am studying the ninth semester of Systems and Computer Engineering where I have strengthened my skills in systems analysis, web and desktop programming, as well as process optimization. My performance has been recognized with the excellence scholarship on three occasions.",
+        "about2-text": "I am a Systems and Informatics Engineering graduate, specializing in software development and process optimization. My academic background, recognized with an Excellence Scholarship on three occasions, has served as the foundation for developing functional and efficient solutions, with a focus on both web and desktop environments.",
         "about2-u": "Technological University of Peru.",
         "about2-e": "Over 2 years of experience."
     },
     "projects": {
         "projects-title": "My Projects",
-        "projects-subtitle": "Here are some projects I have worked on.",
-        "project1-title": "Patitas SOS PIURA",
-        "project1-desc": "Designed to promote responsible pet adoption, facilitate donations, and provide information about animal care in Piura.",
+        "projects-subtitle": "These are some of the projects I have developed.",
+        "vri-title": "Vice-Rectorate of Research",
+        "vri-desc": "Official portal of the Vice-Rectorate of Research at the National University of Piura, designed to showcase scientific output and institutional progress.",
         "project2-title": "Document Management System",
-        "project2-desc": "Web system for an administrative area that manages received documents, allowing their registration, advanced search, export to Excel/PDF, and printing.",
-        "project3-title": "Book and Magazine Manager",
-        "project3-desc": "System to organize and manage collections of books and magazines, ideal for libraries or individual users.",
+        "project2-desc": "Comprehensive web system for administrative and academic management: tracking incoming and outgoing documents, institutional calendar, and end-to-end thesis workflow control (metadata, advisor assignments, review observations, corrections, and report exports).",
+        "project1-title": "Patitas SOS PIURA",
+        "project1-desc": "Designed to promote responsible pet adoption, facilitate donations, and provide animal care information in Piura.",
         "project4-title": "Isaac Newton School",
-        "project4-desc": "Platform developed to inform users about the institution, featuring an admin mode for efficient management.",
+        "project4-desc": "Platform developed to provide information about the institution, featuring an administrative panel for efficient management.",
         "project5-title": "Currency Converter",
-        "project5-desc": "Convert currencies in real-time with updated rates and a simple interface.",
+        "project5-desc": "Real-time currency converter with updated exchange rates and an intuitive interface.",
         "project6-title": "Systems Engineering Portal",
-        "project6-desc": "Portal created to centralize and share relevant information from the faculty, connecting students and teachers."
+        "project6-desc": "Portal created to centralize and share relevant faculty information, connecting students and professors."
     },
     "skills": {
         "skills-title": "My Skills",
