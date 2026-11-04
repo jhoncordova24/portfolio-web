@@ -37,7 +37,7 @@
   --fs-lg: 1.5rem;
   --fs-xl: 2.5rem;
 
-  --profile-size: 250px;
+  --profile-size: 230px;
   --marquee-gap: 2rem;
   --marquee-speed: 25s;
   --marquee-icon: 28px;
@@ -170,10 +170,8 @@ section {
 }
 
 .saludo {
-  margin-bottom: 0.4rem;
+  margin-bottom: 1rem;
   font-size: clamp(1.25rem, 3vw, 2.5rem);
-  font-weight: 500;
-  letter-spacing: 1px;
 }
 
 .title-me {
@@ -187,7 +185,7 @@ section {
     var(--accent-subtle)
   );
   color: var(--accent);
-  font-size: clamp(1.85rem, 5vw, 4rem);
+  font-size: clamp(1.85rem, 5vw, 3.8rem);
   font-weight: bold;
   letter-spacing: 1px;
   white-space: nowrap;
@@ -365,23 +363,59 @@ section {
 
 .proyectos {
   max-width: var(--container-width);
+  margin-inline: auto;
   padding: 30px;
 }
 
-.card img {
-  max-height: 200px;
-  object-fit: cover;
+.proyectos .card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: var(--radius-md);
 }
 
-.card-text {
+.proyectos .card img {
+  width: 100%;
+  height: 200px;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+}
+
+.proyectos .card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+
+.proyectos .card-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.proyectos .card-text {
   margin-top: 5px;
   font-size: var(--fs-sm);
+  color: var(--text-muted, #6c757d);
+  flex-grow: 1;
 }
 
 .project-links {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   text-decoration: none;
-  transition: all var(--transition-base);
+  transition:
+    transform var(--transition-base, 0.2s ease),
+    color var(--transition-base, 0.2s ease);
+  display: inline-flex;
+  align-items: center;
+}
+
+.project-links:hover {
+  transform: translateY(-2px);
 }
 
 .carousel-control-prev-icon,
@@ -507,11 +541,11 @@ section {
   }
 
   .title-section {
-    font-size: 1.9rem;
+    font-size: 1.6rem;
   }
 
   .text-section {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 
   .navbar-brand {
@@ -523,16 +557,11 @@ section {
   }
 
   .saludo {
-    font-size: 1.7rem;
+    font-size: 1.4rem;
   }
 
   .carrer {
     font-size: var(--fs-sm);
-  }
-
-  .descripcion-yo {
-    margin-top: 10px;
-    font-size: 0.9rem;
   }
 
   .button {
@@ -578,7 +607,7 @@ section {
   }
 
   .proyectos .card img {
-    height: auto;
+    height: 180px;
   }
 
   .proyectos .card-title {
