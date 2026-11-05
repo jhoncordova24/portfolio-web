@@ -10,46 +10,50 @@
         "dark": "Oscuro"
     },
     "hero": {
+        "hero-badge": "Disponible para proyectos y desarrollo",
         "hero-first": "Hola, soy",
-        "hero-second": "Ingeniero de sistemas e informática.",
-        "hero-third": "Apasionado por la tecnología y el desarrollo de soluciones, con habilidades en análisis de sistemas y programación."
+        "hero-second": "Ingeniero de Sistemas e Informática",
+        "hero-third": "Especializado en diseñar, optimizar y desplegar plataformas web robustas con foco en arquitectura ágil, interfaces funcionales y rendimiento.",
+        "hero-btn-projects": "Ver Proyectos"
     },
     "about": {
-        "about-sub": "Conóceme un poco más.",
-        "about2-title": "Mi historia",
-        "about2-text": "Soy egresado de Ingeniería de Sistemas e Informática, donde he fortalecido mis habilidades en análisis de sistemas, programación web y de escritorio, así como en la optimización de procesos. Mi rendimiento académico fue reconocido con la beca de excelencia en tres oportunidades.",
-        "about2-u": "Universidad Tecnológica del Perú.",
-        "about2-e": "Más de 2 años de experiencia."
+        "about-sub": "Conóceme un poco más y mi trayectoria profesional.",
+        "about2-title": "Sobre mí",
+        "about2-text": "Soy egresado de Ingeniería de Sistemas e Informática, enfocado en el desarrollo de aplicaciones web escalables, análisis de software y optimización continua de procesos. Mi desempeño académico fue distinguido con la beca de excelencia en tres oportunidades.",
+        "about2-u-label": "Formación",
+        "about2-u": "Universidad Tecnológica del Perú",
+        "about2-e-label": "Trayectoria",
+        "about2-e": "+2 años de experiencia"
     },
     "projects": {
-        "projects-title": "Mis Proyectos",
-        "projects-subtitle": "Estos son algunos proyectos que he realizado.",
+        "projects-title": "Proyectos",
+        "projects-subtitle": "Estos son algunos proyectos que he desarrollado.",
         "vri-title": "Vicerrectorado de Investigación",
         "vri-desc": "Portal oficial del Vicerrectorado de Investigación de la Universidad Nacional de Piura, diseñado para visibilizar la producción científica y el avance institucional.",
         "project2-title": "Sistema de Gestión Documentaria",
-        "project2-desc": "Sistema web de gestión administrativa y académica: registro y seguimiento de documentos recibidos y emitidos, agenda institucional y control exhaustivo del flujo de tesis (metadatos, asignación de asesores, observaciones, subsanaciones y exportación a reportes).",
+        "project2-desc": "Sistema web de gestión administrativa y académica: registro y seguimiento de documentos emitidos, agenda institucional y control exhaustivo de tesis.",
         "project1-title": "Patitas SOS PIURA",
-        "project1-desc": "Diseñada para promover la adopción responsable de mascotas, facilitar donaciones y ofrecer información sobre el cuidado animal en Piura.",
+        "project1-desc": "Diseñada para promover la adopción responsable de mascotas y facilitar donaciones en Piura.",
         "project4-title": "Colegio Isaac Newton",
-        "project4-desc": "Plataforma desarrollada para informar a los usuarios sobre la institución, con un modo administrador para una gestión eficiente.",
+        "project4-desc": "Plataforma institucional con panel administrativo para gestión de contenidos.",
         "project5-title": "Convertidor de Monedas",
-        "project5-desc": "Convierte monedas en tiempo real con tasas actualizadas y una interfaz simple.",
-        "project6-title": "Portal de Ingeniería de Sistemas",
-        "project6-desc": "Portal creado para centralizar y compartir información relevante de la facultad, conectando estudiantes y docentes."
+        "project5-desc": "Herramienta web ágil para conversión de divisas en tiempo real con tasas actualizadas.",
+        "project6-title": "Portal de Ing. de Sistemas",
+        "project6-desc": "Portal centralizado para conectar docentes y estudiantes con recursos académicos."
     },
     "skills": {
-        "skills-title": "Mis habilidades",
-        "skills-subtitle": "Lo que he aprendido hasta ahora.",
-        "frontend-title": "Desarrollo Frontend",
-        "backend-title": "Desarrollo Backend"
+        "skills-title": "Habilidades Técnicas",
+        "skills-subtitle": "Tecnologías y herramientas de uso frecuente.",
+        "frontend-title": "Frontend",
+        "backend-title": "Backend & Datos"
     },
     "contact": {
-        "contact-title": "Creemos algo juntos",
-        "contact-subtitle": "Envíame un mensaje.",
+        "contact-title": "Contacto",
+        "contact-subtitle": "¿Tienes una idea o propuesta técnica? Escríbeme y lo conversamos.",
         "contact-button": "Contáctame"
     },
     "footer": {
-        "footer-copy": "Creado por Jhon Cordova (2026) ©."
+        "footer-copy": "© 2026 Jhon Cordova."
     },
     "modals": {
         "modal-proyecto2": "Sistema de Gestión Documentaria",

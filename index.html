@@ -1,1046 +1,994 @@
 <!doctype html>
-<html lang="es" data-bs-theme="dark">
+<html lang="es" class="scroll-smooth scroll-pt-24">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="assets/img/logo.png" />
-    <title>Jhon Cordova</title>
+    <title>Jhon Cordova — Ingeniero de Sistemas</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      rel="preload"
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      as="style"
-      onload="
-        this.onload = null;
-        this.rel = 'stylesheet';
-      "
-    />
-    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     />
-    <noscript>
-      <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      />
-    </noscript>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-    />
-    <link href="https://cdn.lineicons.com/5.0/lineicons.css" rel="stylesheet" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind.config.js"></script>
+
+    <link rel="stylesheet" href="assets/styles/index.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css"
     />
-    <link rel="stylesheet" href="assets/styles/index.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <head>
+      <script>
+        if (
+          localStorage.getItem("theme") === "dark" ||
+          (!("theme" in localStorage) &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches)
+        ) {
+          document.documentElement.classList.add("dark");
+        } else {
+          document.documentElement.classList.remove("dark");
+        }
+      </script>
+    </head>
   </head>
-  <body>
-    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
-      <symbol id="circle-half" viewBox="0 0 16 16">
-        <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
-      </symbol>
 
-      <symbol id="moon-stars-fill" viewBox="0 0 16 16">
-        <path
-          d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"
-        />
-        <path
-          d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"
-        />
-      </symbol>
+  <body
+    class="bg-body text-main font-sans antialiased selection:bg-accent selection:text-accent-contrast transition-colors duration-300"
+  >
+    <header
+      id="navbar"
+      class="fixed top-0 inset-x-0 z-40 transition-all duration-300 px-4 sm:px-6 pt-4"
+    >
+      <div
+        id="navbar-container"
+        class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between transition-all duration-300 border border-transparent"
+      >
+        <a href="#me" class="text-base font-semibold tracking-tight text-main">
+          Jhon<span class="text-muted">.</span>
+        </a>
 
-      <symbol id="sun-fill" viewBox="0 0 16 16">
-        <path
-          d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
-        />
-      </symbol>
-    </svg>
-
-    <nav class="navbar fixed-top">
-      <div class="barra container-fluid d-flex flex-row mx-auto">
-        <a class="navbar-brand ms-2 ms-lg-2" href="#me"
-          >Jhon<span class="point">.</span></a
+        <nav
+          class="hidden md:flex items-center gap-7 text-xs font-medium text-muted"
         >
-        <div class="navbar-nav d-none d-lg-flex flex-row">
           <a
-            class="nav-link"
+            class="hover:text-main transition-colors"
             href="#about-me"
             data-section="header"
             data-value="about-me"
             >Sobre mí</a
           >
           <a
-            class="nav-link"
+            class="hover:text-main transition-colors"
             href="#projects"
             data-section="header"
             data-value="proyects"
             >Proyectos</a
           >
           <a
-            class="nav-link"
+            class="hover:text-main transition-colors"
             href="#skills"
             data-section="header"
             data-value="skills"
             >Habilidades</a
           >
           <a
-            class="nav-link"
+            class="hover:text-main transition-colors"
             href="#contact"
             data-section="header"
             data-value="contact"
             >Contacto</a
           >
-        </div>
+        </nav>
 
-        <div class="d-flex flex-row align-items-center ms-auto ms-lg-0">
-          <div class="languages me-3">
-            <button class="lang-button" data-language="es" aria-label="Español">
+        <div class="flex items-center gap-2">
+          <!-- Switch Idioma -->
+          <div class="flex items-center gap-1 text-xs text-muted pr-1">
+            <button
+              class="p-1 hover:text-main transition-colors"
+              data-language="es"
+              aria-label="Español"
+            >
               <span class="fi fi-es"></span>
             </button>
-            <button class="lang-button" data-language="en" aria-label="Inglés">
+            <span class="text-subtle">/</span>
+            <button
+              class="p-1 hover:text-main transition-colors"
+              data-language="en"
+              aria-label="Inglés"
+            >
               <span class="fi fi-gb"></span>
             </button>
           </div>
-          <ul class="mb-0 list-unstyled me-2 me-lg-0">
-            <li class="nav-item dropdown">
-              <button
-                class="btn btn-link nav-link py-1 px-0 px-lg-2 dropdown-toggle d-flex align-items-center"
-                id="bd-theme"
-                type="button"
-                aria-expanded="false"
-                data-bs-toggle="dropdown"
-                data-bs-display="static"
-                aria-label="Cambiar tema"
-              >
-                <svg
-                  class="bi my-1 theme-icon-active"
-                  width="14"
-                  height="14"
-                  fill="currentColor"
-                >
-                  <use href="#circle-half"></use>
-                </svg>
-              </button>
 
-              <ul
-                class="dropdown-menu dropdown-menu-end px-1"
-                aria-labelledby="bd-theme"
-              >
-                <li>
-                  <button
-                    type="button"
-                    class="dropdown-item d-flex align-items-center"
-                    data-bs-theme-value="light"
-                  >
-                    <svg
-                      class="bi me-2 opacity-50 theme-icon"
-                      width="14"
-                      height="14"
-                      fill="currentColor"
-                    >
-                      <use href="#sun-fill"></use>
-                    </svg>
-                    <span data-section="mode" data-value="light">Claro</span>
-                  </button>
-                </li>
-                <li>
-                  <button
-                    type="button"
-                    class="dropdown-item d-flex align-items-center"
-                    data-bs-theme-value="dark"
-                  >
-                    <svg
-                      class="bi me-2 opacity-50 theme-icon"
-                      width="14"
-                      height="14"
-                      fill="currentColor"
-                    >
-                      <use href="#moon-stars-fill"></use>
-                    </svg>
-                    <span data-section="mode" data-value="dark">Oscuro</span>
-                  </button>
-                </li>
-                <li>
-                  <button
-                    type="button"
-                    class="dropdown-item d-flex align-items-center active"
-                    data-bs-theme-value="auto"
-                  >
-                    <svg
-                      class="bi me-2 opacity-50 theme-icon"
-                      width="14"
-                      height="14"
-                      fill="currentColor"
-                    >
-                      <use href="#circle-half"></use>
-                    </svg>
-                    Auto
-                  </button>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
+          <!-- Switch Modo Oscuro -->
+          <button
+            id="theme-toggle"
+            type="button"
+            class="p-1.5 text-muted hover:text-main transition-colors"
+            aria-label="Alternar tema"
+          >
+            <svg
+              id="theme-icon"
+              class="w-4 h-4"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></svg>
+          </button>
 
-        <button
-          class="añaña d-lg-none"
-          type="button"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasNavbar"
-          aria-controls="offcanvasNavbar"
-          aria-label="Toggle navigation"
-        >
-          <i class="bi bi-list"></i>
-        </button>
-        <div
-          class="offcanvas offcanvas-end"
-          tabindex="-1"
-          id="offcanvasNavbar"
-          aria-labelledby="offcanvasNavbarLabel"
-        >
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-              Jhon Cordova
-            </h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="offcanvas"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="offcanvas-body">
-            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-              <li class="nav-item">
-                <a
-                  class="nav-link"
-                  href="#about-me"
-                  data-section="header"
-                  data-value="about-me"
-                  >Sobre mí</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link"
-                  href="#projects"
-                  data-section="header"
-                  data-value="proyects"
-                  >Proyectos</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link"
-                  href="#skills"
-                  data-section="header"
-                  data-value="skills"
-                  >Habilidades</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link"
-                  href="#contact"
-                  data-section="header"
-                  data-value="contact"
-                  >Contacto</a
-                >
-              </li>
-            </ul>
-          </div>
+          <!-- Botón Menú Móvil -->
+          <button
+            id="mobile-menu-btn"
+            class="p-1.5 text-muted md:hidden"
+            aria-label="Abrir menú"
+          >
+            <svg
+              class="w-5 h-5"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
         </div>
       </div>
-    </nav>
 
-    <section class="hero-section" data-aos="fade" data-aos-delay="200" id="me">
-      <div class="fila-section row align-items-center container-fluid">
-        <div
-          class="col-12 col-lg-7 d-flex flex-column text-center text-lg-start"
+      <!-- Menú Desplegable Móvil Flotante -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden max-w-sm mx-auto mt-2 p-5 bg-surface/95 backdrop-blur-md rounded-2xl border border-subtle shadow-xl flex flex-col gap-3 text-sm font-medium"
+      >
+        <a
+          class="hover:text-main transition-colors"
+          href="#about-me"
+          data-section="header"
+          data-value="about-me"
+          >Sobre mí</a
         >
-          <h2 class="saludo" data-section="hero" data-value="hero-first">
-            Hola, soy
-          </h2>
-          <div class="title-me mx-auto mx-lg-0" data-aos="fade">
-            Jhon Cordova
+        <a
+          class="hover:text-main transition-colors"
+          href="#projects"
+          data-section="header"
+          data-value="proyects"
+          >Proyectos</a
+        >
+        <a
+          class="hover:text-main transition-colors"
+          href="#skills"
+          data-section="header"
+          data-value="skills"
+          >Habilidades</a
+        >
+        <a
+          class="hover:text-main transition-colors"
+          href="#contact"
+          data-section="header"
+          data-value="contact"
+          >Contacto</a
+        >
+      </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-6 space-y-32 pt-28 pb-20">
+      <!-- Hero -->
+      <section class="md:min-h-[70vh] flex items-center py-2 md:py-0" id="me">
+        <div
+          class="grid grid-cols-1 md:grid-cols-12 gap-0 md:gap-8 items-center w-full"
+        >
+          <div class="md:col-span-8 space-y-3 sm:space-y-6" data-aos="fade-up">
+            <div
+              class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-subtle text-xs font-medium text-muted bg-badge max-w-full"
+            >
+              <span
+                class="w-2 h-2 shrink-0 rounded-full bg-zinc-400 dark:bg-zinc-500"
+              ></span>
+              <span data-section="hero" data-value="hero-badge">
+                Disponible para proyectos y desarrollo
+              </span>
+            </div>
+
+            <div class="flex items-center gap-4 sm:gap-5">
+              <div
+                class="md:hidden relative shrink-0 w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden bg-gradient-to-b from-badge to-surface border border-subtle flex items-end justify-center shadow-sm"
+              >
+                <img
+                  src="assets/img/perfil.png"
+                  alt="Jhon Cordova"
+                  class="w-[82%] h-auto object-contain translate-y-0.5"
+                />
+              </div>
+
+              <div class="min-w-0 space-y-0.5 sm:space-y-2">
+                <h1
+                  class="text-3xl min-[400px]:text-4xl sm:text-6xl font-bold tracking-tight text-main leading-tight"
+                >
+                  Jhon Cordova
+                </h1>
+                <h2
+                  class="text-sm sm:text-xl text-muted font-normal tracking-tight"
+                  data-section="hero"
+                  data-value="hero-second"
+                >
+                  Ingeniero de Sistemas e Informática
+                </h2>
+              </div>
+            </div>
+
+            <p
+              class="max-w-xl text-sm sm:text-base text-muted font-light leading-relaxed"
+              data-section="hero"
+              data-value="hero-third"
+            >
+              Especializado en diseñar, optimizar y desplegar plataformas web
+              robustas con foco en arquitectura ágil, interfaces funcionales y
+              rendimiento.
+            </p>
+
+            <div class="flex items-center gap-3 sm:gap-4 pt-0 sm:pt-2">
+              <a
+                href="#projects"
+                class="flex-1 sm:flex-none px-4 sm:px-5 py-2.5 rounded-lg bg-accent text-accent-contrast hover:opacity-90 text-xs sm:text-sm font-medium transition-all text-center whitespace-nowrap"
+                data-section="hero"
+                data-value="hero-btn-projects"
+              >
+                Ver Proyectos
+              </a>
+              <a
+                href="https://www.linkedin.com/in/jhon-paucar-cordova-ba9354296/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex-1 sm:flex-none px-4 sm:px-5 py-2.5 rounded-lg border border-subtle hover:border-muted text-main text-xs sm:text-sm font-medium transition-all inline-flex items-center justify-center gap-2 whitespace-nowrap"
+              >
+                <span data-icon="linkedin" class="w-4 h-4 shrink-0"></span>
+                <span>LinkedIn</span>
+                <svg
+                  class="w-3.5 h-3.5 shrink-0"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M7 17l9.2-9.2M17 17V7.8H7.8" />
+                </svg>
+              </a>
+            </div>
           </div>
-          <h3 class="carrer" data-section="hero" data-value="hero-second">
-            Ingeniero de sistemas e informática.
-          </h3>
-          <p
-            class="descripcion-yo mx-auto mx-lg-0 d-none d-lg-block"
-            data-section="hero"
-            data-value="hero-third"
+
+          <div
+            class="hidden md:flex md:col-span-4 justify-end"
+            data-aos="fade-up"
+            data-aos-delay="100"
           >
-            Apasionado por la tecnología y el desarrollo de soluciones, con
-            habilidades en análisis de sistemas y programación.
-          </p>
-          <div class="marquee mx-auto mx-lg-0">
-            <div class="marquee__inner">
-              <ul class="marquee__group">
-                <li><img src="./assets/img/icons/css3.svg" alt="CSS3" /></li>
-                <li>
-                  <img
-                    src="./assets/img/icons/javascript.svg"
-                    alt="JavaScript"
-                  />
-                </li>
-                <li>
-                  <img
-                    src="./assets/img/icons/bootstrap-5.svg"
-                    alt="Bootstrap"
-                  />
-                </li>
-                <li>
-                  <img
-                    src="./assets/img/icons/tailwindcss.svg"
-                    alt="Tailwind CSS"
-                  />
-                </li>
-                <li><img src="./assets/img/icons/react.svg" alt="React" /></li>
-                <li><img src="./assets/img/icons/php.svg" alt="PHP" /></li>
-                <li><img src="./assets/img/icons/java.svg" alt="Java" /></li>
-                <li>
-                  <img src="./assets/img/icons/laravel.svg" alt="Laravel" />
-                </li>
-                <li><img src="./assets/img/icons/mysql.svg" alt="MySQL" /></li>
-                <li>
-                  <img src="./assets/img/icons/mongodb.svg" alt="MongoDB" />
-                </li>
-                <li>
-                  <img
-                    src="./assets/img/icons/postgresql.svg"
-                    alt="PostgreSQL"
-                  />
-                </li>
-              </ul>
-              <ul class="marquee__group" aria-hidden="true">
-                <li><img src="./assets/img/icons/css3.svg" alt="CSS3" /></li>
-                <li>
-                  <img
-                    src="./assets/img/icons/javascript.svg"
-                    alt="JavaScript"
-                  />
-                </li>
-                <li>
-                  <img
-                    src="./assets/img/icons/bootstrap-5.svg"
-                    alt="Bootstrap"
-                  />
-                </li>
-                <li>
-                  <img
-                    src="./assets/img/icons/tailwindcss.svg"
-                    alt="Tailwind CSS"
-                  />
-                </li>
-                <li><img src="./assets/img/icons/react.svg" alt="React" /></li>
-                <li><img src="./assets/img/icons/php.svg" alt="PHP" /></li>
-                <li><img src="./assets/img/icons/java.svg" alt="Java" /></li>
-                <li>
-                  <img src="./assets/img/icons/laravel.svg" alt="Laravel" />
-                </li>
-                <li><img src="./assets/img/icons/mysql.svg" alt="MySQL" /></li>
-                <li>
-                  <img src="./assets/img/icons/mongodb.svg" alt="MongoDB" />
-                </li>
-                <li>
-                  <img
-                    src="./assets/img/icons/postgresql.svg"
-                    alt="PostgreSQL"
-                  />
-                </li>
-              </ul>
+            <div
+              class="relative w-56 h-56 rounded-full overflow-hidden bg-gradient-to-b from-badge to-surface border border-subtle flex items-end justify-center shadow-sm group"
+            >
+              <img
+                src="assets/img/perfil.png"
+                alt="Jhon Cordova"
+                class="w-48 h-auto object-contain translate-y-1 transition-transform duration-500 ease-out group-hover:scale-105"
+              />
             </div>
           </div>
         </div>
+      </section>
 
-        <div
-          class="container-img col-12 col-lg-5 mt-4 mt-lg-0 d-flex justify-content-center"
-        >
-          <div class="profile-card">
-            <img
-              src="assets/img/perfil.webp"
-              alt="Jhon Cordova"
-              class="foto-perfil"
-            />
-            <a
-              href="https://www.linkedin.com/in/jhon-paucar-cordova-ba9354296/"
-              class="button"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i class="lni lni-linkedin icon-linkedin"></i>
-              LinkedIn
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section
-      class="about container-fluid"
-      data-aos="fade"
-      data-aos-delay="100"
-      id="about-me"
-    >
-      <h1 class="title-section" data-section="header" data-value="about-me">
-        Sobre mí
-      </h1>
-      <p
-        class="text-section text-center"
-        data-section="about"
-        data-value="about-sub"
-      >
-        Conóceme un poco más.
-      </p>
-      <div class="row text-center">
-        <div
-          class="about1 col-12 col-sm-6 d-flex justify-content-center align-items-center"
-        >
-          <img src="assets/img/about.avif" alt="Sobre Jhon Cordova" />
-        </div>
-        <div class="about2 col-12 col-sm-6 p-3">
+      <!-- About Me -->
+      <section class="space-y-10" id="about-me" data-aos="fade-up">
+        <div class="border-b border-subtle pb-4">
           <h2
-            class="title-about"
+            class="text-2xl font-bold tracking-tight text-main"
             data-section="about"
             data-value="about2-title"
           >
-            Mi historia
+            Sobre mí
           </h2>
-          <p class="text-about" data-section="about" data-value="about2-text">
-            Soy egresado de Ingeniería de Sistemas e Informática, donde he
-            fortalecido mis habilidades en análisis de sistemas, programación
-            web y de escritorio, así como en la optimización de procesos. Mi
-            rendimiento académico fue reconocido con la beca de excelencia en
-            tres oportunidades.
+          <p
+            class="text-xs text-muted mt-1"
+            data-section="about"
+            data-value="about-sub"
+          >
+            Conóceme un poco más y mi trayectoria profesional.
           </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          <div class="lg:col-span-7 space-y-4">
+            <p
+              class="text-sm sm:text-base text-muted font-light leading-relaxed"
+              data-section="about"
+              data-value="about2-text"
+            >
+              Soy egresado de Ingeniería de Sistemas e Informática, enfocado en
+              el desarrollo de aplicaciones web escalables, análisis de software
+              y optimización continua de procesos. Mi desempeño académico fue
+              distinguido con la beca de excelencia en tres oportunidades.
+            </p>
+          </div>
+
           <div
-            class="goals-container d-flex flex-nowrap justify-content-center align-items-center"
+            class="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-3"
           >
-            <div class="goal-item mx-4">
-              <i class="bi bi-patch-check-fill"></i>
-              <p class="text-goals" data-section="about" data-value="about2-u">
-                Universidad Tecnológica del Perú.
-              </p>
-            </div>
-            <div class="goal-item mx-4">
-              <i class="bi bi-patch-check-fill"></i>
-              <p class="text-goals" data-section="about" data-value="about2-e">
-                Más de 2 años de experiencia.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section
-      class="proyectos container-fluid"
-      data-aos="fade"
-      data-aos-delay="100"
-      id="projects"
-    >
-      <h1
-        class="title-section"
-        data-section="projects"
-        data-value="projects-title"
-      >
-        Mis Proyectos
-      </h1>
-      <p
-        class="text-section text-center"
-        data-section="projects"
-        data-value="projects-subtitle"
-      >
-        Estos son algunos proyectos que he realizado.
-      </p>
-      <div class="cards-row row justify-content-center mt-4">
-        <div class="col-12 col-sm-6 col-md-4 mb-4 d-flex align-items-stretch">
-          <div class="card h-100 w-100">
-            <img
-              src="assets/img/projects/project-1.avif"
-              alt="Portal VRI - UNP"
-              loading="lazy"
-            />
-            <div class="card-body d-flex flex-column">
-              <h5
-                class="card-title"
-                data-section="projects"
-                data-value="vri-title"
-              >
-                Vicerrectorado de Investigación
-              </h5>
-              <p
-                class="card-text"
-                data-section="projects"
-                data-value="vri-desc"
-              >
-                Portal oficial del Vicerrectorado de Investigación de la
-                Universidad Nacional de Piura, diseñado para visibilizar la
-                producción científica y el avance institucional.
-              </p>
+            <div
+              class="flex items-center gap-3.5 p-3.5 rounded-xl border border-subtle bg-surface"
+            >
               <div
-                class="d-flex justify-content-end align-items-center gap-2 mt-auto pt-3"
+                class="w-9 h-9 rounded-lg bg-badge flex items-center justify-center shrink-0 text-main"
               >
-                <a
-                  href="https://vri.unp.edu.pe/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="text-body"
-                  aria-label="Visitar Portal VRI"
+                <span data-icon="university" class="w-4 h-4"></span>
+              </div>
+              <div class="flex flex-col">
+                <span
+                  class="text-[11px] uppercase tracking-wider text-muted font-medium"
+                  data-section="about"
+                  data-value="about2-u-label"
+                  >Formación</span
                 >
-                  <i class="project-links lni lni-www-cursor"></i>
-                </a>
+                <span
+                  class="text-xs font-semibold text-main"
+                  data-section="about"
+                  data-value="about2-u"
+                >
+                  Universidad Tecnológica del Perú
+                </span>
+              </div>
+            </div>
+
+            <div
+              class="flex items-center gap-3.5 p-3.5 rounded-xl border border-subtle bg-surface"
+            >
+              <div
+                class="w-9 h-9 rounded-lg bg-badge flex items-center justify-center shrink-0 text-main"
+              >
+                <span data-icon="check" class="w-4 h-4"></span>
+              </div>
+              <div class="flex flex-col">
+                <span
+                  class="text-[11px] uppercase tracking-wider text-muted font-medium"
+                  data-section="about"
+                  data-value="about2-e-label"
+                  >Trayectoria</span
+                >
+                <span
+                  class="text-xs font-semibold text-main"
+                  data-section="about"
+                  data-value="about2-e"
+                >
+                  +2 años de experiencia
+                </span>
               </div>
             </div>
           </div>
         </div>
+      </section>
 
-        <div class="col-12 col-sm-6 col-md-4 mb-4 d-flex align-items-stretch">
-          <div class="card h-100 w-100">
-            <img
-              src="assets/img/projects/project-2.avif"
-              alt="Sistema de Gestión Documentaria"
-              loading="lazy"
-            />
-            <div class="card-body d-flex flex-column">
-              <h5
-                class="card-title"
-                data-section="projects"
-                data-value="project2-title"
-              >
-                Sistema de Gestión Documentaria
-              </h5>
-              <p
-                class="card-text"
-                data-section="projects"
-                data-value="project2-desc"
-              >
-                Sistema web de gestión administrativa y académica: registro y
-                seguimiento de documentos recibidos y emitidos, agenda
-                institucional y control exhaustivo del flujo de tesis
-                (metadatos, asignación de asesores, observaciones, subsanaciones
-                y exportación a reportes).
-              </p>
-              <div
-                class="d-flex justify-content-end align-items-center gap-2 mt-auto pt-3"
-              >
-                <a
-                  href="#"
-                  data-bs-toggle="modal"
-                  data-bs-target="#proyecto2Modal"
-                  class="text-body"
-                  aria-label="Ver capturas del Sistema de Gestión Documentaria"
-                >
-                  <i class="project-links lni lni-eye"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-12 col-sm-6 col-md-4 mb-4 d-flex align-items-stretch">
-          <div class="card h-100 w-100">
-            <img
-              src="assets/img/projects/project-3.png"
-              alt="Patitas SOS PIURA"
-              loading="lazy"
-            />
-            <div class="card-body d-flex flex-column">
-              <h5
-                class="card-title"
-                data-section="projects"
-                data-value="project1-title"
-              >
-                Patitas SOS PIURA
-              </h5>
-              <p
-                class="card-text"
-                data-section="projects"
-                data-value="project1-desc"
-              >
-                Diseñada para promover la adopción responsable de mascotas,
-                facilitar donaciones y ofrecer información sobre el cuidado
-                animal en Piura.
-              </p>
-              <div
-                class="d-flex justify-content-end align-items-center gap-2 mt-auto pt-3"
-              >
-                <a
-                  href="https://github.com/jhoncordova24/patitas-sos-piura"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="text-body repo-link"
-                  aria-label="Repositorio de Patitas SOS Piura"
-                >
-                  <i class="project-links ms-0 lni lni-github"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-12 col-sm-6 col-md-4 mb-4 d-flex align-items-stretch">
-          <div class="card h-100 w-100">
-            <img
-              src="assets/img/projects/project-4.png"
-              alt="Colegio Isaac Newton"
-              loading="lazy"
-            />
-            <div class="card-body d-flex flex-column">
-              <h5
-                class="card-title"
-                data-section="projects"
-                data-value="project4-title"
-              >
-                Colegio Isaac Newton
-              </h5>
-              <p
-                class="card-text"
-                data-section="projects"
-                data-value="project4-desc"
-              >
-                Plataforma desarrollada para informar a los usuarios sobre la
-                institución, con un modo administrador para una gestión
-                eficiente.
-              </p>
-              <div
-                class="d-flex justify-content-end align-items-center gap-2 mt-auto pt-3"
-              >
-                <a
-                  href="https://github.com/jhoncordova24/school-management-system-with-admin-panel"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="text-body repo-link"
-                  aria-label="Repositorio de Colegio Isaac Newton"
-                >
-                  <i class="project-links ms-0 lni lni-github"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-12 col-sm-6 col-md-4 mb-4 d-flex align-items-stretch">
-          <div class="card h-100 w-100">
-            <img
-              src="assets/img/projects/project-5.png"
-              alt="Convertidor de monedas"
-              loading="lazy"
-            />
-            <div class="card-body d-flex flex-column">
-              <h5
-                class="card-title"
-                data-section="projects"
-                data-value="project5-title"
-              >
-                Convertidor de Monedas
-              </h5>
-              <p
-                class="card-text"
-                data-section="projects"
-                data-value="project5-desc"
-              >
-                Convierte monedas en tiempo real con tasas actualizadas y una
-                interfaz simple.
-              </p>
-              <div
-                class="d-flex justify-content-end align-items-center gap-2 mt-auto pt-3"
-              >
-                <a
-                  href="https://github.com/jhoncordova24/currency-converter"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="text-body repo-link"
-                  aria-label="Repositorio de Convertidor de Monedas"
-                >
-                  <i class="project-links lni lni-github"></i>
-                </a>
-
-                <a
-                  href="https://convertidor-de-monedas.vercel.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="text-body"
-                  aria-label="Demo de Convertidor de Monedas"
-                >
-                  <i class="project-links lni lni-www-cursor"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-12 col-sm-6 col-md-4 mb-4 d-flex align-items-stretch">
-          <div class="card h-100 w-100">
-            <img
-              src="assets/img/projects/project-6.png"
-              alt="Portal de Ingeniería de Sistemas"
-              loading="lazy"
-            />
-            <div class="card-body d-flex flex-column">
-              <h5
-                class="card-title"
-                data-section="projects"
-                data-value="project6-title"
-              >
-                Portal de Ingeniería de Sistemas
-              </h5>
-              <p
-                class="card-text"
-                data-section="projects"
-                data-value="project6-desc"
-              >
-                Portal creado para centralizar y compartir información relevante
-                de la facultad, conectando estudiantes y docentes.
-              </p>
-              <div
-                class="d-flex justify-content-end align-items-center gap-2 mt-auto pt-3"
-              >
-                <a
-                  href="https://github.com/jhoncordova24/faculty-of-systems-portal"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="text-body repo-link"
-                  aria-label="Repositorio de Portal de Ingeniería de Sistemas"
-                >
-                  <i class="project-links ms-0 lni lni-github"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section
-      class="exp-section container-fluid"
-      data-aos="fade"
-      data-aos-delay="100"
-      id="skills"
-    >
-      <h1
-        class="title-section text-center"
-        data-section="skills"
-        data-value="skills-title"
-      >
-        Mis habilidades
-      </h1>
-      <p
-        class="text-section text-center"
-        data-section="skills"
-        data-value="skills-subtitle"
-      >
-        Lo que he aprendido hasta ahora.
-      </p>
-      <div class="exp-row row mt-4">
-        <div
-          class="dev dev-f col-12 text-center mb-4"
-          data-aos="fade"
-          data-aos-delay="100"
-        >
+      <!-- Projects -->
+      <section class="space-y-12" id="projects" data-aos="fade-up">
+        <div class="space-y-1">
           <h2
-            class="title-front"
-            data-section="skills"
-            data-value="frontend-title"
+            class="text-2xl font-bold tracking-tight text-main"
+            data-section="projects"
+            data-value="projects-title"
           >
-            Desarrollo Frontend
+            Proyectos
           </h2>
-          <div
-            class="tec-container d-flex flex-wrap justify-content-center align-items-center"
+          <p
+            class="text-xs text-muted"
+            data-section="projects"
+            data-value="projects-subtitle"
           >
-            <div class="tec-item mx-2">
-              <i class="fa-brands fa-html5"></i>
-              <p class="tec">HTML</p>
-            </div>
-            <div class="tec-item mx-2">
-              <i class="lni lni-css3"></i>
-              <p class="tec">CSS</p>
-            </div>
-            <div class="tec-item mx-2">
-              <i class="lni lni-javascript"></i>
-              <p class="tec">JavaScript</p>
-            </div>
-            <div class="tec-item mx-2">
-              <i class="lni lni-bootstrap-5"></i>
-              <p class="tec">Bootstrap</p>
-            </div>
-            <div class="tec-item mx-2">
-              <i class="lni lni-react"></i>
-              <p class="tec">React</p>
-            </div>
-            <div class="tec-item mx-2">
-              <i class="lni lni-tailwindcss"></i>
-              <p class="tec">Tailwind CSS</p>
-            </div>
-          </div>
+            Estos son algunos proyectos que he desarrollado.
+          </p>
         </div>
 
         <div
-          class="dev col-12 text-center mb-4"
-          data-aos="fade"
-          data-aos-delay="100"
+          class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-10 items-start"
         >
+          <!-- Project-1 -->
+          <article class="group space-y-4">
+            <a
+              href="https://vri.unp.edu.pe/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block overflow-hidden rounded-3xl ring-1 ring-inset ring-black/5 dark:ring-white/10"
+              aria-label="Visitar Portal VRI"
+            >
+              <img
+                src="assets/img/projects/project-1.avif"
+                alt="Portal VRI - UNP"
+                loading="lazy"
+                class="w-full h-auto block transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+              />
+            </a>
+            <div class="flex items-start justify-between gap-4 px-1">
+              <div class="space-y-1.5">
+                <h3
+                  class="font-semibold text-base text-main"
+                  data-section="projects"
+                  data-value="vri-title"
+                >
+                  Vicerrectorado de Investigación
+                </h3>
+                <p
+                  class="text-xs text-muted leading-relaxed font-light line-clamp-2"
+                  data-section="projects"
+                  data-value="vri-desc"
+                >
+                  Portal oficial del Vicerrectorado de Investigación de la
+                  Universidad Nacional de Piura, diseñado para visibilizar la
+                  producción científica y el avance institucional.
+                </p>
+              </div>
+              <a
+                href="https://vri.unp.edu.pe/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="shrink-0 p-2 rounded-full text-muted hover:text-main hover:bg-badge transition-colors"
+                aria-label="Visitar Portal VRI"
+              >
+                <span data-icon="web" class="w-4 h-4 block"></span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Project-2 -->
+          <article class="group space-y-4">
+            <button
+              type="button"
+              data-modal-target="proyecto2Modal"
+              class="block w-full overflow-hidden rounded-3xl ring-1 ring-inset ring-black/5 dark:ring-white/10 cursor-pointer"
+              aria-label="Ver capturas"
+            >
+              <img
+                src="assets/img/projects/project-2.avif"
+                alt="Sistema de Gestión Documentaria"
+                loading="lazy"
+                class="w-full h-auto block transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+              />
+            </button>
+            <div class="flex items-start justify-between gap-4 px-1">
+              <div class="space-y-1.5">
+                <h3
+                  class="font-semibold text-base text-main"
+                  data-section="projects"
+                  data-value="project2-title"
+                >
+                  Sistema de Gestión Documentaria
+                </h3>
+                <p
+                  class="text-xs text-muted leading-relaxed font-light line-clamp-2"
+                  data-section="projects"
+                  data-value="project2-desc"
+                >
+                  Sistema web de gestión administrativa y académica: registro y
+                  seguimiento de documentos emitidos, agenda institucional y
+                  control exhaustivo de tesis.
+                </p>
+              </div>
+              <button
+                type="button"
+                data-modal-target="proyecto2Modal"
+                class="shrink-0 p-2 rounded-full text-muted hover:text-main hover:bg-badge transition-colors"
+                aria-label="Ver capturas"
+              >
+                <span data-icon="eye" class="w-4 h-4 block"></span>
+              </button>
+            </div>
+          </article>
+        </div>
+
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-10 items-start"
+        >
+          <!-- Project-3 -->
+          <article class="group space-y-3">
+            <a
+              href="https://github.com/jhoncordova24/patitas-sos-piura"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block overflow-hidden rounded-2xl ring-1 ring-inset ring-black/5 dark:ring-white/10"
+              aria-label="Repositorio GitHub"
+            >
+              <img
+                src="assets/img/projects/project-3.png"
+                alt="Patitas SOS PIURA"
+                loading="lazy"
+                class="w-full h-auto block transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+              />
+            </a>
+            <div class="flex items-start justify-between gap-3 px-0.5">
+              <div class="space-y-1">
+                <h3
+                  class="font-semibold text-sm text-main"
+                  data-section="projects"
+                  data-value="project1-title"
+                >
+                  Patitas SOS PIURA
+                </h3>
+                <p
+                  class="text-xs text-muted leading-relaxed font-light line-clamp-2"
+                  data-section="projects"
+                  data-value="project1-desc"
+                >
+                  Diseñada para promover la adopción responsable de mascotas y
+                  facilitar donaciones en Piura.
+                </p>
+              </div>
+              <a
+                href="https://github.com/jhoncordova24/patitas-sos-piura"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="shrink-0 p-1.5 rounded-full text-muted hover:text-main hover:bg-badge transition-colors"
+                aria-label="Repositorio GitHub"
+              >
+                <span data-icon="github" class="w-4 h-4 block"></span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Project-4 -->
+          <article class="group space-y-3">
+            <a
+              href="https://github.com/jhoncordova24/school-management-system-with-admin-panel"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block overflow-hidden rounded-2xl ring-1 ring-inset ring-black/5 dark:ring-white/10"
+              aria-label="Repositorio GitHub"
+            >
+              <img
+                src="assets/img/projects/project-4.png"
+                alt="Colegio Isaac Newton"
+                loading="lazy"
+                class="w-full h-auto block transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+              />
+            </a>
+            <div class="flex items-start justify-between gap-3 px-0.5">
+              <div class="space-y-1">
+                <h3
+                  class="font-semibold text-sm text-main"
+                  data-section="projects"
+                  data-value="project4-title"
+                >
+                  Colegio Isaac Newton
+                </h3>
+                <p
+                  class="text-xs text-muted leading-relaxed font-light line-clamp-2"
+                  data-section="projects"
+                  data-value="project4-desc"
+                >
+                  Plataforma institucional con panel administrativo para gestión
+                  de contenidos.
+                </p>
+              </div>
+              <a
+                href="https://github.com/jhoncordova24/school-management-system-with-admin-panel"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="shrink-0 p-1.5 rounded-full text-muted hover:text-main hover:bg-badge transition-colors"
+                aria-label="Repositorio GitHub"
+              >
+                <span data-icon="github" class="w-4 h-4 block"></span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Project-5 -->
+          <article class="group space-y-3">
+            <a
+              href="https://convertidor-de-monedas.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block overflow-hidden rounded-2xl ring-1 ring-inset ring-black/5 dark:ring-white/10"
+              aria-label="Demo en vivo"
+            >
+              <img
+                src="assets/img/projects/project-5.avif"
+                alt="Convertidor de monedas"
+                loading="lazy"
+                class="w-full h-auto block transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+              />
+            </a>
+            <div class="flex items-start justify-between gap-3 px-0.5">
+              <div class="space-y-1">
+                <h3
+                  class="font-semibold text-sm text-main"
+                  data-section="projects"
+                  data-value="project5-title"
+                >
+                  Convertidor de Monedas
+                </h3>
+                <p
+                  class="text-xs text-muted leading-relaxed font-light line-clamp-2"
+                  data-section="projects"
+                  data-value="project5-desc"
+                >
+                  Herramienta web ágil para conversión de divisas en tiempo real
+                  con tasas actualizadas.
+                </p>
+              </div>
+              <a
+                href="https://convertidor-de-monedas.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="shrink-0 p-1.5 rounded-full text-muted hover:text-main hover:bg-badge transition-colors"
+                aria-label="Demo en vivo"
+              >
+                <span data-icon="web" class="w-4 h-4 block"></span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Project-6 -->
+          <article class="group space-y-3">
+            <a
+              href="https://github.com/jhoncordova24/faculty-of-systems-portal"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block overflow-hidden rounded-2xl ring-1 ring-inset ring-black/5 dark:ring-white/10"
+              aria-label="Repositorio GitHub"
+            >
+              <img
+                src="assets/img/projects/project-6.png"
+                alt="Portal de Ingeniería de Sistemas"
+                loading="lazy"
+                class="w-full h-auto block transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+              />
+            </a>
+            <div class="flex items-start justify-between gap-3 px-0.5">
+              <div class="space-y-1">
+                <h3
+                  class="font-semibold text-sm text-main"
+                  data-section="projects"
+                  data-value="project6-title"
+                >
+                  Portal de Ing. de Sistemas
+                </h3>
+                <p
+                  class="text-xs text-muted leading-relaxed font-light line-clamp-2"
+                  data-section="projects"
+                  data-value="project6-desc"
+                >
+                  Portal centralizado para conectar docentes y estudiantes con
+                  recursos académicos.
+                </p>
+              </div>
+              <a
+                href="https://github.com/jhoncordova24/faculty-of-systems-portal"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="shrink-0 p-1.5 rounded-full text-muted hover:text-main hover:bg-badge transition-colors"
+                aria-label="Repositorio GitHub"
+              >
+                <span data-icon="github" class="w-4 h-4 block"></span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section class="space-y-10" id="skills" data-aos="fade-up">
+        <div class="border-b border-subtle pb-4">
           <h2
-            class="title-front"
+            class="text-2xl font-bold tracking-tight text-main"
             data-section="skills"
-            data-value="backend-title"
+            data-value="skills-title"
           >
-            Desarrollo Backend
+            Habilidades Técnicas
           </h2>
-          <div
-            class="tec-container d-flex flex-wrap justify-content-center align-items-center"
+          <p
+            class="text-xs text-muted mt-1"
+            data-section="skills"
+            data-value="skills-subtitle"
           >
-            <div class="tec-item mx-2">
-              <i class="fa-brands fa-php"></i>
-              <p class="tec">PHP</p>
-            </div>
-            <div class="tec-item mx-2">
-              <i class="lni lni-laravel"></i>
-              <p class="tec">Laravel</p>
-            </div>
-            <div class="tec-item mx-2">
-              <i class="lni lni-nodejs"></i>
-              <p class="tec">Node.js</p>
-            </div>
-            <div class="tec-item mx-2">
-              <i class="fa-brands fa-java"></i>
-              <p class="tec">JAVA</p>
-            </div>
-            <div class="tec-item mx-2">
-              <i class="lni lni-mysql"></i>
-              <p class="tec">MySQL</p>
-            </div>
-            <div class="tec-item mx-2">
-              <i class="lni lni-postgresql"></i>
-              <p class="tec">PostgreSQL</p>
-            </div>
-            <div class="tec-item mx-2">
-              <i class="lni lni-mongodb"></i>
-              <p class="tec">MongoDB</p>
-            </div>
-            <div class="tec-item mx-2">
-              <i class="lni lni-supabase"></i>
-              <p class="tec">Supabase</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section
-      class="container-contact container-fluid"
-      data-aos="fade"
-      data-aos-delay="100"
-      id="contact"
-    >
-      <h1
-        class="title-section"
-        data-section="contact"
-        data-value="contact-title"
-      >
-        Creemos algo juntos
-      </h1>
-      <p
-        class="text-section text-center"
-        data-section="contact"
-        data-value="contact-subtitle"
-      >
-        Envíame un mensaje.
-      </p>
-
-      <div class="svg-wrapper">
-        <svg height="60" width="190" xmlns="http://www.w3.org/2000/svg">
-          <rect class="shape" height="60" width="190"></rect>
-        </svg>
-        <a
-          href="mailto:jacordova838@gmail.com"
-          class="text"
-          aria-label="Contáctame"
-          title="Contáctame"
-          target="_blank"
-          rel="noopener noreferrer"
-          data-section="contact"
-          data-value="contact-button"
-        >
-          Contáctame
-        </a>
-      </div>
-    </section>
-
-    <footer class="container-fluid">
-      <div class="row">
-        <div class="col-12">
-          <div class="buttons-container-footer d-flex justify-content-center">
-            <a
-              href="mailto:jacordova838@gmail.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Email"
-              class="text-body"
-            >
-              <i class="bi bi-envelope"></i>
-            </a>
-            <a
-              href="https://github.com/jhoncordova24"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub"
-              class="text-body"
-            >
-              <i class="bi bi-github"></i>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/jhon-paucar-cordova-ba9354296/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
-              class="text-body"
-            >
-              <i class="bi bi-linkedin"></i>
-            </a>
-            <a
-              href="https://www.instagram.com/jhonc.24/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Instagram"
-              class="text-body"
-            >
-              <i class="bi bi-instagram"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="copy col text-center">
-          <p data-section="footer" data-value="footer-copy">
-            Creado por Jhon Cordova (2026) ©.
+            Tecnologías y herramientas de uso frecuente.
           </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <div class="space-y-4">
+            <h3
+              class="text-xs font-semibold tracking-wider uppercase text-muted"
+              data-section="skills"
+              data-value="frontend-title"
+            >
+              Frontend
+            </h3>
+            <div class="flex flex-wrap gap-2.5">
+              <span
+                class="inline-flex items-center gap-2 px-3 py-1.5 rounded-md border border-subtle text-xs font-medium text-main bg-surface"
+              >
+                <span data-icon="html5" class="w-4 h-4"></span> HTML5
+              </span>
+              <span
+                class="inline-flex items-center gap-2 px-3 py-1.5 rounded-md border border-subtle text-xs font-medium text-main bg-surface"
+              >
+                <span data-icon="css3" class="w-4 h-4"></span> CSS3
+              </span>
+              <span
+                class="inline-flex items-center gap-2 px-3 py-1.5 rounded-md border border-subtle text-xs font-medium text-main bg-surface"
+              >
+                <span data-icon="javascript" class="w-4 h-4"></span> JavaScript
+              </span>
+
+              <span
+                class="inline-flex items-center gap-2 px-3 py-1.5 rounded-md border border-subtle text-xs font-medium text-main bg-surface"
+              >
+                <span data-icon="react" class="w-4 h-4"></span> React
+              </span>
+              <span
+                class="inline-flex items-center gap-2 px-3 py-1.5 rounded-md border border-subtle text-xs font-medium text-main bg-surface"
+              >
+                <span data-icon="astro" class="w-4 h-4"></span> Astro
+              </span>
+
+              <span
+                class="inline-flex items-center gap-2 px-3 py-1.5 rounded-md border border-subtle text-xs font-medium text-main bg-surface"
+              >
+                <span data-icon="tailwindcss" class="w-4 h-4"></span> Tailwind
+                CSS
+              </span>
+              <span
+                class="inline-flex items-center gap-2 px-3 py-1.5 rounded-md border border-subtle text-xs font-medium text-main bg-surface"
+              >
+                <span data-icon="bootstrap-5" class="w-4 h-4"></span> Bootstrap
+              </span>
+            </div>
+          </div>
+
+          <div class="space-y-4">
+            <h3
+              class="text-xs font-semibold tracking-wider uppercase text-muted"
+              data-section="skills"
+              data-value="backend-title"
+            >
+              Backend & Datos
+            </h3>
+            <div class="flex flex-wrap gap-2.5">
+              <span
+                class="inline-flex items-center gap-2 px-3 py-1.5 rounded-md border border-subtle text-xs font-medium text-main bg-surface"
+              >
+                <span data-icon="php" class="w-4 h-4"></span> PHP
+              </span>
+              <span
+                class="inline-flex items-center gap-2 px-3 py-1.5 rounded-md border border-subtle text-xs font-medium text-main bg-surface"
+              >
+                <span data-icon="java" class="w-4 h-4"></span> Java
+              </span>
+
+              <span
+                class="inline-flex items-center gap-2 px-3 py-1.5 rounded-md border border-subtle text-xs font-medium text-main bg-surface"
+              >
+                <span data-icon="laravel" class="w-4 h-4"></span> Laravel
+              </span>
+
+              <span
+                class="inline-flex items-center gap-2 px-3 py-1.5 rounded-md border border-subtle text-xs font-medium text-main bg-surface"
+              >
+                <span data-icon="mysql" class="w-4 h-4"></span> MySQL
+              </span>
+              <span
+                class="inline-flex items-center gap-2 px-3 py-1.5 rounded-md border border-subtle text-xs font-medium text-main bg-surface"
+              >
+                <span data-icon="postgresql" class="w-4 h-4"></span> PostgreSQL
+              </span>
+
+              <span
+                class="inline-flex items-center gap-2 px-3 py-1.5 rounded-md border border-subtle text-xs font-medium text-main bg-surface"
+              >
+                <span data-icon="mongodb" class="w-4 h-4"></span> MongoDB
+              </span>
+              <span
+                class="inline-flex items-center gap-2 px-3 py-1.5 rounded-md border border-subtle text-xs font-medium text-main bg-surface"
+              >
+                <span data-icon="supabase" class="w-4 h-4"></span> Supabase
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section
+        class="text-center space-y-6 pt-4"
+        id="contact"
+        data-aos="fade-up"
+      >
+        <div class="space-y-1.5">
+          <h2
+            class="text-2xl sm:text-3xl font-bold tracking-tight text-main"
+            data-section="contact"
+            data-value="contact-title"
+          >
+            Contacto
+          </h2>
+          <p
+            class="text-xs sm:text-sm text-muted font-light max-w-sm mx-auto"
+            data-section="contact"
+            data-value="contact-subtitle"
+          >
+            ¿Tienes una idea o propuesta técnica? Escríbeme y lo conversamos.
+          </p>
+        </div>
+
+        <div class="pt-2">
+          <a
+            href="mailto:jacordova838@gmail.com"
+            class="inline-block px-5 py-2.5 rounded-lg bg-accent text-accent-contrast hover:opacity-90 text-xs sm:text-sm font-medium transition-all"
+            data-section="contact"
+            data-value="contact-button"
+          >
+            Contáctame
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-subtle">
+      <div
+        class="max-w-5xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6 text-xs text-muted"
+      >
+        <p data-section="footer" data-value="footer-copy">
+          © 2026 Jhon Cordova.
+        </p>
+
+        <div class="flex items-center gap-5">
+          <a
+            href="https://github.com/jhoncordova24"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 hover:text-main transition-colors"
+            aria-label="GitHub"
+          >
+            <span data-icon="github" class="w-4 h-4 shrink-0"></span>
+            <span>GitHub</span>
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/jhon-paucar-cordova-ba9354296/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 hover:text-main transition-colors"
+            aria-label="LinkedIn"
+          >
+            <span data-icon="linkedin" class="w-4 h-4 shrink-0"></span>
+            <span>LinkedIn</span>
+          </a>
+
+          <a
+            href="https://www.instagram.com/jhonc.24/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 hover:text-main transition-colors"
+            aria-label="Instagram"
+          >
+            <span data-icon="instagram" class="w-4 h-4 shrink-0"></span>
+            <span>Instagram</span>
+          </a>
         </div>
       </div>
     </footer>
 
+    <!-- Modal -->
     <div
-      class="modal fade"
       id="proyecto2Modal"
-      tabindex="-1"
-      aria-labelledby="proyecto2ModalLabel"
-      aria-hidden="true"
+      class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4"
     >
-      <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5
-              class="modal-title"
-              id="proyecto2ModalLabel"
-              data-section="modals"
-              data-value="modal-proyecto2"
+      <div
+        class="relative w-full max-w-3xl rounded-2xl bg-surface border border-subtle shadow-2xl overflow-hidden"
+      >
+        <div class="flex items-center justify-between px-6 py-4">
+          <h3
+            class="text-sm font-semibold text-main"
+            data-section="modals"
+            data-value="modal-proyecto2"
+          >
+            Sistema de Gestión Documentaria
+          </h3>
+          <button
+            type="button"
+            data-modal-close
+            class="p-1.5 text-muted hover:text-main transition-colors"
+          >
+            <svg
+              class="w-5 h-5"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
             >
-              Sistema de Gestión Documentaria
-            </h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Cerrar"
-            ></button>
-          </div>
-          <div class="modal-body">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+        <div class="p-6 pt-0">
+          <div
+            class="relative rounded-xl overflow-hidden aspect-video bg-badge"
+          >
             <div
-              id="proyecto2Carousel"
-              class="carousel slide"
-              data-bs-ride="false"
+              id="modalCarouselTrack"
+              class="flex transition-transform duration-300 ease-out h-full"
             >
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img
-                    src="assets/img/projects/project-2/p2-1.avif"
-                    class="d-block w-100"
-                    alt="Pantallazo 1"
-                  />
-                </div>
-                <div class="carousel-item">
-                  <img
-                    src="assets/img/projects/project-2/p2-2.avif"
-                    class="d-block w-100"
-                    alt="Pantallazo 2"
-                  />
-                </div>
-                <div class="carousel-item">
-                  <img
-                    src="assets/img/projects/project-2/p2-3.avif"
-                    class="d-block w-100"
-                    alt="Pantallazo 3"
-                  />
-                </div>
-                <div class="carousel-item">
-                  <img
-                    src="assets/img/projects/project-2/p2-4.avif"
-                    class="d-block w-100"
-                    alt="Pantallazo 4"
-                  />
-                </div>
-                <div class="carousel-item">
-                  <img
-                    src="assets/img/projects/project-2/p2-5.avif"
-                    class="d-block w-100"
-                    alt="Pantallazo 5"
-                  />
-                </div>
-                <div class="carousel-item">
-                  <img
-                    src="assets/img/projects/project-2/p2-6.avif"
-                    class="d-block w-100"
-                    alt="Pantallazo 6"
-                  />
-                </div>
-              </div>
-              <button
-                class="carousel-control-prev"
-                type="button"
-                data-bs-target="#proyecto2Carousel"
-                data-bs-slide="prev"
-              >
-                <span class="carousel-control-prev-icon"></span>
-                <span class="visually-hidden">Anterior</span>
-              </button>
-              <button
-                class="carousel-control-next"
-                type="button"
-                data-bs-target="#proyecto2Carousel"
-                data-bs-slide="next"
-              >
-                <span class="carousel-control-next-icon"></span>
-                <span class="visually-hidden">Siguiente</span>
-              </button>
+              <img
+                src="assets/img/projects/project-2/p2-1.avif"
+                class="w-full h-full object-contain shrink-0"
+                alt="Pantallazo 1"
+              />
+              <img
+                src="assets/img/projects/project-2/p2-2.avif"
+                class="w-full h-full object-contain shrink-0"
+                alt="Pantallazo 2"
+              />
+              <img
+                src="assets/img/projects/project-2/p2-3.avif"
+                class="w-full h-full object-contain shrink-0"
+                alt="Pantallazo 3"
+              />
+              <img
+                src="assets/img/projects/project-2/p2-4.avif"
+                class="w-full h-full object-contain shrink-0"
+                alt="Pantallazo 4"
+              />
+              <img
+                src="assets/img/projects/project-2/p2-5.avif"
+                class="w-full h-full object-contain shrink-0"
+                alt="Pantallazo 5"
+              />
+              <img
+                src="assets/img/projects/project-2/p2-6.avif"
+                class="w-full h-full object-contain shrink-0"
+                alt="Pantallazo 6"
+              />
             </div>
+            <button
+              id="prevSlide"
+              class="absolute left-3 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/40 text-white hover:bg-black/70 transition-colors"
+            >
+              <svg
+                class="w-4 h-4"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+            </button>
+            <button
+              id="nextSlide"
+              class="absolute right-3 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/40 text-white hover:bg-black/70 transition-colors"
+            >
+              <svg
+                class="w-4 h-4"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </button>
           </div>
         </div>
       </div>
     </div>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://kit.fontawesome.com/24a7aa86be.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="assets/js/index.js"></script>
-    <script src="assets/js/dark-mode.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="./assets/js/aos.js"></script>
+    <script src="assets/js/main.js"></script>
   </body>
 </html>

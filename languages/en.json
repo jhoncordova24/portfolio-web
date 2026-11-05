@@ -10,46 +10,50 @@
         "dark": "Dark"
     },
     "hero": {
+        "hero-badge": "Available for projects and development",
         "hero-first": "Hi, I am",
-        "hero-second": "Systems and Computer Engineering.",
-        "hero-third": "Passionate about technology and the development of solutions, with skills in systems analysis and programming."
+        "hero-second": "Systems and Informatics Engineer",
+        "hero-third": "Specialized in designing, optimizing, and deploying robust web platforms with a focus on agile architecture, functional interfaces, and performance.",
+        "hero-btn-projects": "View Projects"
     },
     "about": {
-        "about-sub": "Get to know me a little more.",
-        "about2-title": "My Story",
-        "about2-text": "I am a graduate in Systems and Informatics Engineering, where I have strengthened my skills in systems analysis, web and desktop programming, and process optimization. My academic performance was recognized with an Excellence Scholarship on three occasions.",
-        "about2-u": "Technological University of Peru.",
-        "about2-e": "Over 2 years of experience."
+        "about-sub": "Get to know me a little more and my professional background.",
+        "about2-title": "About me",
+        "about2-text": "I am a graduate in Systems and Informatics Engineering, focused on the development of scalable web applications, software analysis, and continuous process optimization. My academic performance was recognized with an excellence scholarship on three occasions.",
+        "about2-u-label": "Education",
+        "about2-u": "Technological University of Peru",
+        "about2-e-label": "Experience",
+        "about2-e": "+2 years of experience"
     },
     "projects": {
-        "projects-title": "My Projects",
-        "projects-subtitle": "These are some of the projects I have developed.",
+        "projects-title": "Projects",
+        "projects-subtitle": "These are some projects I have developed.",
         "vri-title": "Vice-Rectorate of Research",
-        "vri-desc": "Official portal of the Vice-Rectorate of Research at the National University of Piura, designed to showcase scientific output and institutional progress.",
+        "vri-desc": "Official portal of the Vice-Rectorate of Research of the National University of Piura, designed to showcase scientific production and institutional progress.",
         "project2-title": "Document Management System",
-        "project2-desc": "Comprehensive web system for administrative and academic management: tracking incoming and outgoing documents, institutional calendar, and end-to-end thesis workflow control (metadata, advisor assignments, review observations, corrections, and report exports).",
+        "project2-desc": "Web system for administrative and academic management: registration and tracking of issued documents, institutional agenda, and comprehensive thesis control.",
         "project1-title": "Patitas SOS PIURA",
-        "project1-desc": "Designed to promote responsible pet adoption, facilitate donations, and provide animal care information in Piura.",
+        "project1-desc": "Designed to promote responsible pet adoption and facilitate donations in Piura.",
         "project4-title": "Isaac Newton School",
-        "project4-desc": "Platform developed to provide information about the institution, featuring an administrative panel for efficient management.",
+        "project4-desc": "Institutional platform with an administrative panel for content management.",
         "project5-title": "Currency Converter",
-        "project5-desc": "Real-time currency converter with updated exchange rates and an intuitive interface.",
-        "project6-title": "Systems Engineering Portal",
-        "project6-desc": "Portal created to centralize and share relevant faculty information, connecting students and professors."
+        "project5-desc": "Agile web tool for real-time currency conversion with updated rates.",
+        "project6-title": "Systems Eng. Portal",
+        "project6-desc": "Centralized portal to connect professors and students with academic resources."
     },
     "skills": {
-        "skills-title": "My Skills",
-        "skills-subtitle": "What I have learned so far.",
-        "frontend-title": "Frontend Development",
-        "backend-title": "Backend Development"
+        "skills-title": "Technical Skills",
+        "skills-subtitle": "Frequently used technologies and tools.",
+        "frontend-title": "Frontend",
+        "backend-title": "Backend & Data"
     },
     "contact": {
-        "contact-title": "Let's create something together",
-        "contact-subtitle": "Send me a message.",
+        "contact-title": "Contact",
+        "contact-subtitle": "Do you have an idea or technical proposal? Send me a message and let's talk.",
         "contact-button": "Contact me"
     },
     "footer": {
-        "footer-copy": "Created by Jhon Cordova (2026) ©."
+        "footer-copy": "© 2026 Jhon Cordova."
     },
     "modals": {
         "modal-proyecto2": "Document Management System",
