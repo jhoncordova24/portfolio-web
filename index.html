@@ -3,8 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Jhon Cordova</title>
+    <meta property="og:title" content="Jhon Cordova" />
+    <meta
+      property="og:description"
+      content="Especializado en diseñar, optimizar y desplegar plataformas web robustas con foco en arquitectura ágil, interfaces funcionales y rendimiento."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://jhoncordova.netlify.app/assets/img/og-image.jpg"
+    />
+    <meta property="og:url" content="https://jhoncordova.netlify.app/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Jhon Cordova" />
+    <meta
+      name="twitter:description"
+      content="Especializado en diseñar, optimizar y desplegar plataformas web robustas con foco en arquitectura ágil, interfaces funcionales y rendimiento."
+    />
+    <meta
+      name="twitter:image"
+      content="https://jhoncordova.netlify.app/assets/img/og-image.jpg"
+    />
+
     <link rel="icon" type="image/png" href="assets/img/logo.png" />
-    <title>Jhon Cordova — Ingeniero de Sistemas</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,28 +36,26 @@
       rel="stylesheet"
     />
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="tailwind.config.js"></script>
-
-    <link rel="stylesheet" href="assets/styles/index.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css"
     />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <head>
-      <script>
-        if (
-          localStorage.getItem("theme") === "dark" ||
-          (!("theme" in localStorage) &&
-            window.matchMedia("(prefers-color-scheme: dark)").matches)
-        ) {
-          document.documentElement.classList.add("dark");
-        } else {
-          document.documentElement.classList.remove("dark");
-        }
-      </script>
-    </head>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link rel="stylesheet" href="assets/styles/index.css" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind.config.js"></script>
+    <script>
+      if (
+        localStorage.getItem("theme") === "dark" ||
+        (!("theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
   </head>
 
   <body
