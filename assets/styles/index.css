@@ -36,3 +36,39 @@ html.dark {
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(161, 161, 170, 0.6);
 }
+
+/* Animación pulse suave para el indicador de disponibilidad */
+@keyframes pulse-suave {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+    box-shadow: 0 0 0 0 rgba(161, 161, 170, 0.45);
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 0.8;
+    box-shadow: 0 0 0 5px rgba(161, 161, 170, 0);
+  }
+}
+
+.pulse-dot {
+  animation: pulse-suave 2.2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Cursor para la animación de máquina de escribir */
+@keyframes cursor-blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.typewriter-cursor {
+  display: inline-block;
+  margin-left: 2px;
+  animation: cursor-blink 0.8s ease-in-out infinite;
+  color: var(--text-muted);
+  font-weight: 300;
+}

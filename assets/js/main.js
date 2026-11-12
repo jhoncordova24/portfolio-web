@@ -122,6 +122,55 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  const typewriterTarget = document.getElementById("hero-typewriter");
+  let typewriterTimeout = null;
+  let isDeleting = false;
+  let charIndex = 0;
+  let currentWord = typewriterTarget
+    ? typewriterTarget.textContent.trim()
+    : "Ingeniero de Sistemas e Informática";
+
+  function typeStep() {
+    if (!typewriterTarget) return;
+
+    if (!isDeleting) {
+      charIndex++;
+      typewriterTarget.textContent = currentWord.substring(0, charIndex);
+
+      if (charIndex === currentWord.length) {
+        isDeleting = true;
+        typewriterTimeout = setTimeout(typeStep, 3000);
+        return;
+      }
+      typewriterTimeout = setTimeout(typeStep, 75);
+    } else {
+      charIndex--;
+      typewriterTarget.textContent = currentWord.substring(0, charIndex);
+
+      if (charIndex === 0) {
+        isDeleting = false;
+        typewriterTimeout = setTimeout(typeStep, 600);
+        return;
+      }
+      typewriterTimeout = setTimeout(typeStep, 35);
+    }
+  }
+
+  function updateTypewriterText(newText) {
+    if (!typewriterTarget) return;
+    clearTimeout(typewriterTimeout);
+    currentWord = newText;
+    isDeleting = false;
+    charIndex = 0;
+    typewriterTarget.textContent = "";
+    typewriterTimeout = setTimeout(typeStep, 150);
+  }
+
+  if (typewriterTarget) {
+    typewriterTarget.textContent = "";
+    typewriterTimeout = setTimeout(typeStep, 500);
+  }
+
   const langButtons = document.querySelectorAll("[data-language]");
   const textsToChange = document.querySelectorAll("[data-section]");
 
@@ -133,7 +182,11 @@ document.addEventListener("DOMContentLoaded", () => {
           const section = el.dataset.section;
           const value = el.dataset.value;
           if (data[section] && data[section][value]) {
-            el.innerHTML = data[section][value];
+            if (section === "hero" && value === "hero-second") {
+              updateTypewriterText(data[section][value]);
+            } else {
+              el.innerHTML = data[section][value];
+            }
           }
         });
         document.documentElement.lang = lang;
