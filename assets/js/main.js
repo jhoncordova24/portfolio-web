@@ -123,12 +123,16 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   const typewriterTarget = document.getElementById("hero-typewriter");
+  const heroHeading = typewriterTarget?.closest("[data-section='hero']");
   let typewriterTimeout = null;
   let isDeleting = false;
   let charIndex = 0;
-  let currentWord = typewriterTarget
+  let desktopWord = typewriterTarget
     ? typewriterTarget.textContent.trim()
     : "Ingeniero de Sistemas e Informática";
+  let mobileWord = heroHeading?.dataset.mobileText || desktopWord;
+  const heroTitleMedia = window.matchMedia("(min-width: 640px)");
+  let currentWord = heroTitleMedia.matches ? desktopWord : mobileWord;
 
   function typeStep() {
     if (!typewriterTarget) return;
@@ -166,6 +170,10 @@ document.addEventListener("DOMContentLoaded", () => {
     typewriterTimeout = setTimeout(typeStep, 150);
   }
 
+  heroTitleMedia.addEventListener("change", () => {
+    updateTypewriterText(heroTitleMedia.matches ? desktopWord : mobileWord);
+  });
+
   if (typewriterTarget) {
     typewriterTarget.textContent = "";
     typewriterTimeout = setTimeout(typeStep, 500);
@@ -183,7 +191,13 @@ document.addEventListener("DOMContentLoaded", () => {
           const value = el.dataset.value;
           if (data[section] && data[section][value]) {
             if (section === "hero" && value === "hero-second") {
-              updateTypewriterText(data[section][value]);
+              desktopWord = data[section][value];
+              mobileWord =
+                data[section][heroHeading?.dataset.mobileValue] || desktopWord;
+              if (heroHeading) heroHeading.dataset.mobileText = mobileWord;
+              updateTypewriterText(
+                heroTitleMedia.matches ? desktopWord : mobileWord,
+              );
             } else {
               el.innerHTML = data[section][value];
             }
